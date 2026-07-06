@@ -1,0 +1,50 @@
+[
+  {
+    "id": "mock-1",
+    "ten_hoc_sinh_hien_thi": "Nguyễn Minh A.",
+    "thanh_tich": "Thủ khoa đầu vào lớp 10 chuyên Toán",
+    "khoi": "9",
+    "ky_thi": "Tuyển sinh vào 10",
+    "nam": 2026
+  },
+  {
+    "id": "mock-2",
+    "ten_hoc_sinh_hien_thi": "Trần Bảo N.",
+    "thanh_tich": "Đạt 9.5 điểm Toán kỳ thi tốt nghiệp THPT",
+    "khoi": "12",
+    "ky_thi": "Tốt nghiệp THPT",
+    "nam": 2026
+  },
+  {
+    "id": "mock-3",
+    "ten_hoc_sinh_hien_thi": "Phạm Gia H.",
+    "thanh_tich": "Đỗ vào lớp 6 chất lượng cao",
+    "khoi": "5",
+    "ky_thi": "Tuyển sinh vào 6",
+    "nam": 2025
+  },
+  {
+    "id": "mock-4",
+    "ten_hoc_sinh_hien_thi": "Lê Thảo V.",
+    "thanh_tich": "Giải Nhì học sinh giỏi Toán cấp Quận",
+    "khoi": "8",
+    "ky_thi": "HSG cấp Quận",
+    "nam": 2025
+  },
+  {
+    "id": "mock-5",
+    "ten_hoc_sinh_hien_thi": "Đỗ Quang M.",
+    "thanh_tich": "Thủ khoa đầu vào lớp 10 chuyên Toán",
+    "khoi": "9",
+    "ky_thi": "Tuyển sinh vào 10",
+    "nam": 2025
+  },
+  {
+    "id": "mock-6",
+    "ten_hoc_sinh_hien_thi": "Vũ Khánh L.",
+    "thanh_tich": "Đạt 10 điểm Toán kỳ thi tốt nghiệp THPT",
+    "khoi": "12",
+    "ky_thi": "Tốt nghiệp THPT",
+    "nam": 2025
+  }
+]

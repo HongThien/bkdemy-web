@@ -1,26 +1,62 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
+/*
+  Design tokens — BKdemy marketing site.
+  Thế giới brand: toán học (lưới toạ độ, đường cong tăng trưởng) nhưng ẤM,
+  đáng tin cho phụ huynh — không lạnh như phần mềm nội bộ (ERP dùng tông khác).
+  Tinh chỉnh từ đề xuất §4 BKDEMY_WEB_SPEC.md, tự phê bình chống 3 look AI mặc định:
+  không cream+terracotta (đây là navy+ivory+bronze), không near-black+acid-green,
+  không broadsheet-hairline (dùng card bo góc + shadow mềm, không kẻ báo).
+*/
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-ink: #1e3a5f; /* navy mực — thương hiệu, độ sâu/tin cậy */
+  --color-ink-dark: #142a45;
+  /* đồng ánh vàng — điểm nhấn thành tựu, buộc dây "bảng vàng".
+     Đậm hơn đề xuất gốc §4 (#B8862E chỉ ~3.2:1 trên nền sáng, KHÔNG đạt AA) —
+     chỉnh còn ~4.9:1 để chữ/nút vàng-trên-sáng vẫn đạt chuẩn. */
+  --color-gold: #8f6a24;
+  --color-gold-light: #d9ac5c; /* dùng khi CHỮ SÁNG trên nền TỐI (hero navy) — không dùng ngược lại */
+  --color-paper: #faf7f1; /* nền chính, trắng ngà ấm */
+  --color-paper-dim: #f3efe6;
+  --color-sky: #4c6b8a; /* phụ — đồ hoạ, đường lưới */
+  --color-slate: #2b3947; /* chữ thân */
+  --color-slate-soft: #5b6b78;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-ink: var(--color-ink);
+  --color-ink-dark: var(--color-ink-dark);
+  --color-gold: var(--color-gold);
+  --color-gold-light: var(--color-gold-light);
+  --color-paper: var(--color-paper);
+  --color-paper-dim: var(--color-paper-dim);
+  --color-slate: var(--color-slate);
+  --color-slate-soft: var(--color-slate-soft);
+  --color-sky: var(--color-sky);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-display: var(--font-lora);
+  --font-sans: var(--font-be-vietnam-pro);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-slate);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus rõ ràng, không chỉ dựa vào outline mặc định của browser */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
 }

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "mock-kg-1",
+    "ten_lop": "Toán 6A",
+    "cap": "thcs",
+    "ngay_khai_giang": "2026-08-15",
+    "ghi_chu": "Lớp buổi tối, thứ 2-4-6"
+  },
+  {
+    "id": "mock-kg-2",
+    "ten_lop": "Toán 10A",
+    "cap": "thpt",
+    "ngay_khai_giang": "2026-08-20",
+    "ghi_chu": "Lớp cuối tuần"
+  },
+  {
+    "id": "mock-kg-3",
+    "ten_lop": "Ôn thi vào 10 - Nâng cao",
+    "cap": "vao-10",
+    "ngay_khai_giang": "2026-09-01",
+    "ghi_chu": null
+  }
+]
