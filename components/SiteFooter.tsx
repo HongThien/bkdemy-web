@@ -30,17 +30,15 @@ export function SiteFooter() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-white/60">Liên hệ</p>
             <ul className="mt-3 space-y-2 text-sm text-white/80">
-              <li>
-                <TodoContent>địa chỉ cơ sở</TodoContent>
-              </li>
+              <li>{SITE.address || <TodoContent>địa chỉ cơ sở</TodoContent>}</li>
               <li>
                 Hotline:{" "}
-                {SITE.hotline.startsWith("TODO") ? (
-                  <TodoContent>hotline</TodoContent>
-                ) : (
+                {SITE.hotline ? (
                   <a href={`tel:${SITE.hotline}`} className="hover:text-white">
                     {SITE.hotline}
                   </a>
+                ) : (
+                  <TodoContent>hotline</TodoContent>
                 )}
               </li>
               <li>

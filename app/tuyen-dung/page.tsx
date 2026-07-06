@@ -34,7 +34,7 @@ export default function TuyenDungPage() {
                 </Button>
               </div>
               <p className="mt-3 text-sm text-slate-soft">
-                <TodoContent>{c.description}</TodoContent>
+                {c.description || <TodoContent>mô tả công việc, yêu cầu, quyền lợi</TodoContent>}
               </p>
             </Card>
           ))}

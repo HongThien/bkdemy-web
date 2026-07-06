@@ -13,7 +13,7 @@ export function FloatingContact() {
         <span className="text-xs font-bold">Zalo</span>
       </a>
       <a
-        href={SITE.hotline.startsWith("TODO") ? "/lien-he" : `tel:${SITE.hotline}`}
+        href={SITE.hotline ? `tel:${SITE.hotline}` : "/lien-he"}
         aria-label="Gọi hotline"
         className="flex h-14 w-14 items-center justify-center rounded-full bg-gold text-white shadow-lg transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2"
       >

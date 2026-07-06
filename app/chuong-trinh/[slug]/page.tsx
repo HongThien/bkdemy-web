@@ -44,24 +44,30 @@ export default async function CapHocPage({ params }: Props) {
           <div>
             <h2 className="font-display text-xl font-semibold text-ink">Mục tiêu</h2>
             <p className="mt-2 text-sm text-slate-soft">
-              <TodoContent>{cap.mucTieu}</TodoContent>
+              {cap.mucTieu || <TodoContent>mục tiêu cụ thể của chương trình {cap.ten}</TodoContent>}
             </p>
           </div>
           <div>
             <h2 className="font-display text-xl font-semibold text-ink">Đối tượng</h2>
             <p className="mt-2 text-sm text-slate-soft">
-              <TodoContent>{cap.doiTuong}</TodoContent>
+              {cap.doiTuong || <TodoContent>đối tượng học sinh phù hợp</TodoContent>}
             </p>
           </div>
           <div>
             <h2 className="font-display text-xl font-semibold text-ink">Lộ trình / nội dung chính</h2>
-            <ul className="mt-2 space-y-2">
-              {cap.noiDung.map((n, i) => (
-                <li key={i} className="text-sm text-slate-soft">
-                  <TodoContent>{n}</TodoContent>
-                </li>
-              ))}
-            </ul>
+            {cap.noiDung.length === 0 ? (
+              <p className="mt-2 text-sm text-slate-soft">
+                <TodoContent>nội dung/lộ trình chính</TodoContent>
+              </p>
+            ) : (
+              <ul className="mt-2 space-y-2">
+                {cap.noiDung.map((n, i) => (
+                  <li key={i} className="text-sm text-slate-soft">
+                    {n}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
 

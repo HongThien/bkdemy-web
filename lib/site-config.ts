@@ -1,5 +1,9 @@
-// Cấu hình chung: nav, link ngoài, thông tin liên hệ.
-// TODO(content): thay placeholder bằng giá trị thật khi vận hành cung cấp (xem BKDEMY_WEB_SPEC.md §10).
+// Cấu hình chung: nav + loader nội dung editable (content/data/*.json).
+// Nội dung thật do nhân sự/marketing cung cấp (xem BKDEMY_WEB_SPEC.md §10) — sửa
+// trực tiếp trong content/data/site.json (không sửa file này), chuẩn bị sẵn cho
+// Decap CMS sau này (JSON thuần, không type/logic).
+import siteData from "@/content/data/site.json";
+import programsData from "@/content/data/programs.json";
 
 // Khe mở rộng tương lai (spec §8): /nhuong-quyen chưa có trang — thêm 1 dòng vào
 // mảng này khi trang đó được build, router tự nhận, không cần đổi cấu trúc.
@@ -15,17 +19,23 @@ export const NAV_LINKS = [
 
 export const CTA_TRA_CUU = { href: "/tra-cuu", label: "Tra cứu kết quả" } as const;
 
+export type HomeStat = { value: string; label: string };
+
 export const SITE = {
   name: "BKdemy",
   domain: "bkacademy.edu.vn",
-  hotline: process.env.NEXT_PUBLIC_HOTLINE || "TODO(content): số hotline",
-  zaloUrl: process.env.NEXT_PUBLIC_ZALO_URL || "https://zalo.me",
+  // Hạ tầng/deploy (KHÔNG phải nội dung — giữ ở env, không đưa vào content/data).
   phPortalUrl: process.env.NEXT_PUBLIC_PH_PORTAL_URL || "https://ph.bkacademy.edu.vn",
   hocUrl: process.env.NEXT_PUBLIC_HOC_URL || "https://hoc.bkacademy.edu.vn",
-  address: "TODO(content): địa chỉ cơ sở 1",
-  mapEmbedSrc: process.env.NEXT_PUBLIC_MAP_EMBED_SRC || "",
-  careerApplyUrl: process.env.NEXT_PUBLIC_CAREER_FORM_URL || "",
-  careerApplyEmail: process.env.NEXT_PUBLIC_CAREER_EMAIL || "tuyendung@bkacademy.edu.vn",
+  // Nội dung editable — nguồn DUY NHẤT là content/data/site.json.
+  address: siteData.address,
+  hotline: siteData.hotline,
+  zaloUrl: siteData.zaloUrl,
+  workingHours: siteData.workingHours,
+  mapEmbedSrc: siteData.mapEmbedSrc,
+  careerApplyUrl: siteData.careerApplyUrl,
+  careerApplyEmail: siteData.careerApplyEmail,
+  homeStats: siteData.homeStats as HomeStat[],
 };
 
 export type CapHoc = {
@@ -38,48 +48,7 @@ export type CapHoc = {
   noiDung: string[];
 };
 
-export const CAP_HOC: CapHoc[] = [
-  {
-    slug: "tieu-hoc",
-    ten: "Tiểu học",
-    moTa: "Xây nền tư duy Toán từ sớm, học mà chơi, chắc gốc.",
-    mucTieu: "TODO(content): mục tiêu cụ thể của chương trình Tiểu học",
-    doiTuong: "TODO(content): đối tượng học sinh phù hợp",
-    noiDung: ["TODO(content): nội dung/lộ trình chính 1", "TODO(content): nội dung/lộ trình chính 2"],
-  },
-  {
-    slug: "vao-6",
-    ten: "Ôn thi vào 6",
-    moTa: "Luyện thi vào lớp 6 trường chuyên/chất lượng cao.",
-    mucTieu: "TODO(content): mục tiêu cụ thể của chương trình Ôn thi vào 6",
-    doiTuong: "TODO(content): đối tượng học sinh phù hợp",
-    noiDung: ["TODO(content): nội dung/lộ trình chính 1", "TODO(content): nội dung/lộ trình chính 2"],
-  },
-  {
-    slug: "thcs",
-    ten: "THCS",
-    moTa: "Củng cố nền tảng, bứt tốc theo từng dạng bài.",
-    mucTieu: "TODO(content): mục tiêu cụ thể của chương trình THCS",
-    doiTuong: "TODO(content): đối tượng học sinh phù hợp",
-    noiDung: ["TODO(content): nội dung/lộ trình chính 1", "TODO(content): nội dung/lộ trình chính 2"],
-  },
-  {
-    slug: "vao-10",
-    ten: "Ôn thi vào 10",
-    moTa: "Lộ trình tăng tốc bám sát cấu trúc đề thi vào 10.",
-    mucTieu: "TODO(content): mục tiêu cụ thể của chương trình Ôn thi vào 10",
-    doiTuong: "TODO(content): đối tượng học sinh phù hợp",
-    noiDung: ["TODO(content): nội dung/lộ trình chính 1", "TODO(content): nội dung/lộ trình chính 2"],
-  },
-  {
-    slug: "thpt",
-    ten: "THPT",
-    moTa: "Ôn luyện theo mục tiêu thi tốt nghiệp & xét tuyển đại học.",
-    mucTieu: "TODO(content): mục tiêu cụ thể của chương trình THPT",
-    doiTuong: "TODO(content): đối tượng học sinh phù hợp",
-    noiDung: ["TODO(content): nội dung/lộ trình chính 1", "TODO(content): nội dung/lộ trình chính 2"],
-  },
-];
+export const CAP_HOC: CapHoc[] = programsData;
 
 export function getCapHoc(slug: string): CapHoc | undefined {
   return CAP_HOC.find((c) => c.slug === slug);

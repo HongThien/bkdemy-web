@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "tieu-hoc",
+    "ten": "Tiểu học",
+    "moTa": "Xây nền tư duy Toán từ sớm, học mà chơi, chắc gốc.",
+    "mucTieu": "",
+    "doiTuong": "",
+    "noiDung": []
+  },
+  {
+    "slug": "vao-6",
+    "ten": "Ôn thi vào 6",
+    "moTa": "Luyện thi vào lớp 6 trường chuyên/chất lượng cao.",
+    "mucTieu": "",
+    "doiTuong": "",
+    "noiDung": []
+  },
+  {
+    "slug": "thcs",
+    "ten": "THCS",
+    "moTa": "Củng cố nền tảng, bứt tốc theo từng dạng bài.",
+    "mucTieu": "",
+    "doiTuong": "",
+    "noiDung": []
+  },
+  {
+    "slug": "vao-10",
+    "ten": "Ôn thi vào 10",
+    "moTa": "Lộ trình tăng tốc bám sát cấu trúc đề thi vào 10.",
+    "mucTieu": "",
+    "doiTuong": "",
+    "noiDung": []
+  },
+  {
+    "slug": "thpt",
+    "ten": "THPT",
+    "moTa": "Ôn luyện theo mục tiêu thi tốt nghiệp & xét tuyển đại học.",
+    "mucTieu": "",
+    "doiTuong": "",
+    "noiDung": []
+  }
+]

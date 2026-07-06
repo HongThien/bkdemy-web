@@ -1,0 +1,15 @@
+{
+  "_ghiChu": "Nội dung nhân sự/marketing sửa (sau này qua Decap CMS). Chuỗi rỗng \"\" = chưa cập nhật, web tự hiện badge TODO(content) — đừng tự gõ chữ TODO vào giá trị.",
+  "address": "",
+  "hotline": "",
+  "zaloUrl": "https://zalo.me",
+  "workingHours": "",
+  "mapEmbedSrc": "",
+  "careerApplyUrl": "",
+  "careerApplyEmail": "tuyendung@bkacademy.edu.vn",
+  "homeStats": [
+    { "value": "", "label": "Học sinh đang theo học" },
+    { "value": "", "label": "Năm hoạt động" },
+    { "value": "", "label": "Tỉ lệ đạt nguyện vọng" }
+  ]
+}

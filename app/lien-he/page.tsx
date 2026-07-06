@@ -15,19 +15,17 @@ export default function LienHePage() {
         <div className="mt-8 space-y-5 text-sm text-slate">
           <div>
             <p className="font-semibold text-ink">Địa chỉ</p>
-            <p className="mt-1 text-slate-soft">
-              <TodoContent>{SITE.address}</TodoContent>
-            </p>
+            <p className="mt-1 text-slate-soft">{SITE.address || <TodoContent>địa chỉ cơ sở</TodoContent>}</p>
           </div>
           <div>
             <p className="font-semibold text-ink">Hotline</p>
             <p className="mt-1 text-slate-soft">
-              {SITE.hotline.startsWith("TODO") ? (
-                <TodoContent>{SITE.hotline}</TodoContent>
-              ) : (
+              {SITE.hotline ? (
                 <a href={`tel:${SITE.hotline}`} className="hover:text-ink">
                   {SITE.hotline}
                 </a>
+              ) : (
+                <TodoContent>số hotline</TodoContent>
               )}
             </p>
           </div>
@@ -40,7 +38,7 @@ export default function LienHePage() {
           <div>
             <p className="font-semibold text-ink">Giờ làm việc</p>
             <p className="mt-1 text-slate-soft">
-              <TodoContent>giờ làm việc các ngày trong tuần</TodoContent>
+              {SITE.workingHours || <TodoContent>giờ làm việc các ngày trong tuần</TodoContent>}
             </p>
           </div>
         </div>

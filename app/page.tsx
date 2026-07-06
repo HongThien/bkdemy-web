@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getBangVang } from "@/lib/data";
-import { CAP_HOC, CTA_TRA_CUU } from "@/lib/site-config";
+import { CAP_HOC, CTA_TRA_CUU, SITE } from "@/lib/site-config";
 import { Section, SectionTitle, Card, Button, Stat, TodoContent } from "@/components/ui";
 import { ProgressCurve } from "@/components/ProgressCurve";
 import { BangVangItem } from "@/components/BangVangItem";
@@ -39,9 +39,9 @@ export default async function Home() {
 
       {/* CON SỐ THẬT */}
       <Section className="grid grid-cols-1 gap-8 sm:grid-cols-3">
-        <Stat value={<TodoContentInline />} label="Học sinh đang theo học" />
-        <Stat value={<TodoContentInline />} label="Năm hoạt động" />
-        <Stat value={<TodoContentInline />} label="Tỉ lệ đạt nguyện vọng" />
+        {SITE.homeStats.map((s) => (
+          <Stat key={s.label} value={s.value || <TodoContent>số liệu</TodoContent>} label={s.label} />
+        ))}
       </Section>
 
       {/* 4 KHỐI CHƯƠNG TRÌNH */}
@@ -126,8 +126,4 @@ export default async function Home() {
       </Section>
     </>
   );
-}
-
-function TodoContentInline() {
-  return <TodoContent>số liệu</TodoContent>;
 }
