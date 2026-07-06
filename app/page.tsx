@@ -95,25 +95,27 @@ export default async function Home() {
         </div>
       </Section>
 
-      {/* BẢNG VÀNG PREVIEW */}
-      <Section className="bg-paper-dim/60 !max-w-none">
-        <div className="mx-auto max-w-6xl">
-          <div className="flex items-end justify-between gap-4">
-            <SectionTitle eyebrow="Bảng vàng" title="Thành tích học sinh" />
-            <Link href="/bang-vang" className="hidden shrink-0 text-sm font-semibold text-ink hover:text-gold sm:block">
+      {/* BẢNG VÀNG PREVIEW — chỉ hiện khi có dữ liệu thật (đúng luật thiếu-data=không-có-dòng) */}
+      {bangVang.length > 0 && (
+        <Section className="bg-paper-dim/60 !max-w-none">
+          <div className="mx-auto max-w-6xl">
+            <div className="flex items-end justify-between gap-4">
+              <SectionTitle eyebrow="Bảng vàng" title="Thành tích học sinh" />
+              <Link href="/bang-vang" className="hidden shrink-0 text-sm font-semibold text-ink hover:text-gold sm:block">
+                Xem tất cả →
+              </Link>
+            </div>
+            <div className="mt-8 flex snap-x gap-4 overflow-x-auto pb-4">
+              {bangVang.map((item) => (
+                <BangVangItem key={item.id} item={item} />
+              ))}
+            </div>
+            <Link href="/bang-vang" className="mt-4 block text-sm font-semibold text-ink hover:text-gold sm:hidden">
               Xem tất cả →
             </Link>
           </div>
-          <div className="mt-8 flex snap-x gap-4 overflow-x-auto pb-4">
-            {bangVang.map((item) => (
-              <BangVangItem key={item.id} item={item} />
-            ))}
-          </div>
-          <Link href="/bang-vang" className="mt-4 block text-sm font-semibold text-ink hover:text-gold sm:hidden">
-            Xem tất cả →
-          </Link>
-        </div>
-      </Section>
+        </Section>
+      )}
 
       {/* DẢI TRA CỨU */}
       <Section className="text-center">
