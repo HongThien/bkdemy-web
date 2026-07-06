@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Section, Card, TodoContent } from "@/components/ui";
+import gioiThieu from "@/content/data/gioi-thieu.json";
 
 export const metadata: Metadata = {
   title: "Giới thiệu",
@@ -20,25 +21,24 @@ export default function GioiThieuPage() {
         <div>
           <h2 className="font-display text-2xl font-semibold text-ink">Câu chuyện của chúng tôi</h2>
           <p className="mt-3 text-sm leading-relaxed text-slate-soft">
-            <TodoContent>câu chuyện thành lập / lý do ra đời BKdemy</TodoContent>
+            {gioiThieu.cauChuyen || <TodoContent>câu chuyện thành lập / lý do ra đời BKdemy</TodoContent>}
           </p>
         </div>
 
         <div>
           <h2 className="font-display text-2xl font-semibold text-ink">Triết lý dạy học</h2>
           <p className="mt-3 text-sm leading-relaxed text-slate-soft">
-            <TodoContent>triết lý dạy học, diễn giải cho phụ huynh dễ hiểu</TodoContent>
+            {gioiThieu.trietLy || <TodoContent>triết lý dạy học, diễn giải cho phụ huynh dễ hiểu</TodoContent>}
           </p>
         </div>
 
         <div>
           <h2 className="font-display text-2xl font-semibold text-ink">Cam kết</h2>
           <div className="mt-4 grid gap-4 sm:grid-cols-3">
-            {[1, 2, 3].map((i) => (
-              <Card key={i}>
-                <p className="text-sm text-slate-soft">
-                  <TodoContent>{`cam kết ${i}`}</TodoContent>
-                </p>
+            {gioiThieu.camKet.map((c) => (
+              <Card key={c.tieuDe}>
+                <p className="font-semibold text-ink">{c.tieuDe}</p>
+                <p className="mt-2 text-sm text-slate-soft">{c.moTa}</p>
               </Card>
             ))}
           </div>
