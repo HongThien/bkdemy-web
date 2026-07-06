@@ -40,9 +40,18 @@ export function SectionTitle({
   );
 }
 
-export function Card({ children, className = "" }: { children: ReactNode; className?: string }) {
+export function Card({
+  children,
+  className = "",
+  id,
+}: {
+  children: ReactNode;
+  className?: string;
+  id?: string;
+}) {
   return (
     <div
+      id={id}
       className={clsx(
         "rounded-2xl border border-ink/10 bg-white p-6 shadow-sm transition-shadow hover:shadow-md",
         className

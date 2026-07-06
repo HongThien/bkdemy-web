@@ -1,0 +1,58 @@
+{
+  "_ghiChu": "Nội dung tĩnh trang /khoi-7 — rút từ BK-Brochure-2026-2027.pdf (SPEC-tuyen-sinh-khoi-7.md §5). GIỮ NGẮN — trang cuộn mobile, chi tiết sâu để trong PDF (nút cuối FAQ).",
+  "hero": {
+    "eyebrow": "Tuyển sinh Toán khối 7 · 2026–2027",
+    "title": "Đúng người — Đúng lớp — Đúng lộ trình",
+    "intro": "BKdemy phân lớp theo năng lực để mỗi con học đúng sức mình, tiến bộ vững chắc suốt năm học."
+  },
+  "heThong": [
+    {
+      "he": "C",
+      "ten": "Củng cố nền tảng",
+      "mucTieu": "7+",
+      "siSo": "4–7 hs",
+      "danhCho": "Cần củng cố lại nền tảng cơ bản, học chắc — chậm mà chắc."
+    },
+    {
+      "he": "B",
+      "ten": "Vững cơ bản",
+      "mucTieu": "8+",
+      "siSo": "5–10 hs",
+      "danhCho": "Nền tảng cơ bản đã ổn, cần luyện tập nhiều lần để thành thạo."
+    },
+    {
+      "he": "A",
+      "ten": "Nâng cao chọn lọc",
+      "mucTieu": "9+",
+      "siSo": "10–15 hs",
+      "danhCho": "Đã vững cơ bản, muốn bứt phá lên nâng cao có chọn lọc."
+    },
+    {
+      "he": "S",
+      "ten": "Nâng cao toàn diện",
+      "mucTieu": "9.5+",
+      "siSo": "10–15 hs",
+      "danhCho": "Nền tảng vững, sẵn sàng làm chủ 100% dạng nâng cao."
+    }
+  ],
+  "faq": [
+    {
+      "hoi": "Con được xếp vào Lớp C có phải là học kém không?",
+      "dap": "Không. Lớp C dành cho học sinh cần củng cố nền tảng chắc trước khi tăng tốc — không phải đánh giá năng lực kém."
+    },
+    {
+      "hoi": "Khi nào con có thể chuyển lớp?",
+      "dap": "BK xét dựa trên 3 yếu tố: điểm kiểm tra, quá trình học, đánh giá của giáo viên. Đủ điều kiện, con được học thử 2 tuần ở lớp cao hơn trước khi chuyển chính thức."
+    },
+    {
+      "hoi": "Học phí giữa 4 hệ có chênh lệch không?",
+      "dap": "Học phí buổi chính bằng nhau ở cả 4 hệ. Riêng Lớp C có thêm buổi bổ trợ định kỳ (75.000đ/buổi, tự động kèm khi đăng ký)."
+    },
+    {
+      "hoi": "Nếu con học không theo kịp lớp thì sao?",
+      "dap": "BK chủ động trao đổi với gia đình trước khi đề xuất chuyển lớp phù hợp hơn — không có quyết định đột ngột."
+    }
+  ],
+  "brochurePdf": "/brochure/BK-Brochure-2026-2027.pdf",
+  "brochureLabel": "Xem đầy đủ tài liệu Hệ thống phân lớp (PDF)"
+}

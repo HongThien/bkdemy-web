@@ -1,0 +1,50 @@
+[
+  {
+    "id": "mock-7s1",
+    "ten_lop": "7S1",
+    "he": "S",
+    "mo_ta": null,
+    "gia_buoi": 150000,
+    "gv_dung_lop": "(mẫu) GV phụ trách",
+    "gv_chat_luong": "(mẫu) GV chất lượng",
+    "lich": "T4 18:00–19:30 · CN 10:30–12:00",
+    "si_so_hien_tai": 12,
+    "si_so_max": 15
+  },
+  {
+    "id": "mock-7a1",
+    "ten_lop": "7A1",
+    "he": "A",
+    "mo_ta": "Lớp buổi tối, phù hợp học sinh học thêm ngoài giờ hành chính.",
+    "gia_buoi": 150000,
+    "gv_dung_lop": "(mẫu) GV phụ trách",
+    "gv_chat_luong": "(mẫu) GV chất lượng",
+    "lich": "T3 18:00–19:30 · T7 14:00–15:30",
+    "si_so_hien_tai": 8,
+    "si_so_max": 15
+  },
+  {
+    "id": "mock-7b1",
+    "ten_lop": "7B1",
+    "he": "B",
+    "mo_ta": null,
+    "gia_buoi": 150000,
+    "gv_dung_lop": "(mẫu) GV phụ trách",
+    "gv_chat_luong": "(mẫu) GV chất lượng",
+    "lich": "T5 18:00–19:30 · CN 8:30–10:00",
+    "si_so_hien_tai": 10,
+    "si_so_max": 10
+  },
+  {
+    "id": "mock-7c1",
+    "ten_lop": "7C1",
+    "he": "C",
+    "mo_ta": "Lớp nhỏ, giáo viên kèm sát từng học sinh.",
+    "gia_buoi": 150000,
+    "gv_dung_lop": "(mẫu) GV phụ trách",
+    "gv_chat_luong": "(mẫu) GV chất lượng",
+    "lich": "T2 18:00–19:30 · T6 18:00–19:30",
+    "si_so_hien_tai": 5,
+    "si_so_max": 7
+  }
+]
