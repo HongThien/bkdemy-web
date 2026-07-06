@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Section, Card, TodoContent } from "@/components/ui";
+import { Section, Card, Button, TodoContent } from "@/components/ui";
 import gioiThieu from "@/content/data/gioi-thieu.json";
 
 export const metadata: Metadata = {
@@ -30,6 +30,11 @@ export default function GioiThieuPage() {
           <p className="mt-3 text-sm leading-relaxed text-slate-soft">
             {gioiThieu.trietLy || <TodoContent>triết lý dạy học, diễn giải cho phụ huynh dễ hiểu</TodoContent>}
           </p>
+          {gioiThieu.brochurePdf && (
+            <Button href={gioiThieu.brochurePdf} variant="secondary" className="mt-4" target="_blank">
+              {gioiThieu.brochureLabel}
+            </Button>
+          )}
         </div>
 
         <div>
