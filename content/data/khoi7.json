@@ -9,7 +9,7 @@
     {
       "he": "C",
       "ten": "Củng cố nền tảng",
-      "mucTieu": "7+",
+      "mucTieu": "8",
       "siSo": "tối đa 10 hs",
       "danhCho": "Cần củng cố lại nền tảng cơ bản, học chắc — chậm mà chắc."
     },
@@ -37,20 +37,12 @@
   ],
   "faq": [
     {
-      "hoi": "Con được xếp vào Lớp C có phải là học kém không?",
-      "dap": "Không. Lớp C dành cho học sinh cần củng cố nền tảng chắc trước khi tăng tốc — không phải đánh giá năng lực kém."
+      "hoi": "Sau này con tiến bộ có được lên lớp trên không?",
+      "dap": "BK có các kỳ thi sát hạch định kỳ. Dựa trên kết quả kỳ thi và tình hình học tập thực tế, trung tâm sẽ chủ động đề xuất với phụ huynh khi con đủ điều kiện chuyển lớp."
     },
     {
-      "hoi": "Khi nào con có thể chuyển lớp?",
-      "dap": "BK xét dựa trên 3 yếu tố: điểm kiểm tra, quá trình học, đánh giá của giáo viên. Đủ điều kiện, con được học thử 2 tuần ở lớp cao hơn trước khi chuyển chính thức."
-    },
-    {
-      "hoi": "Học phí giữa 4 hệ có chênh lệch không?",
-      "dap": "Học phí buổi chính bằng nhau ở cả 4 hệ. Riêng Lớp C có thêm buổi bổ trợ định kỳ (75.000đ/buổi, tự động kèm khi đăng ký)."
-    },
-    {
-      "hoi": "Nếu con học không theo kịp lớp thì sao?",
-      "dap": "BK chủ động trao đổi với gia đình trước khi đề xuất chuyển lớp phù hợp hơn — không có quyết định đột ngột."
+      "hoi": "Nếu con không theo kịp lớp thì sao?",
+      "dap": "BK có tiến hành report tình hình học tập theo từng buổi. Do đó khi con có hiện tượng đuối hơn so với các bạn, trung tâm sẽ trao đổi với phụ huynh và có phương án bổ trợ cho con. Các hoạt động bổ trợ ở BK đa số đều là miễn phí."
     }
   ],
   "brochurePdf": "/brochure/BK-Brochure-2026-2027.pdf",

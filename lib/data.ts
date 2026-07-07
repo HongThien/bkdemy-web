@@ -19,6 +19,7 @@ export type LopTuyenSinh = {
   mo_ta: string | null;
   gia_buoi: number;
   gv_dung_lop: string | null;
+  gv_dung_lop_anh: string | null;
   gv_chat_luong: string | null;
   lich: string | null;
   si_so_hien_tai: number;
@@ -68,8 +69,8 @@ export async function getLopKhoi7(): Promise<LopTuyenSinh[]> {
   }
   const { data, error } = await supabasePh
     .from("v_lop_tuyen_sinh")
-    .select("id, ten_lop, he, mo_ta, gia_buoi, gv_dung_lop, gv_chat_luong, lich, si_so_hien_tai, si_so_max")
-    .eq("khoi", 7)
+    .select("id, ten_lop, he, mo_ta, gia_buoi, gv_dung_lop, gv_dung_lop_anh, gv_chat_luong, lich, si_so_hien_tai, si_so_max")
+    .eq("khoi", "7")
     .order("ten_lop", { ascending: true });
   if (error) {
     console.error("getLopKhoi7 error", error.message);
