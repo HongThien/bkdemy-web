@@ -60,6 +60,16 @@ export async function getKhaiGiang(): Promise<KhaiGiang[]> {
   return data ?? [];
 }
 
+// v_lop_tuyen_sinh (migration 0002) string_agg lịch học group theo lop_id, không
+// dedupe theo (thứ, giờ) — vì tkb_view lưu 1 dòng/buổi học thực tế (theo ngày), không
+// phải 1 dòng/khung giờ cố định trong tuần, nên cùng 1 khung giờ lặp lại theo số buổi
+// đã sync. Dedupe ở đây (không đụng schema) cho tới khi có migration sửa tận view.
+function dedupeLich(lich: string | null): string | null {
+  if (!lich) return lich;
+  const parts = lich.split(" · ").filter(Boolean);
+  return Array.from(new Set(parts)).join(" · ");
+}
+
 // Trang /khoi-7 (SPEC-tuyen-sinh-khoi-7.md §2/§3) — đọc view `v_lop_tuyen_sinh`
 // trong bkdemy-ph (CHƯA tồn tại lúc viết hàm này). Mock cho tới khi có view thật —
 // tự chuyển sang live ngay khi credential + view sẵn sàng, không cần sửa code.
@@ -76,5 +86,5 @@ export async function getLopKhoi7(): Promise<LopTuyenSinh[]> {
     console.error("getLopKhoi7 error", error.message);
     return [];
   }
-  return data ?? [];
+  return (data ?? []).map((lop) => ({ ...lop, lich: dedupeLich(lop.lich) }));
 }
