@@ -11,6 +11,14 @@ export const metadata: Metadata = {
   description: khoi7.hero.intro,
 };
 
+// Tông "đường cong tiến bộ" C < B < A < S — cùng hệ navy/gold/paper, không màu rời rạc (SPEC §2.2).
+const HE_STYLE: Record<string, string> = {
+  C: "!bg-paper-dim !border-ink/10",
+  B: "!bg-ink/[0.06] !border-ink/20",
+  A: "!bg-gold/10 !border-gold/30",
+  S: "!bg-gold/15 !border-ink !border-2",
+};
+
 export default async function Khoi7Page() {
   const lopList = await getLopKhoi7();
 
@@ -38,7 +46,11 @@ export default async function Khoi7Page() {
         </p>
         <div className="mt-8 grid gap-4 grid-cols-2 lg:grid-cols-4">
           {khoi7.heThong.map((h) => (
-            <Card key={h.he} id={`he-${h.he.toLowerCase()}`} className="text-center scroll-mt-24">
+            <Card
+              key={h.he}
+              id={`he-${h.he.toLowerCase()}`}
+              className={`text-center scroll-mt-24 ${HE_STYLE[h.he] ?? ""}`}
+            >
               <p className="font-display text-3xl font-semibold text-ink">{h.he}</p>
               <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-gold">{h.ten}</p>
               <p className="mt-3 text-sm text-slate-soft">

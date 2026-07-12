@@ -20,7 +20,7 @@ export function LopKhoi7Carousel({ lopList }: { lopList: LopTuyenSinh[] }) {
   function scrollBy(dir: 1 | -1) {
     const el = trackRef.current;
     if (!el) return;
-    const card = el.querySelector("[data-lop-card]") as HTMLElement | null;
+    const card = el.firstElementChild as HTMLElement | null;
     const step = card ? card.offsetWidth + 20 : 340;
     el.scrollBy({ left: dir * step, behavior: "smooth" });
   }
@@ -34,11 +34,7 @@ export function LopKhoi7Carousel({ lopList }: { lopList: LopTuyenSinh[] }) {
         {lopList.map((lop) => {
           const trangThai = trangThaiSiSo(lop);
           return (
-            <Card
-              key={lop.id}
-              data-lop-card
-              className="w-[85vw] max-w-[360px] shrink-0 snap-start sm:w-[360px]"
-            >
+            <Card key={lop.id} className="w-[82%] shrink-0 snap-start sm:w-[380px]">
               <div className="flex items-start justify-between gap-3">
                 <div>
                   <p className="font-display text-xl font-semibold text-ink">{lop.ten_lop}</p>

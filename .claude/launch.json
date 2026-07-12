@@ -6,6 +6,13 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
       "port": 3000
+    },
+    {
+      "name": "bkdemy-web-dev-alt",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["next", "dev", "-p", "3011"],
+      "port": 3011,
+      "autoPort": false
     }
   ]
 }
