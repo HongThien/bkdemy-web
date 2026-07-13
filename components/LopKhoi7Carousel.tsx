@@ -45,29 +45,40 @@ export function LopKhoi7Carousel({ lopList }: { lopList: LopTuyenSinh[] }) {
                     Hệ {lop.he}
                   </Link>
                 </div>
-                <p className="shrink-0 font-semibold text-ink">{lop.gia_buoi.toLocaleString("vi-VN")}đ/buổi</p>
-              </div>
 
-              {(lop.gv_dung_lop || lop.gv_dung_lop_anh) && (
-                <div className="mt-4 flex items-center gap-3 border-t border-ink/10 pt-4">
-                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full bg-paper-dim">
-                    {lop.gv_dung_lop_anh && (
-                      <Image src={lop.gv_dung_lop_anh} alt={lop.gv_dung_lop ?? "GV"} fill sizes="48px" className="object-cover" />
-                    )}
+                {(lop.gv_dung_lop || lop.gv_dung_lop_anh) && (
+                  <div className="flex shrink-0 items-center gap-2">
+                    <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full bg-paper-dim">
+                      {lop.gv_dung_lop_anh && (
+                        <Image src={lop.gv_dung_lop_anh} alt={lop.gv_dung_lop ?? "GV"} fill sizes="40px" className="object-cover" />
+                      )}
+                    </div>
+                    <div>
+                      <p className="text-xs text-slate-soft">Giáo viên</p>
+                      <p className="text-sm font-semibold text-ink">{lop.gv_dung_lop ?? "—"}</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-xs text-slate-soft">GV phụ trách chính</p>
-                    <p className="text-sm font-semibold text-ink">{lop.gv_dung_lop ?? "—"}</p>
-                  </div>
-                </div>
-              )}
+                )}
+              </div>
 
               {lop.mo_ta && <p className="mt-4 text-sm text-slate-soft">{lop.mo_ta}</p>}
 
+              <p className="mt-4 text-sm text-slate-soft">
+                <span className="font-semibold text-ink">Học phí:</span>{" "}
+                {lop.gia_buoi.toLocaleString("vi-VN")}đ/buổi
+              </p>
+
               {lop.lich && (
-                <p className="mt-4 text-sm text-slate-soft">
-                  <span className="font-semibold text-ink">Lịch học:</span> {lop.lich}
-                </p>
+                <div className="mt-2 text-sm text-slate-soft">
+                  <span className="font-semibold text-ink">Lịch học:</span>
+                  <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1">
+                    {lop.lich.split(" · ").map((khungGio) => (
+                      <span key={khungGio} className="whitespace-nowrap">
+                        {khungGio}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               )}
 
               <div className="mt-4">

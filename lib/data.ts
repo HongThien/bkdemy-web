@@ -70,12 +70,22 @@ function dedupeLich(lich: string | null): string | null {
   return Array.from(new Set(parts)).join(" · ");
 }
 
+// Thứ tự hiển thị theo bậc (Thùy chốt): S > A > B > C, trong mỗi hệ xếp theo số lớp tăng dần.
+const HE_ORDER: Record<string, number> = { S: 0, A: 1, B: 2, C: 3 };
+function sapXepLopKhoi7(list: LopTuyenSinh[]): LopTuyenSinh[] {
+  return [...list].sort((a, b) => {
+    const heDiff = (HE_ORDER[a.he] ?? 99) - (HE_ORDER[b.he] ?? 99);
+    if (heDiff !== 0) return heDiff;
+    return a.ten_lop.localeCompare(b.ten_lop, "vi", { numeric: true });
+  });
+}
+
 // Trang /khoi-7 (SPEC-tuyen-sinh-khoi-7.md §2/§3) — đọc view `v_lop_tuyen_sinh`
 // trong bkdemy-ph (CHƯA tồn tại lúc viết hàm này). Mock cho tới khi có view thật —
 // tự chuyển sang live ngay khi credential + view sẵn sàng, không cần sửa code.
 export async function getLopKhoi7(): Promise<LopTuyenSinh[]> {
   if (useMock || !supabasePh) {
-    return lopKhoi7Mock as LopTuyenSinh[];
+    return sapXepLopKhoi7(lopKhoi7Mock as LopTuyenSinh[]);
   }
   const { data, error } = await supabasePh
     .from("v_lop_tuyen_sinh")
@@ -86,5 +96,5 @@ export async function getLopKhoi7(): Promise<LopTuyenSinh[]> {
     console.error("getLopKhoi7 error", error.message);
     return [];
   }
-  return (data ?? []).map((lop) => ({ ...lop, lich: dedupeLich(lop.lich) }));
+  return sapXepLopKhoi7((data ?? []).map((lop) => ({ ...lop, lich: dedupeLich(lop.lich) })));
 }
