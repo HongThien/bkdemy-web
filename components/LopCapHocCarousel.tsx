@@ -12,6 +12,8 @@ export function LopCapHocCarousel({
   lopList: LopTuyenSinh[];
   khoiList: string[];
 }) {
+  const coNhieuKhoi = khoiList.length > 1;
+
   const khoiCoLop = useMemo(() => {
     const set = new Set(lopList.map((lop) => lop.khoi));
     return khoiList.filter((k) => set.has(k));
@@ -32,47 +34,60 @@ export function LopCapHocCarousel({
     el.scrollBy({ left: dir * step, behavior: "smooth" });
   }
 
-  const lopTheoKhoi = lopList.filter((lop) => lop.khoi === khoiChon);
+  // Route riêng 1 khối (/khoi-3, /khoi-7...) — không cần lọc, lopList đã đúng đúng khối đó rồi.
+  const lopTheoKhoi = coNhieuKhoi ? lopList.filter((lop) => lop.khoi === khoiChon) : lopList;
+  const khoiDangXem = coNhieuKhoi ? khoiChon : khoiList[0];
 
   return (
     <div>
-      <div className="flex flex-wrap justify-center gap-2">
-        {khoiList.map((k) => {
-          const coLop = khoiCoLop.includes(k);
-          const dangChon = k === khoiChon;
-          return (
-            <button
-              key={k}
-              type="button"
-              disabled={!coLop}
-              onClick={() => setKhoiChon(k)}
-              className={clsx(
-                "rounded-full px-4 py-1.5 text-sm font-semibold transition-colors",
-                dangChon
-                  ? "bg-ink text-white"
-                  : coLop
-                    ? "border border-ink/20 text-ink hover:bg-ink/5"
-                    : "cursor-not-allowed border border-dashed border-ink/15 text-slate-soft/50"
-              )}
-            >
-              Khối {k}
-            </button>
-          );
-        })}
-      </div>
+      {coNhieuKhoi && (
+        <div className="flex flex-wrap justify-center gap-2">
+          {khoiList.map((k) => {
+            const coLop = khoiCoLop.includes(k);
+            const dangChon = k === khoiChon;
+            return (
+              <button
+                key={k}
+                type="button"
+                disabled={!coLop}
+                onClick={() => setKhoiChon(k)}
+                className={clsx(
+                  "rounded-full px-4 py-1.5 text-sm font-semibold transition-colors",
+                  dangChon
+                    ? "bg-ink text-white"
+                    : coLop
+                      ? "border border-ink/20 text-ink hover:bg-ink/5"
+                      : "cursor-not-allowed border border-dashed border-ink/15 text-slate-soft/50"
+                )}
+              >
+                Khối {k}
+              </button>
+            );
+          })}
+        </div>
+      )}
 
       {lopTheoKhoi.length === 0 ? (
         <p className="mx-auto mt-6 max-w-md text-center text-sm text-slate-soft">
-          Khối {khoiChon} đang mở lớp mới —{" "}
+          Khối {khoiDangXem} đang mở lớp mới —{" "}
           <a href="#dang-ky" className="font-semibold text-ink hover:text-gold">
-            nhắn Zalo bên dưới
+            để lại thông tin bên dưới
           </a>{" "}
           để BK xếp lịch test.
         </p>
       ) : (
         <>
-          <p className="mt-4 text-center text-sm text-slate-soft">
-            Đang có <span className="font-semibold text-ink">{lopTheoKhoi.length} lớp khối {khoiChon}</span>.
+          <p className={clsx("text-center text-sm text-slate-soft", coNhieuKhoi && "mt-4")}>
+            {coNhieuKhoi ? (
+              <>
+                Đang có <span className="font-semibold text-ink">{lopTheoKhoi.length} lớp khối {khoiChon}</span>.
+              </>
+            ) : (
+              <>
+                Trung tâm hiện tại đang có{" "}
+                <span className="font-semibold text-ink">{lopTheoKhoi.length} lớp {khoiDangXem}</span>.
+              </>
+            )}
           </p>
           <div className="relative mt-4">
             <div

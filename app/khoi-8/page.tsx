@@ -3,10 +3,10 @@ import thcs from "@/content/data/thcs.json";
 import { CapHocLanding } from "@/components/CapHocLanding";
 
 export const metadata: Metadata = {
-  title: "Tuyển sinh Toán khối 7",
+  title: "Tuyển sinh Toán khối 8",
   description: thcs.hero.intro,
 };
 
-export default function Khoi7Page() {
-  return <CapHocLanding khoiList={["7"]} content={thcs} />;
+export default function Khoi8Page() {
+  return <CapHocLanding khoiList={["8"]} content={thcs} />;
 }

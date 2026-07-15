@@ -19,18 +19,21 @@ export type CapHocContent = {
   brochureLabel: string;
 };
 
-// Template dùng chung cho /tieu-hoc, /thcs, /thpt (và /khoi-7 gốc) — cùng 1 layout,
-// khác nhau ở khoiList (lọc lớp) + content (nội dung tĩnh riêng từng cấp).
+// Template dùng chung cho mọi trang tuyển sinh: /khoi-3..12 (1 khối/link) VÀ
+// /tieu-hoc, /thcs, /thpt (nhiều khối gộp, có picker). Route riêng từng khối để share
+// link theo đúng lớp con học; content (CBAS/FAQ) share theo nhóm cấp (3 file JSON) —
+// sửa 1 file áp dụng cho mọi khối cùng cấp (Thùy chốt).
 export async function CapHocLanding({
   khoiList,
   tenCap,
   content,
 }: {
   khoiList: string[];
-  tenCap: string;
+  tenCap?: string;
   content: CapHocContent;
 }) {
   const lopList = await getLopTuyenSinh(khoiList);
+  const tieuDeLop = khoiList.length === 1 ? `Lớp khối ${khoiList[0]} đang mở` : `Lớp ${tenCap ?? ""} đang mở`;
 
   return (
     <>
@@ -77,7 +80,7 @@ export async function CapHocLanding({
       <Section className="bg-paper-dim/60 !max-w-none">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-center font-display text-2xl font-semibold text-ink sm:text-3xl">
-            Lớp {tenCap} đang mở
+            {tieuDeLop}
           </h2>
           <div className="mt-6">
             <LopCapHocCarousel lopList={lopList} khoiList={khoiList} />
