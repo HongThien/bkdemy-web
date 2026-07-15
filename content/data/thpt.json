@@ -1,0 +1,54 @@
+{
+  "_ghiChu": "TODO(content): clone tạm từ khoi7.json để có trang chạy được ngay — mucTieu/siSo/danhCho/FAQ đang là số của khối 7, CẦN Thùy rà lại có hợp với THPT (10-11-12) không rồi sửa trực tiếp file này.",
+  "hero": {
+    "eyebrow": "Tuyển sinh Toán THPT · 2026–2027",
+    "title": "Đúng người — Đúng lớp — Đúng lộ trình",
+    "intro": "BKdemy phân lớp theo năng lực để mỗi con học đúng sức mình, tiến bộ vững chắc suốt năm học."
+  },
+  "heThong": [
+    {
+      "he": "C",
+      "ten": "Củng cố nền tảng",
+      "mucTieu": "8",
+      "siSo": "tối đa 10 hs",
+      "danhCho": "Cần củng cố lại nền tảng cơ bản, học chắc — chậm mà chắc."
+    },
+    {
+      "he": "B",
+      "ten": "Vững cơ bản",
+      "mucTieu": "8+",
+      "siSo": "tối đa 12 hs",
+      "danhCho": "Nền tảng cơ bản đã ổn, cần luyện tập nhiều lần để thành thạo."
+    },
+    {
+      "he": "A",
+      "ten": "Nâng cao chọn lọc",
+      "mucTieu": "9+",
+      "siSo": "tối đa 15 hs",
+      "danhCho": "Đã vững cơ bản, muốn bứt phá lên nâng cao có chọn lọc."
+    },
+    {
+      "he": "S",
+      "ten": "Nâng cao toàn diện",
+      "mucTieu": "9.5+",
+      "siSo": "tối đa 15 hs",
+      "danhCho": "Nền tảng vững, sẵn sàng làm chủ 100% dạng nâng cao."
+    }
+  ],
+  "faq": [
+    {
+      "hoi": "Con có được chuyển lớp chuyển hệ không?",
+      "dap": "Ở BK, các con sẽ có các kì thi sát hạch định kì để đánh giá lại năng lực. Khi con đủ điều kiện chuyển lớp, con sẽ được học thử lớp mới và sẽ chuyển lớp nếu con thấy phù hợp."
+    },
+    {
+      "hoi": "Ở trung tâm có báo cáo tình hình học tập không?",
+      "dap": "Ở BK, sau mỗi buổi, trung tâm sẽ cập nhật tình hình của con. Mỗi tháng sau bài Test tháng, trung tâm sẽ trao đổi với bố mẹ. Ngoài ra, mỗi khi con gặp vấn đề, trung tâm cũng sẽ chủ động liên hệ bố mẹ để tìm giải pháp xử lý."
+    },
+    {
+      "hoi": "Con đang hơi kém thì trung tâm sẽ hỗ trợ con như thế nào?",
+      "dap": "Đầu tiên, con sẽ cần Test đầu vào để đánh giá mức năng lực hiện tại và xếp lớp phù hợp. Trong quá trình học tập, khi con gặp vấn đề khiến con không theo kịp lớp, trung tâm sẽ kích hoạt cơ chế Bổ trợ để hỗ trợ con. Ngoài ra, trước mỗi kì thi quan trọng, trung tâm đều tổ chức \"Chiến dịch\" để ôn tập cho các con."
+    }
+  ],
+  "brochurePdf": "/brochure/BK-Brochure-2026-2027.pdf",
+  "brochureLabel": "Xem đầy đủ tài liệu Hệ thống phân lớp (PDF)"
+}

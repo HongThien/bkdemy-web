@@ -2,6 +2,7 @@
   {
     "id": "mock-7s1",
     "ten_lop": "7S1",
+    "khoi": "7",
     "he": "S",
     "mo_ta": null,
     "gia_buoi": 150000,
@@ -15,6 +16,7 @@
   {
     "id": "mock-7a1",
     "ten_lop": "7A1",
+    "khoi": "7",
     "he": "A",
     "mo_ta": "Lớp buổi tối, phù hợp học sinh học thêm ngoài giờ hành chính.",
     "gia_buoi": 150000,
@@ -28,6 +30,7 @@
   {
     "id": "mock-7b1",
     "ten_lop": "7B1",
+    "khoi": "7",
     "he": "B",
     "mo_ta": null,
     "gia_buoi": 150000,
@@ -41,6 +44,7 @@
   {
     "id": "mock-7c1",
     "ten_lop": "7C1",
+    "khoi": "7",
     "he": "C",
     "mo_ta": "Lớp nhỏ, giáo viên kèm sát từng học sinh.",
     "gia_buoi": 150000,
@@ -50,5 +54,61 @@
     "lich": "T2 18:00–19:30 · T6 18:00–19:30",
     "si_so_hien_tai": 5,
     "si_so_max": 7
+  },
+  {
+    "id": "mock-3a1",
+    "ten_lop": "3A1",
+    "khoi": "3",
+    "he": "A",
+    "mo_ta": null,
+    "gia_buoi": 150000,
+    "gv_dung_lop": "(mẫu) GV phụ trách",
+    "gv_dung_lop_anh": null,
+    "gv_chat_luong": null,
+    "lich": "T3 17:00–18:30 · T7 9:00–10:30",
+    "si_so_hien_tai": 6,
+    "si_so_max": 15
+  },
+  {
+    "id": "mock-5s1",
+    "ten_lop": "5S1",
+    "khoi": "5",
+    "he": "S",
+    "mo_ta": null,
+    "gia_buoi": 150000,
+    "gv_dung_lop": "(mẫu) GV phụ trách",
+    "gv_dung_lop_anh": null,
+    "gv_chat_luong": null,
+    "lich": "T2 17:00–18:30 · T5 17:00–18:30",
+    "si_so_hien_tai": 11,
+    "si_so_max": 15
+  },
+  {
+    "id": "mock-9a1",
+    "ten_lop": "9A1",
+    "khoi": "9",
+    "he": "A",
+    "mo_ta": "Lớp ôn thi vào 10.",
+    "gia_buoi": 150000,
+    "gv_dung_lop": "(mẫu) GV phụ trách",
+    "gv_dung_lop_anh": null,
+    "gv_chat_luong": null,
+    "lich": "T4 19:30–21:00 · CN 14:00–15:30",
+    "si_so_hien_tai": 14,
+    "si_so_max": 15
+  },
+  {
+    "id": "mock-11s1",
+    "ten_lop": "11S1",
+    "khoi": "11",
+    "he": "S",
+    "mo_ta": null,
+    "gia_buoi": 150000,
+    "gv_dung_lop": "(mẫu) GV phụ trách",
+    "gv_dung_lop_anh": null,
+    "gv_chat_luong": null,
+    "lich": "T3 19:30–21:00 · T7 19:30–21:00",
+    "si_so_hien_tai": 9,
+    "si_so_max": 15
   }
 ]
