@@ -82,7 +82,11 @@ export function LopCard({ lop, className = "" }: { lop: LopTuyenSinh; className?
           vì đây là chỗ Thùy tự viết tay, cần thấy rõ "còn thiếu" để biết mà điền. */}
       <div className="mt-4 space-y-2.5">
         <InfoBox label="Mô tả">
-          {lop.mo_ta ? <p>{lop.mo_ta}</p> : <p className="italic text-slate-soft/60">Chưa có thông tin</p>}
+          {lop.mo_ta ? (
+            <p className="whitespace-pre-line">{lop.mo_ta}</p>
+          ) : (
+            <p className="italic text-slate-soft/60">Chưa có thông tin</p>
+          )}
         </InfoBox>
 
         {khungGioList.length > 0 && (
