@@ -12,6 +12,27 @@ function trangThaiSiSo(lop: LopTuyenSinh) {
   return { text: "Đang tuyển sinh", phanTram, mau: "bg-sky" };
 }
 
+const TEN_THU: Record<string, string> = {
+  T2: "Thứ 2",
+  T3: "Thứ 3",
+  T4: "Thứ 4",
+  T5: "Thứ 5",
+  T6: "Thứ 6",
+  T7: "Thứ 7",
+  CN: "Chủ Nhật",
+};
+
+// lop.lich đến dạng "T3 18:00–19:30 · T6 18:00–19:30" (xem lib/data.ts) — parse ra
+// từng khung giờ để hiện tên thứ đầy đủ + tính số phút/buổi cho ô Học phí.
+function parseKhungGio(raw: string): { text: string; phut: number | null } {
+  const match = raw.match(/^(\S+)\s+(\d{1,2}):(\d{2})[–-](\d{1,2}):(\d{2})$/);
+  if (!match) return { text: raw, phut: null };
+  const [, thuMa, h1, m1, h2, m2] = match;
+  const tenThu = TEN_THU[thuMa] ?? thuMa;
+  const phut = (Number(h2) * 60 + Number(m2)) - (Number(h1) * 60 + Number(m1));
+  return { text: `${tenThu}, ${h1}:${m1} - ${h2}:${m2}`, phut };
+}
+
 // Mỗi mục thông tin 1 khung riêng, có biên giới rõ — tránh cảm giác chữ dồn chung 1 khối (Thùy chốt).
 function InfoBox({ label, children }: { label: string; children: ReactNode }) {
   return (
@@ -24,10 +45,12 @@ function InfoBox({ label, children }: { label: string; children: ReactNode }) {
 
 export function LopCard({ lop, className = "" }: { lop: LopTuyenSinh; className?: string }) {
   const trangThai = trangThaiSiSo(lop);
+  const khungGioList = lop.lich ? lop.lich.split(" · ").map(parseKhungGio) : [];
+  const phutMoiBuoi = khungGioList.find((k) => k.phut != null)?.phut ?? null;
 
   return (
     <Card className={className}>
-      {/* Định danh lớp — không boxed, đứng ngoài 4 khung thông tin bên dưới */}
+      {/* Định danh lớp — không boxed, đứng ngoài các khung thông tin bên dưới */}
       <div className="flex items-start justify-between gap-3">
         <div>
           <p className="font-display text-xl font-semibold text-ink">{lop.ten_lop}</p>
@@ -54,7 +77,8 @@ export function LopCard({ lop, className = "" }: { lop: LopTuyenSinh; className?
         )}
       </div>
 
-      {/* 4 khung thông tin riêng biệt: mô tả / lịch học / học phí / trạng thái lớp */}
+      {/* Khung thông tin riêng biệt: mô tả / lịch học / học phí / trạng thái lớp.
+          Thiếu mô tả thì bỏ hẳn khung đó, không hiện khung rỗng (đúng quy ước chung của site). */}
       <div className="mt-4 space-y-2.5">
         {lop.mo_ta && (
           <InfoBox label="Mô tả">
@@ -62,12 +86,13 @@ export function LopCard({ lop, className = "" }: { lop: LopTuyenSinh; className?
           </InfoBox>
         )}
 
-        {lop.lich && (
+        {khungGioList.length > 0 && (
           <InfoBox label="Lịch học">
-            <div className="flex flex-wrap gap-x-3 gap-y-1">
-              {lop.lich.split(" · ").map((khungGio) => (
-                <span key={khungGio} className="whitespace-nowrap font-medium text-ink">
-                  {khungGio}
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5">
+              {khungGioList.map((k, i) => (
+                <span key={k.text} className="flex items-center gap-x-2">
+                  {i > 0 && <span className="text-ink/30">-</span>}
+                  <span className="whitespace-nowrap font-medium text-ink">{k.text}</span>
                 </span>
               ))}
             </div>
@@ -75,7 +100,9 @@ export function LopCard({ lop, className = "" }: { lop: LopTuyenSinh; className?
         )}
 
         <InfoBox label="Học phí">
-          <p className="font-semibold text-ink">{lop.gia_buoi.toLocaleString("vi-VN")}đ/buổi</p>
+          <p className="font-semibold text-ink">
+            {lop.gia_buoi.toLocaleString("vi-VN")}đ/buổi{phutMoiBuoi != null && `/${phutMoiBuoi} phút`}
+          </p>
         </InfoBox>
 
         <InfoBox label="Trạng thái lớp">
