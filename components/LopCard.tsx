@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { LopTuyenSinh } from "@/lib/data";
@@ -11,11 +12,22 @@ function trangThaiSiSo(lop: LopTuyenSinh) {
   return { text: "Đang tuyển sinh", phanTram, mau: "bg-sky" };
 }
 
+// Mỗi mục thông tin 1 khung riêng, có biên giới rõ — tránh cảm giác chữ dồn chung 1 khối (Thùy chốt).
+function InfoBox({ label, children }: { label: string; children: ReactNode }) {
+  return (
+    <div className="rounded-xl border border-ink/10 bg-paper-dim/50 p-3">
+      <p className="text-xs font-semibold uppercase tracking-wide text-gold">{label}</p>
+      <div className="mt-1.5 text-sm text-slate-soft">{children}</div>
+    </div>
+  );
+}
+
 export function LopCard({ lop, className = "" }: { lop: LopTuyenSinh; className?: string }) {
   const trangThai = trangThaiSiSo(lop);
 
   return (
     <Card className={className}>
+      {/* Định danh lớp — không boxed, đứng ngoài 4 khung thông tin bên dưới */}
       <div className="flex items-start justify-between gap-3">
         <div>
           <p className="font-display text-xl font-semibold text-ink">{lop.ten_lop}</p>
@@ -42,32 +54,38 @@ export function LopCard({ lop, className = "" }: { lop: LopTuyenSinh; className?
         )}
       </div>
 
-      {lop.mo_ta && <p className="mt-4 text-sm text-slate-soft">{lop.mo_ta}</p>}
+      {/* 4 khung thông tin riêng biệt: mô tả / lịch học / học phí / trạng thái lớp */}
+      <div className="mt-4 space-y-2.5">
+        {lop.mo_ta && (
+          <InfoBox label="Mô tả">
+            <p>{lop.mo_ta}</p>
+          </InfoBox>
+        )}
 
-      <p className="mt-4 text-sm text-slate-soft">
-        <span className="font-semibold text-ink">Học phí:</span> {lop.gia_buoi.toLocaleString("vi-VN")}đ/buổi
-      </p>
+        {lop.lich && (
+          <InfoBox label="Lịch học">
+            <div className="flex flex-wrap gap-x-3 gap-y-1">
+              {lop.lich.split(" · ").map((khungGio) => (
+                <span key={khungGio} className="whitespace-nowrap font-medium text-ink">
+                  {khungGio}
+                </span>
+              ))}
+            </div>
+          </InfoBox>
+        )}
 
-      {lop.lich && (
-        <div className="mt-2 text-sm text-slate-soft">
-          <span className="font-semibold text-ink">Lịch học:</span>
-          <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1">
-            {lop.lich.split(" · ").map((khungGio) => (
-              <span key={khungGio} className="whitespace-nowrap">
-                {khungGio}
-              </span>
-            ))}
+        <InfoBox label="Học phí">
+          <p className="font-semibold text-ink">{lop.gia_buoi.toLocaleString("vi-VN")}đ/buổi</p>
+        </InfoBox>
+
+        <InfoBox label="Trạng thái lớp">
+          <div className="h-2 w-full overflow-hidden rounded-full bg-ink/10">
+            <div className={`h-full rounded-full ${trangThai.mau}`} style={{ width: `${trangThai.phanTram}%` }} />
           </div>
-        </div>
-      )}
-
-      <div className="mt-4">
-        <div className="h-2 w-full overflow-hidden rounded-full bg-paper-dim">
-          <div className={`h-full rounded-full ${trangThai.mau}`} style={{ width: `${trangThai.phanTram}%` }} />
-        </div>
-        <p className="mt-1.5 text-xs text-slate-soft">
-          {lop.si_so_hien_tai}/{lop.si_so_max} học sinh · <span className="font-semibold text-ink">{trangThai.text}</span>
-        </p>
+          <p className="mt-1.5 text-xs">
+            {lop.si_so_hien_tai}/{lop.si_so_max} học sinh · <span className="font-semibold text-ink">{trangThai.text}</span>
+          </p>
+        </InfoBox>
       </div>
     </Card>
   );
