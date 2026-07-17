@@ -78,13 +78,12 @@ export function LopCard({ lop, className = "" }: { lop: LopTuyenSinh; className?
       </div>
 
       {/* Khung thông tin riêng biệt: mô tả / lịch học / học phí / trạng thái lớp.
-          Thiếu mô tả thì bỏ hẳn khung đó, không hiện khung rỗng (đúng quy ước chung của site). */}
+          Mô tả LUÔN hiện khung (kể cả chưa có nội dung) — khác các mục còn lại,
+          vì đây là chỗ Thùy tự viết tay, cần thấy rõ "còn thiếu" để biết mà điền. */}
       <div className="mt-4 space-y-2.5">
-        {lop.mo_ta && (
-          <InfoBox label="Mô tả">
-            <p>{lop.mo_ta}</p>
-          </InfoBox>
-        )}
+        <InfoBox label="Mô tả">
+          {lop.mo_ta ? <p>{lop.mo_ta}</p> : <p className="italic text-slate-soft/60">Chưa có thông tin</p>}
+        </InfoBox>
 
         {khungGioList.length > 0 && (
           <InfoBox label="Lịch học">
