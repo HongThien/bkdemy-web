@@ -2,6 +2,7 @@ import { getLopTuyenSinh } from "@/lib/data";
 import { SITE } from "@/lib/site-config";
 import { Section, Card, Button } from "@/components/ui";
 import { LopCapHocCarousel } from "@/components/LopCapHocCarousel";
+import { ChonKhoiNav } from "@/components/ChonKhoiNav";
 
 // Tông "đường cong tiến bộ" C < B < A < S — cùng hệ navy/gold/paper, không màu rời rạc.
 // T (hệ riêng Tiểu học, ôn thi CLC) dùng chung style đỉnh với S — 2 hệ không bao giờ chung 1 trang.
@@ -52,6 +53,10 @@ export async function CapHocLanding({
           <p className="mx-auto mt-4 max-w-xl text-white/85">{content.hero.intro}</p>
         </Section>
       </div>
+
+      {/* Thanh chuyển khối — chỉ hiện ở trang 1 khối riêng, không hiện ở /tieu-hoc /thcs /thpt
+          (3 trang đó đã có picker lọc data riêng trong LopCapHocCarousel). */}
+      {khoiList.length === 1 && <ChonKhoiNav khoiHienTai={khoiList[0]} />}
 
       {/* ② BỐN HỆ NĂNG LỰC */}
       <Section>
