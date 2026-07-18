@@ -1,38 +1,32 @@
 {
-  "_ghiChu": "TODO(content): clone tạm từ khoi7.json để có trang chạy được ngay — mucTieu/siSo/danhCho/FAQ đang là số của khối 7, CẦN Thùy rà lại có hợp với Tiểu học (3-4-5) không rồi sửa trực tiếp file này.",
+  "_ghiChu": "Hệ thống riêng cho Tiểu học (khác THCS): chỉ 3 hệ B/A/T, không phải C/B/A/S. Thùy chốt 2026-07 — T là hệ ôn thi CLC (cao nhất), không phải hệ 'chất lượng cao' generic.",
   "hero": {
     "eyebrow": "Tuyển sinh Toán Tiểu học · 2026–2027",
     "title": "Đúng người — Đúng lớp — Đúng lộ trình",
     "intro": "BKdemy phân lớp theo năng lực để mỗi con học đúng sức mình, tiến bộ vững chắc suốt năm học."
   },
+  "tieuDeHeThong": "Ba hệ năng lực",
   "heThong": [
-    {
-      "he": "C",
-      "ten": "Củng cố nền tảng",
-      "mucTieu": "8",
-      "siSo": "tối đa 10 hs",
-      "danhCho": "Cần củng cố lại nền tảng cơ bản, học chắc — chậm mà chắc."
-    },
     {
       "he": "B",
       "ten": "Vững cơ bản",
-      "mucTieu": "8+",
+      "mucTieu": "8 - 9",
       "siSo": "tối đa 12 hs",
-      "danhCho": "Nền tảng cơ bản đã ổn, cần luyện tập nhiều lần để thành thạo."
+      "danhCho": "Cần củng cố lại nền tảng cơ bản."
     },
     {
       "he": "A",
       "ten": "Nâng cao chọn lọc",
-      "mucTieu": "9+",
-      "siSo": "tối đa 15 hs",
+      "mucTieu": "9 - 10",
+      "siSo": "tối đa 12 hs",
       "danhCho": "Đã vững cơ bản, muốn bứt phá lên nâng cao có chọn lọc."
     },
     {
-      "he": "S",
-      "ten": "Nâng cao toàn diện",
-      "mucTieu": "9.5+",
+      "he": "T",
+      "ten": "Ôn thi CLC",
+      "mucTieu": "Thi vào các trường CLC ở Hà Nội",
       "siSo": "tối đa 15 hs",
-      "danhCho": "Nền tảng vững, sẵn sàng làm chủ 100% dạng nâng cao."
+      "danhCho": "Cần nền tảng tốt, có năng lực học toán nâng cao."
     }
   ],
   "faq": [

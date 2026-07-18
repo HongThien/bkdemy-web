@@ -70,11 +70,11 @@
     "si_so_max": 15
   },
   {
-    "id": "mock-5s1",
-    "ten_lop": "5S1",
+    "id": "mock-5t1",
+    "ten_lop": "5T1",
     "khoi": "5",
-    "he": "S",
-    "mo_ta": null,
+    "he": "T",
+    "mo_ta": "Tính chất: Những bạn có tố chất Toán học rất tốt.\nMục tiêu: Ôn thi vào các trường CLC.\nYêu cầu: Nền tảng toán nâng cao tốt.",
     "gia_buoi": 150000,
     "gv_dung_lop": "(mẫu) GV phụ trách",
     "gv_dung_lop_anh": null,

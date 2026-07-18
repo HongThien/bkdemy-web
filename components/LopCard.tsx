@@ -35,7 +35,7 @@ function parseKhungGio(raw: string): { text: string; phut: number | null } {
 
 // mo_ta lưu mỗi câu 1 dòng (\n) — tách dòng, in đậm từ khoá mở đầu (Yêu cầu/Mục tiêu…)
 // và thêm chấm gold đầu dòng cho dễ đọc thay vì 1 khối chữ liền.
-const TU_KHOA_MO_TA = /^(Yêu cầu|Mục tiêu(?: của lớp)?)/;
+const TU_KHOA_MO_TA = /^(Yêu cầu|Mục tiêu(?: của lớp)?|Tính chất)/;
 function DongMoTa({ dong }: { dong: string }) {
   const match = dong.match(TU_KHOA_MO_TA);
   return (

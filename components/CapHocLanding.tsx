@@ -4,15 +4,19 @@ import { Section, Card, Button } from "@/components/ui";
 import { LopCapHocCarousel } from "@/components/LopCapHocCarousel";
 
 // Tông "đường cong tiến bộ" C < B < A < S — cùng hệ navy/gold/paper, không màu rời rạc.
+// T (hệ riêng Tiểu học, ôn thi CLC) dùng chung style đỉnh với S — 2 hệ không bao giờ chung 1 trang.
 const HE_STYLE: Record<string, string> = {
   C: "!bg-paper-dim !border-ink/10",
   B: "!bg-ink/[0.06] !border-ink/20",
   A: "!bg-gold/10 !border-gold/30",
   S: "!bg-gold/15 !border-ink !border-2",
+  T: "!bg-gold/15 !border-ink !border-2",
 };
 
 export type CapHocContent = {
   hero: { eyebrow: string; title: string; intro: string };
+  // Tiêu đề section "N hệ năng lực" — mỗi cấp số hệ khác nhau (THCS 4 hệ, Tiểu học 3 hệ...).
+  tieuDeHeThong?: string;
   heThong: { he: string; ten: string; mucTieu: string; siSo: string; danhCho: string }[];
   faq: { hoi: string; dap: string }[];
   brochurePdf: string;
@@ -52,7 +56,7 @@ export async function CapHocLanding({
       {/* ② BỐN HỆ NĂNG LỰC */}
       <Section>
         <h2 className="text-center font-display text-2xl font-semibold text-ink sm:text-3xl">
-          Bốn hệ năng lực
+          {content.tieuDeHeThong ?? "Bốn hệ năng lực"}
         </h2>
         <p className="mx-auto mt-2 max-w-xl text-center text-sm text-slate-soft">
           Hệ do bài test xếp lớp quyết định, không phải phụ huynh tự chọn.

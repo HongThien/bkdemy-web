@@ -16,7 +16,7 @@ export type LopTuyenSinh = {
   id: string;
   ten_lop: string;
   khoi: string;
-  he: "S" | "A" | "B" | "C";
+  he: "S" | "A" | "B" | "C" | "T";
   mo_ta: string | null;
   gia_buoi: number;
   gv_dung_lop: string | null;
@@ -73,7 +73,8 @@ function dedupeLich(lich: string | null): string | null {
 
 // Thứ tự hiển thị theo bậc (Thùy chốt): S > A > B > C, trong mỗi hệ xếp theo số lớp tăng dần.
 // Khối tăng dần trước tiên (chỉ có ý nghĩa khi 1 trang gộp nhiều khối — /tieu-hoc, /thcs, /thpt).
-const HE_ORDER: Record<string, number> = { S: 0, A: 1, B: 2, C: 3 };
+// T (hệ riêng của Tiểu học — ôn thi CLC) xếp cùng bậc với S vì không bao giờ xuất hiện chung trang.
+const HE_ORDER: Record<string, number> = { S: 0, T: 0, A: 1, B: 2, C: 3 };
 function sapXepLop(list: LopTuyenSinh[]): LopTuyenSinh[] {
   return [...list].sort((a, b) => {
     const khoiDiff = Number(a.khoi) - Number(b.khoi);
