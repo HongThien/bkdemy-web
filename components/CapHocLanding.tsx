@@ -54,9 +54,9 @@ export async function CapHocLanding({
         </Section>
       </div>
 
-      {/* Thanh chuyển khối — chỉ hiện ở trang 1 khối riêng, không hiện ở /tieu-hoc /thcs /thpt
-          (3 trang đó đã có picker lọc data riêng trong LopCapHocCarousel). */}
-      {khoiList.length === 1 && <ChonKhoiNav khoiHienTai={khoiList[0]} />}
+      {/* Thanh chuyển khối — hiện ở mọi trang (kể cả /tieu-hoc /thcs /thpt) để PH có
+          con học nhiều khối khác nhau luôn nhảy được sang khối khác từ bất kỳ đâu. */}
+      <ChonKhoiNav khoiDangXem={khoiList} />
 
       {/* ② BỐN HỆ NĂNG LỰC */}
       <Section>

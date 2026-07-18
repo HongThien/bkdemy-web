@@ -4,9 +4,12 @@ import clsx from "clsx";
 // Khối 3 tạm ẩn — ERP chưa có lớp thật, thêm lại khi có (Thùy chốt 2026-07).
 const TOAN_BO_KHOI = ["4", "5", "6", "7", "8", "9", "10", "11", "12"];
 
-// Thanh chuyển khối — chỉ hiện trên trang 1 khối riêng (/khoi-N), không hiện ở
-// /tieu-hoc /thcs /thpt (3 trang đó đã có picker lọc data riêng, thêm cái này vào sẽ trùng ý).
-export function ChonKhoiNav({ khoiHienTai }: { khoiHienTai: string }) {
+// Thanh chuyển khối — hiện ở MỌI trang tuyển sinh (1 khối riêng /khoi-N, và cả
+// 3 trang gộp /tieu-hoc /thcs /thpt) để PH có con học nhiều khối khác nhau
+// (VD lớp 9 + lớp 4) luôn nhảy được sang khối khác, không cần biết trang gộp
+// đang giới hạn trong 1 cấp. Không đổi Hero/CBAS theo khối — chỉ là link điều
+// hướng, bấm là chuyển hẳn trang (Thùy chốt: đơn giản hơn là ghép nội dung động).
+export function ChonKhoiNav({ khoiDangXem }: { khoiDangXem: string[] }) {
   return (
     <div className="border-b border-ink/10 bg-paper-dim/40">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-2 px-6 py-4">
@@ -19,7 +22,7 @@ export function ChonKhoiNav({ khoiHienTai }: { khoiHienTai: string }) {
             href={`/khoi-${k}`}
             className={clsx(
               "rounded-full px-3 py-1 text-sm font-semibold transition-colors",
-              k === khoiHienTai
+              khoiDangXem.includes(k)
                 ? "bg-ink text-white"
                 : "border border-ink/20 text-ink hover:bg-ink/5"
             )}
