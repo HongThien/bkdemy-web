@@ -33,6 +33,28 @@ function parseKhungGio(raw: string): { text: string; phut: number | null } {
   return { text: `${tenThu}, ${h1}:${m1} - ${h2}:${m2}`, phut };
 }
 
+// mo_ta lưu mỗi câu 1 dòng (\n) — tách dòng, in đậm từ khoá mở đầu (Yêu cầu/Mục tiêu…)
+// và thêm chấm gold đầu dòng cho dễ đọc thay vì 1 khối chữ liền.
+const TU_KHOA_MO_TA = /^(Yêu cầu|Mục tiêu(?: của lớp)?)/;
+function DongMoTa({ dong }: { dong: string }) {
+  const match = dong.match(TU_KHOA_MO_TA);
+  return (
+    <li className="flex gap-2">
+      <span className="mt-1.5 text-gold">•</span>
+      <span>
+        {match ? (
+          <>
+            <span className="font-semibold text-ink">{match[1]}</span>
+            {dong.slice(match[1].length)}
+          </>
+        ) : (
+          dong
+        )}
+      </span>
+    </li>
+  );
+}
+
 // Mỗi mục thông tin 1 khung riêng, có biên giới rõ — tránh cảm giác chữ dồn chung 1 khối (Thùy chốt).
 function InfoBox({ label, children }: { label: string; children: ReactNode }) {
   return (
@@ -83,7 +105,11 @@ export function LopCard({ lop, className = "" }: { lop: LopTuyenSinh; className?
       <div className="mt-4 space-y-2.5">
         <InfoBox label="Mô tả">
           {lop.mo_ta ? (
-            <p className="whitespace-pre-line">{lop.mo_ta}</p>
+            <ul className="space-y-1">
+              {lop.mo_ta.split("\n").map((dong, i) => (
+                <DongMoTa key={i} dong={dong} />
+              ))}
+            </ul>
           ) : (
             <p className="italic text-slate-soft/60">Chưa có thông tin</p>
           )}
