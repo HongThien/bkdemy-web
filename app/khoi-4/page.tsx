@@ -6,7 +6,7 @@ import { CapHocLanding } from "@/components/CapHocLanding";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Tuyển sinh Toán khối 4",
+  title: "Thông tin học tập khối 4",
   description: tieuHoc.hero.intro,
 };
 
