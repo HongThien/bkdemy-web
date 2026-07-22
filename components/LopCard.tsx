@@ -22,15 +22,15 @@ const TEN_THU: Record<string, string> = {
   CN: "Chủ Nhật",
 };
 
-// lop.lich đến dạng "T3 18:00–19:30 · T6 18:00–19:30" (xem lib/data.ts) — parse ra
-// từng khung giờ để hiện tên thứ đầy đủ + tính số phút/buổi cho ô Học phí.
-function parseKhungGio(raw: string): { text: string; phut: number | null } {
+// lop.lich đến dạng "T3 18:00–19:30 · T6 18:00–19:30" (xem lib/data.ts) — tách riêng
+// thứ/giờ để render card 2 nửa tương phản, + tính số phút/buổi cho ô Học phí.
+function parseKhungGio(raw: string): { thu: string; gio: string; phut: number | null } {
   const match = raw.match(/^(\S+)\s+(\d{1,2}):(\d{2})[–-](\d{1,2}):(\d{2})$/);
-  if (!match) return { text: raw, phut: null };
+  if (!match) return { thu: "", gio: raw, phut: null };
   const [, thuMa, h1, m1, h2, m2] = match;
   const tenThu = TEN_THU[thuMa] ?? thuMa;
   const phut = (Number(h2) * 60 + Number(m2)) - (Number(h1) * 60 + Number(m1));
-  return { text: `${tenThu}, ${h1}:${m1} - ${h2}:${m2}`, phut };
+  return { thu: tenThu, gio: `${h1}:${m1} - ${h2}:${m2}`, phut };
 }
 
 // mo_ta lưu mỗi câu 1 dòng (\n) — tách dòng, in đậm từ khoá mở đầu (Yêu cầu/Mục tiêu…)
@@ -117,12 +117,16 @@ export function LopCard({ lop, className = "" }: { lop: LopTuyenSinh; className?
 
         {khungGioList.length > 0 && (
           <InfoBox label="Lịch học">
-            <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5">
-              {khungGioList.map((k, i) => (
-                <span key={k.text} className="flex items-center gap-x-2">
-                  {i > 0 && <span className="text-ink/30">-</span>}
-                  <span className="whitespace-nowrap font-medium text-ink">{k.text}</span>
-                </span>
+            <div className="flex flex-wrap gap-2">
+              {khungGioList.map((k) => (
+                <div key={`${k.thu}-${k.gio}`} className="flex overflow-hidden rounded-lg border border-ink/10">
+                  <span className="whitespace-nowrap bg-ink px-2.5 py-1.5 text-xs font-semibold text-white">
+                    {k.thu}
+                  </span>
+                  <span className="whitespace-nowrap bg-white px-2.5 py-1.5 text-xs font-semibold text-ink">
+                    {k.gio}
+                  </span>
+                </div>
               ))}
             </div>
           </InfoBox>
