@@ -25,9 +25,6 @@ export type LopTuyenSinh = {
   lich: string | null;
   si_so_hien_tai: number;
   si_so_max: number;
-  // Ghi đè trạng thái lớp (VD "Dừng tuyển sinh") khi khác với trạng thái tự tính
-  // từ sĩ số hiện tại/tối đa — null thì hiện trạng thái tự tính như bình thường.
-  trang_thai_ghi_de: string | null;
 };
 
 // Đổi mock ↔ live CHỈ ở đây (spec §7). Luôn rơi về mock nếu chưa có credential
@@ -97,9 +94,7 @@ export async function getLopTuyenSinh(khoiList: string[]): Promise<LopTuyenSinh[
   }
   const { data, error } = await supabasePh
     .from("v_lop_tuyen_sinh")
-    .select(
-      "id, ten_lop, khoi, he, mo_ta, gia_buoi, gv_dung_lop, gv_dung_lop_anh, gv_chat_luong, lich, si_so_hien_tai, si_so_max, trang_thai_ghi_de"
-    )
+    .select("id, ten_lop, khoi, he, mo_ta, gia_buoi, gv_dung_lop, gv_dung_lop_anh, gv_chat_luong, lich, si_so_hien_tai, si_so_max")
     .in("khoi", khoiList)
     .order("ten_lop", { ascending: true });
   if (error) {

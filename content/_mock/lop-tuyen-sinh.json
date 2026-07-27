@@ -11,8 +11,7 @@
     "gv_chat_luong": "(mẫu) GV chất lượng",
     "lich": "T4 18:00–19:30 · CN 10:30–12:00",
     "si_so_hien_tai": 12,
-    "si_so_max": 15,
-    "trang_thai_ghi_de": null
+    "si_so_max": 15
   },
   {
     "id": "mock-7a1",
@@ -26,8 +25,7 @@
     "gv_chat_luong": "(mẫu) GV chất lượng",
     "lich": "T3 18:00–19:30 · T7 14:00–15:30",
     "si_so_hien_tai": 8,
-    "si_so_max": 15,
-    "trang_thai_ghi_de": null
+    "si_so_max": 15
   },
   {
     "id": "mock-7b1",
@@ -41,8 +39,7 @@
     "gv_chat_luong": "(mẫu) GV chất lượng",
     "lich": "T5 18:00–19:30 · CN 8:30–10:00",
     "si_so_hien_tai": 10,
-    "si_so_max": 10,
-    "trang_thai_ghi_de": null
+    "si_so_max": 10
   },
   {
     "id": "mock-7c1",
@@ -56,8 +53,7 @@
     "gv_chat_luong": "(mẫu) GV chất lượng",
     "lich": "T2 18:00–19:30 · T6 18:00–19:30",
     "si_so_hien_tai": 5,
-    "si_so_max": 7,
-    "trang_thai_ghi_de": null
+    "si_so_max": 7
   },
   {
     "id": "mock-3a1",
@@ -71,8 +67,7 @@
     "gv_chat_luong": null,
     "lich": "T3 17:00–18:30 · T7 9:00–10:30",
     "si_so_hien_tai": 6,
-    "si_so_max": 15,
-    "trang_thai_ghi_de": null
+    "si_so_max": 15
   },
   {
     "id": "mock-5t1",
@@ -86,8 +81,7 @@
     "gv_chat_luong": null,
     "lich": "T2 17:00–18:30 · T5 17:00–18:30",
     "si_so_hien_tai": 11,
-    "si_so_max": 15,
-    "trang_thai_ghi_de": null
+    "si_so_max": 15
   },
   {
     "id": "mock-9a1",
@@ -101,8 +95,7 @@
     "gv_chat_luong": null,
     "lich": "T4 19:30–21:00 · CN 14:00–15:30",
     "si_so_hien_tai": 14,
-    "si_so_max": 15,
-    "trang_thai_ghi_de": null
+    "si_so_max": 15
   },
   {
     "id": "mock-11s1",
@@ -116,8 +109,7 @@
     "gv_chat_luong": null,
     "lich": "T3 19:30–21:00 · T7 19:30–21:00",
     "si_so_hien_tai": 9,
-    "si_so_max": 15,
-    "trang_thai_ghi_de": null
+    "si_so_max": 15
   },
   {
     "id": "mock-4b1",
@@ -131,8 +123,7 @@
     "gv_chat_luong": null,
     "lich": "T4 17:00–18:30 · CN 9:00–10:30",
     "si_so_hien_tai": 7,
-    "si_so_max": 12,
-    "trang_thai_ghi_de": null
+    "si_so_max": 12
   },
   {
     "id": "mock-6c1",
@@ -146,8 +137,7 @@
     "gv_chat_luong": null,
     "lich": "T2 17:30–19:00 · T5 17:30–19:00",
     "si_so_hien_tai": 4,
-    "si_so_max": 10,
-    "trang_thai_ghi_de": null
+    "si_so_max": 10
   },
   {
     "id": "mock-8b1",
@@ -161,8 +151,7 @@
     "gv_chat_luong": null,
     "lich": "T3 18:00–19:30 · T6 18:00–19:30",
     "si_so_hien_tai": 9,
-    "si_so_max": 12,
-    "trang_thai_ghi_de": null
+    "si_so_max": 12
   },
   {
     "id": "mock-10a1",
@@ -176,8 +165,7 @@
     "gv_chat_luong": null,
     "lich": "T2 19:30–21:00 · T5 19:30–21:00",
     "si_so_hien_tai": 10,
-    "si_so_max": 15,
-    "trang_thai_ghi_de": null
+    "si_so_max": 15
   },
   {
     "id": "mock-12c1",
@@ -191,7 +179,6 @@
     "gv_chat_luong": null,
     "lich": "T4 19:30–21:00 · CN 8:00–9:30",
     "si_so_hien_tai": 6,
-    "si_so_max": 10,
-    "trang_thai_ghi_de": null
+    "si_so_max": 10
   }
 ]
