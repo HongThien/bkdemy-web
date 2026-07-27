@@ -5,8 +5,13 @@ import type { LopTuyenSinh } from "@/lib/data";
 import { Card } from "@/components/ui";
 
 function trangThaiSiSo(lop: LopTuyenSinh) {
-  const conLai = lop.si_so_max - lop.si_so_hien_tai;
   const phanTram = Math.min(100, Math.round((lop.si_so_hien_tai / lop.si_so_max) * 100));
+  // Ghi đè thủ công (VD "Dừng tuyển sinh") — khác "Đã đủ sĩ số", có thể xảy ra dù
+  // còn chỗ trống, nên không tự suy ra được từ sĩ số, phải có cột riêng.
+  if (lop.trang_thai_ghi_de) {
+    return { text: lop.trang_thai_ghi_de, phanTram, mau: "bg-slate-300" };
+  }
+  const conLai = lop.si_so_max - lop.si_so_hien_tai;
   if (conLai <= 0) return { text: "Đã đủ sĩ số", phanTram: 100, mau: "bg-slate-300" };
   if (conLai <= 5) return { text: `Còn ${conLai} chỗ trống`, phanTram, mau: "bg-gold" };
   return { text: "Đang tuyển sinh", phanTram, mau: "bg-sky" };
