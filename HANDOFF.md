@@ -49,17 +49,21 @@
 
 ---
 
-## ③ Việc cần làm tiếp (theo thứ tự ưu tiên)
+## ③ Việc cần làm tiếp (cập nhật 13/10/2026 — đợt "fill nội dung")
 
-1. **Tạo repo GitHub + push** — để làm được ở máy khác (xem mục Git ở trên).
-2. **Chạy `alter role web_lead_writer with password '...'`** trên SQL Editor ERP (câu lệnh đã đưa Thùy trong chat, chưa xác nhận đã chạy).
-3. **Build API route + form thật** cho `/khoi-7` section ⑤ (Tên con/Lớp đang học/SĐT PH → `ung_vien`, `nguon='web'`) — sau khi có credential ở bước 2.
-4. **Chạy migration `0002_gv_dung_lop_anh.sql`** trên SQL Editor `bkdemy-ph` (đã viết sẵn trong `supabase-ph-migrations/`, kèm URL avatar thật 4 GV).
-5. **Điền bảng vàng + khai giảng** — qua Supabase Table Editor của `bkdemy-ph` (bảng `thanh_tich_cong_khai`/`khai_giang`), khi Thùy có nội dung.
-6. Nội dung còn thiếu (không chặn ai, điền dần): câu chuyện thành lập BKdemy, năm hoạt động, tỉ lệ đạt nguyện vọng, danh sách GV đầy đủ cho `/doi-ngu`, mô tả riêng từng lớp khối 7 (Thùy tự viết).
-7. Domain thật `bkacademy.edu.vn` — gắn vào Vercel khi nội dung sẵn sàng lên thật (chưa làm).
+**Đã xong so với bản 07/2026:** repo GitHub `HongThien/bkdemy-web` đã có (origin) · migration `0002_gv_dung_lop_anh` đã áp (cột + view có thật trên bkdemy-ph) · domain `bkacademy.edu.vn` đã gắn (308 → www; `proxy.ts` còn chặn mọi trang ngoài tuyển sinh).
 
----
+**13/10/2026 đã điền (commit cùng ngày):** 3 con số trang chủ (350+ HS · 49 lớp · ≤15 HS/lớp — số đếm ERP 13/10) · câu chuyện `/gioi-thieu` (NHÁP) · 5 trang cấp học mục tiêu/đối tượng/lộ trình (NHÁP từ brochure + lớp thật) · 12 GV tên/ảnh/môn thật từ team Giáo viên ERP · mô tả 2 vị trí tuyển dụng (NHÁP) · bản đồ Google nhúng (không cần key) · bài tin tức đầu tiên `content/posts/he-thong-phan-lop-2026-2027.mdx` · mặc định `hocUrl` sửa `hoc.` → `hs.bkacademy.edu.vn` (`hoc.` không có DNS). Mỗi file JSON có `_ghiChu` ghi rõ chỗ nào là nháp.
+
+1. **Thùy duyệt/sửa 4 bản NHÁP** ngay trong `content/data/`: `gioi-thieu.json` (cauChuyen — thiếu năm thành lập, người sáng lập) · `programs.json` (5 cấp) · `careers.json` (2 vị trí — thiếu lương/quyền lợi) · `teachers.json` (ai được lên web; 3 GV đang đứng lớp nhưng không ở team GV: Hoàng Thị Quỳnh Trang, Phạm Bảo Ngân, Trần Thị Thảo Nguyên — thêm?).
+2. **Facts chỉ Thùy có:** `site.json` → `workingHours` · `zaloUrl` thật (brochure ghi Zalo OA @BKacademy, chưa có link) · `careerApplyUrl` (Google Form) · `teachers.json` → `education`/`intro` từng GV (24 badge TODO còn lại ở `/doi-ngu`).
+3. **Vị thế công khai:** hero vẫn "Hệ thống dạy Toán bài bản" trong khi ERP đang mở 6 lớp KHTN · 4 Tiếng Anh · 1 Văn (53/19/5 HS). Thùy quyết: web chỉ nói Toán, hay thêm 3 môn (cần trang chương trình + GV cho từng môn).
+4. **Bảng vàng + khai giảng** (`thanh_tich_cong_khai` / `khai_giang` trên bkdemy-ph) vẫn TRỐNG — web tự ẩn section. Điền qua Supabase Table Editor khi có; lớp đang tuyển chưa có lịch (5T2 0 HS, 5A3 2 HS) là ứng viên cho `khai_giang`.
+5. **Gỡ `proxy.ts`** (mở toàn bộ trang trên domain thật) — sau khi Thùy duyệt mục 1–2. Kiểm Vercel env `NEXT_PUBLIC_HOC_URL`: nếu đang trỏ `hoc.` thì đổi sang `hs.`.
+6. (Cũ, chưa xác nhận) `alter role web_lead_writer with password` + API route + form đăng ký ở section ⑤ trang khối — chỉ làm khi Thùy muốn nhận lead từ web.
+7. Ba con số trang chủ là số đếm TAY ngày 13/10 — muốn tự cập nhật thì tạo view công khai trên bkdemy-ph (đếm `hoc_sinh_live` / `erp_lop`) rồi `lib/data.ts` đọc; cần Thùy duyệt SQL.
+
+**Máy này (WBPC):** `.env.local` đã tạo 13/10 (copy anon key bkdemy-ph từ `../bkdemy-ph-app/.env.local`). Cache `.next` cũ làm `next dev` 500 (global-error manifest) — `npm run build` rồi `npx next start -p 3105` chạy OK.
 
 ## Khởi động ở máy MỚI
 1. `git clone <url-sau-khi-push>` (hoặc copy thư mục nếu chưa kịp push).

@@ -1,14 +1,15 @@
 [
   {
+    "_ghiChu": "description = BẢN NHÁP Claude 13/10/2026 từ cách BKdemy đang vận hành (TA chấm BTVN, trực ca bổ trợ; GV đứng lớp theo hệ C/B/A/S). CHƯA có mức lương, quyền lợi cụ thể, link form ứng tuyển — Thùy/Vận hành bổ sung.",
     "slug": "ta",
     "title": "Trợ giảng (TA)",
     "type": "Bán thời gian",
-    "description": ""
+    "description": "Hỗ trợ giáo viên trong và ngoài giờ học: chấm bài tập về nhà, theo dõi tiến độ từng học sinh, trực các ca bổ trợ cho học sinh yếu hoặc học bù, ghi nhận kết quả vào hệ thống. Phù hợp sinh viên hoặc cử nhân ngành Toán, Sư phạm, kỹ thuật — nền Toán tốt, kiên nhẫn với học sinh. Làm việc theo ca tối và cuối tuần tại cơ sở An Khánh. Có lộ trình phát triển từ trợ giảng lên giáo viên đứng lớp."
   },
   {
     "slug": "gv",
     "title": "Giáo viên Toán",
     "type": "Toàn thời gian / bán thời gian",
-    "description": ""
+    "description": "Đứng lớp Toán từ Tiểu học đến THPT theo hệ thống phân lớp 4 mức năng lực (C/B/A/S), sĩ số nhỏ tối đa 15 học sinh. Giáo viên được cấp giáo trình theo hệ, dữ liệu theo dõi từng học sinh và đội ngũ trợ giảng hỗ trợ chấm bài. Yêu cầu: chuyên môn Toán vững, trình bày rõ ràng, ưu tiên có kinh nghiệm luyện thi vào 10 hoặc THPT, cam kết đồng hành lâu dài. Lớp học buổi tối và cuối tuần tại cơ sở An Khánh."
   }
 ]

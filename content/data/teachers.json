@@ -1,26 +1,99 @@
 [
   {
-    "slug": "gv-1",
-    "name": "",
-    "photo": "/avatar-placeholder.svg",
+    "_ghiChu": "Danh sách = team Giáo viên trong ERP ngày 13/10/2026 (bỏ 3 tài khoản chưa có tên thật/chưa đứng lớp). Tên + ảnh + môn lấy thật từ ERP (ảnh = bucket avatars công khai, giống card lớp tuyển sinh, Thùy duyệt 07/07). education/intro ĐỂ TRỐNG (web hiện TODO) — cần từng GV/Thùy cung cấp, không bịa. Thứ tự: GV chính nhiều lớp trước.",
+    "slug": "dao-xuan-thuy",
+    "name": "Đào Xuân Thùy",
+    "photo": "https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/4cc7af19-6f4e-4833-9bb1-3c9781a0ec11.png",
     "education": "",
-    "specialty": "",
+    "specialty": "Giáo viên Toán · Ban chuyên môn",
     "intro": ""
   },
   {
-    "slug": "gv-2",
-    "name": "",
-    "photo": "/avatar-placeholder.svg",
+    "slug": "pham-thi-thuy-trang",
+    "name": "Phạm Thị Thùy Trang",
+    "photo": "https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/29e583b4-8bc1-4304-88ae-87f3b0073154.jpg",
     "education": "",
-    "specialty": "",
+    "specialty": "Giáo viên Toán",
     "intro": ""
   },
   {
-    "slug": "gv-3",
-    "name": "",
+    "slug": "ta-quoc-cuong",
+    "name": "Tạ Quốc Cường",
+    "photo": "https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/4915b6b5-1851-4377-9dcd-a803576f5b60.jpg",
+    "education": "",
+    "specialty": "Giáo viên Toán",
+    "intro": ""
+  },
+  {
+    "slug": "nguyen-cong-hai",
+    "name": "Nguyễn Công Hải",
     "photo": "/avatar-placeholder.svg",
     "education": "",
-    "specialty": "",
+    "specialty": "Giáo viên Toán",
+    "intro": ""
+  },
+  {
+    "slug": "tran-hoang-dat",
+    "name": "Trần Hoàng Đạt",
+    "photo": "https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/338e970d-20aa-4f26-8e11-f1ae0a4c89c5.jpg",
+    "education": "",
+    "specialty": "Giáo viên Toán THPT",
+    "intro": ""
+  },
+  {
+    "slug": "pham-anh-ngoc",
+    "name": "Phạm Anh Ngọc",
+    "photo": "https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/2d903a82-a07b-4365-97a4-76d0eb7257fb.jpg",
+    "education": "",
+    "specialty": "Giáo viên Khoa học tự nhiên",
+    "intro": ""
+  },
+  {
+    "slug": "nguyen-quynh-mai",
+    "name": "Nguyễn Quỳnh Mai",
+    "photo": "https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/ac3127b1-acbb-4a81-ab2f-cf610c285373.jpeg",
+    "education": "",
+    "specialty": "Giáo viên Toán Tiểu học",
+    "intro": ""
+  },
+  {
+    "slug": "nguyen-thu-tra",
+    "name": "Nguyễn Thu Trà",
+    "photo": "https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/a7accc97-4bd4-48e3-9ec1-c5c3399ddee8.jpeg",
+    "education": "",
+    "specialty": "Giáo viên Toán Tiểu học",
+    "intro": ""
+  },
+  {
+    "slug": "nguyen-thi-van-anh",
+    "name": "Nguyễn Thị Vân Anh",
+    "photo": "https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/fdbb8660-4cea-4908-b4be-0a0457825247.jpg",
+    "education": "",
+    "specialty": "Giáo viên Toán Tiểu học",
+    "intro": ""
+  },
+  {
+    "slug": "nguyen-ha-giang",
+    "name": "Nguyễn Hà Giang",
+    "photo": "https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/b2cd9844-021a-4153-b082-e7c34ccc07e1.jpeg",
+    "education": "",
+    "specialty": "Giáo viên Toán",
+    "intro": ""
+  },
+  {
+    "slug": "nguyen-linh-uyen",
+    "name": "Nguyễn Linh Uyên",
+    "photo": "https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/d9b483b9-6d58-44dc-8157-fd950f38bcde.jpg",
+    "education": "",
+    "specialty": "Giáo viên Toán",
+    "intro": ""
+  },
+  {
+    "slug": "nguyen-mai-trang",
+    "name": "Nguyễn Mai Trang",
+    "photo": "/avatar-placeholder.svg",
+    "education": "",
+    "specialty": "Giáo viên Tiếng Anh",
     "intro": ""
   }
 ]

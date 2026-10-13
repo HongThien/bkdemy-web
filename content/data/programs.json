@@ -1,42 +1,69 @@
 [
   {
+    "_ghiChu": "mucTieu/doiTuong/noiDung của cả 5 cấp = BẢN NHÁP Claude viết 13/10/2026 từ brochure 2026–2027 + các lớp đang mở thật trong ERP (3A1, 4A1/4A2, 4T1, 5A1–5A3, 5T1/5T2, 6–9 C/B/A/S, 10–12 A/B/C). Thùy rà rồi sửa thẳng file này.",
     "slug": "tieu-hoc",
     "ten": "Tiểu học",
     "moTa": "Xây nền tư duy Toán từ sớm, học mà chơi, chắc gốc.",
-    "mucTieu": "",
-    "doiTuong": "",
-    "noiDung": []
+    "mucTieu": "Xây nền số học và hình học vững cho lớp 3–5: hiểu bản chất phép tính, trình bày rõ ràng, làm quen dần với toán tư duy và các dạng nâng cao vừa sức.",
+    "doiTuong": "Học sinh lớp 3, 4, 5. Xếp lớp theo 3 hệ: B — vững cơ bản (mục tiêu 8–9), A — nâng cao chọn lọc (mục tiêu 9–10), T — ôn thi vào lớp 6 trường chất lượng cao.",
+    "noiDung": [
+      "Bám sát chương trình lớp 3–5 trên trường, học chắc từng dạng trước khi sang dạng mới.",
+      "Hệ A và T bổ sung chuyên đề nâng cao có chọn lọc: số học, hình học, toán tư duy.",
+      "Bài kiểm tra định kỳ và sát hạch để xếp lại lớp đúng sức; phụ huynh nhận cập nhật sau mỗi buổi.",
+      "Sĩ số tối đa 12–15 học sinh mỗi lớp."
+    ]
   },
   {
     "slug": "vao-6",
     "ten": "Ôn thi vào 6",
     "moTa": "Luyện thi vào lớp 6 trường chuyên/chất lượng cao.",
-    "mucTieu": "",
-    "doiTuong": "",
-    "noiDung": []
+    "mucTieu": "Chuẩn bị cho kỳ thi và khảo sát vào lớp 6 các trường chất lượng cao ở Hà Nội — nền nâng cao vững ở lớp 4, luyện đề và tăng tốc ở lớp 5.",
+    "doiTuong": "Học sinh lớp 4–5 có nền tảng tốt, có năng lực học toán nâng cao, gia đình định hướng thi vào trường chất lượng cao (hệ T).",
+    "noiDung": [
+      "Lộ trình 2 năm: lớp 4T xây nền nâng cao, lớp 5T luyện đề và tăng tốc trước kỳ thi.",
+      "Học theo chuyên đề, luyện đề bám cấu trúc đề của từng trường.",
+      "Sát hạch định kỳ để đánh giá lại năng lực và xếp lại lớp; bổ trợ miễn phí khi con hổng một phần kiến thức.",
+      "Sĩ số tối đa 15 học sinh mỗi lớp."
+    ]
   },
   {
     "slug": "thcs",
     "ten": "THCS",
     "moTa": "Củng cố nền tảng, bứt tốc theo từng dạng bài.",
-    "mucTieu": "",
-    "doiTuong": "",
-    "noiDung": []
+    "mucTieu": "Học chắc từng dạng bài của lớp 6–9, tiến dần lên nâng cao theo đúng sức từng con — làm nền cho kỳ thi vào 10.",
+    "doiTuong": "Học sinh lớp 6, 7, 8, 9. Xếp lớp theo 4 hệ: C — củng cố nền tảng (mục tiêu 7+), B — vững cơ bản (8+), A — nâng cao chọn lọc (9+), S — nâng cao toàn diện (9.5+).",
+    "noiDung": [
+      "Mỗi hệ có mục tiêu đầu ra và tỉ lệ nâng cao riêng: C 0% · B 10–20% · A 30–50% · S 60–80%.",
+      "Bổ trợ yếu miễn phí ngay khi con hổng một phần kiến thức; hệ C có thêm 1 buổi bổ trợ định kỳ mỗi tuần.",
+      "Bài kiểm tra tháng, báo cáo tình hình học sau mỗi buổi, trao đổi với phụ huynh hằng tháng.",
+      "Chuyển lớp linh hoạt giữa năm: đủ điều kiện thì học thử lớp cao hơn 2 tuần, hai bên cùng đồng thuận mới chuyển chính thức.",
+      "Sĩ số: hệ C tối đa 10, hệ B tối đa 12, hệ A/S tối đa 15 học sinh."
+    ]
   },
   {
     "slug": "vao-10",
     "ten": "Ôn thi vào 10",
     "moTa": "Lộ trình tăng tốc bám sát cấu trúc đề thi vào 10.",
-    "mucTieu": "",
-    "doiTuong": "",
-    "noiDung": []
+    "mucTieu": "Lớp 9 ôn theo cấu trúc đề thi vào 10 của Sở GD&ĐT Hà Nội, mục tiêu theo hệ: C 7+ · B 8+ · A 9+ · S 9.5+.",
+    "doiTuong": "Học sinh lớp 9 (và lớp 8 muốn đi trước một bước), xếp theo 4 hệ C/B/A/S sau bài test đầu vào.",
+    "noiDung": [
+      "Tổng ôn theo chuyên đề rồi luyện đề theo đúng cấu trúc đề thi vào 10.",
+      "Theo dõi kết quả theo từng dạng bài để biết con còn hổng chỗ nào, bổ trợ đúng chỗ đó.",
+      "Chiến dịch ôn thi miễn phí trước kỳ thi: các buổi ôn tập tổng hợp ngoài giờ học chính.",
+      "Hệ A/S tiếp cận 50–100% các dạng nâng cao trong đề thi vào 10."
+    ]
   },
   {
     "slug": "thpt",
     "ten": "THPT",
     "moTa": "Ôn luyện theo mục tiêu thi tốt nghiệp & xét tuyển đại học.",
-    "mucTieu": "",
-    "doiTuong": "",
-    "noiDung": []
+    "mucTieu": "Nắm chắc chương trình Toán lớp 10–12, hướng tới kỳ thi tốt nghiệp THPT và các kỳ thi xét tuyển đại học.",
+    "doiTuong": "Học sinh lớp 10, 11, 12. Xếp lớp theo cùng khung 4 hệ C/B/A/S như THCS; hiện đang mở các lớp hệ A và B ở cả ba khối.",
+    "noiDung": [
+      "Học theo chuyên đề bám chương trình lớp 10–12, luyện đề theo cấu trúc đề thi tốt nghiệp THPT.",
+      "Bổ trợ miễn phí khi con hổng kiến thức; ôn tập tổng hợp trước các kỳ kiểm tra trên trường.",
+      "Bài kiểm tra tháng và báo cáo tình hình học cho phụ huynh.",
+      "Sĩ số tối đa 12–15 học sinh mỗi lớp."
+    ]
   }
 ]

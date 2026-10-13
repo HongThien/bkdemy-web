@@ -26,7 +26,7 @@ export const SITE = {
   domain: "bkacademy.edu.vn",
   // Hạ tầng/deploy (KHÔNG phải nội dung — giữ ở env, không đưa vào content/data).
   phPortalUrl: process.env.NEXT_PUBLIC_PH_PORTAL_URL || "https://ph.bkacademy.edu.vn",
-  hocUrl: process.env.NEXT_PUBLIC_HOC_URL || "https://hoc.bkacademy.edu.vn",
+  hocUrl: process.env.NEXT_PUBLIC_HOC_URL || "https://hs.bkacademy.edu.vn",
   // Nội dung editable — nguồn DUY NHẤT là content/data/site.json.
   address: siteData.address,
   hotline: siteData.hotline,

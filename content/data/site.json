@@ -1,15 +1,15 @@
 {
-  "_ghiChu": "Nội dung nhân sự/marketing sửa (sau này qua Decap CMS). Chuỗi rỗng \"\" = chưa cập nhật, web tự hiện badge TODO(content) — đừng tự gõ chữ TODO vào giá trị.",
+  "_ghiChu": "Nội dung nhân sự/marketing sửa (sau này qua Decap CMS). Chuỗi rỗng \"\" = chưa cập nhật, web tự hiện badge TODO(content) — đừng tự gõ chữ TODO vào giá trị. homeStats: số đếm từ ERP ngày 13/10/2026 (HS trạng thái đang học = 351; lớp trạng thái đang học = 49 gồm 38 Toán · 6 KHTN · 4 Tiếng Anh · 1 Văn) — cập nhật tay khi số đổi đáng kể, hoặc chuyển sang view công khai trên bkdemy-ph khi có. 'Tối đa 15' là CHÍNH SÁCH sĩ số (Thùy chốt 07/2026), không phải số đếm.",
   "address": "Số 17, Lô A10, KĐT Geleximco, An Khánh, Hà Nội",
   "hotline": "0963 209 309",
   "zaloUrl": "https://zalo.me",
   "workingHours": "",
-  "mapEmbedSrc": "",
+  "mapEmbedSrc": "https://www.google.com/maps?q=S%E1%BB%91+17+L%C3%B4+A10+K%C4%90T+Geleximco+An+Kh%C3%A1nh+H%C3%A0+N%E1%BB%99i&z=16&output=embed",
   "careerApplyUrl": "",
   "careerApplyEmail": "tuyendung@bkacademy.edu.vn",
   "homeStats": [
-    { "value": "326", "label": "Học sinh đang theo học" },
-    { "value": "", "label": "Năm hoạt động" },
-    { "value": "", "label": "Tỉ lệ đạt nguyện vọng" }
+    { "value": "350+", "label": "Học sinh đang theo học" },
+    { "value": "49", "label": "Lớp đang mở, từ lớp 3 đến lớp 12" },
+    { "value": "≤ 15", "label": "Học sinh mỗi lớp" }
   ]
 }
