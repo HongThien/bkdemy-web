@@ -61,6 +61,7 @@ body{margin:0;background:#e9e6df;font-family:"Be Vietnam Pro",system-ui,sans-ser
 .box.b2{background:#FBF3E4}.box.b2 .ic{background:#F3E2BE}
 .box.b3{background:#EAF5EE}.box.b3 .ic{background:#CFE8D8}
 .box.b4{background:#F5EEF7}.box.b4 .ic{background:#E5D6EA}
+.box.b5{background:#FDEEEE}.box.b5 .ic{background:#F6D3D3}
 .home-call{padding:4px 16px 20px}
 .home-call p{font-size:11.5px;color:var(--soft);text-align:center;margin:10px 0 0;line-height:1.5}
 .gv-row{display:flex;gap:6px;margin-top:8px}
@@ -72,6 +73,9 @@ body{margin:0;background:#e9e6df;font-family:"Be Vietnam Pro",system-ui,sans-ser
 .zalo-btn small{display:block;font-weight:400;font-size:11.5px;opacity:.85;margin-top:2px}
 .box{justify-content:center;align-items:center;text-align:center;aspect-ratio:1/1}.box b{font-size:16px;padding:0 4px}
 .box .ic{position:static;width:58px;height:58px;border-radius:16px;font-size:28px;margin-bottom:12px}
+.box.wide{grid-column:1/-1;aspect-ratio:auto;flex-direction:row;justify-content:flex-start;gap:14px;padding:14px 18px;text-align:left}.box.wide .ic{margin:0}.board.wide .box.wide{grid-column:span 2}
+.img-ph{margin:12px 16px 0;height:120px;border-radius:12px;border:1.5px dashed var(--gold);background:#fff8e8;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px;font-size:11.5px;color:#8a5a00}
+.sec .img-ph{margin:10px 0 0}
 .gv-row .more{display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:var(--ink)}
 .menu{font-size:20px;color:var(--ink)}
 .nav{display:none;padding:8px 16px 12px;border-bottom:1px solid var(--line);font-size:13px;color:var(--ink);gap:14px;flex-wrap:wrap}
@@ -179,7 +183,7 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
 <body>
 <div class="board-head">
   <h1>Mockup web bkacademy.edu.vn</h1>
-  <span class="note">15/10/2026 (bản 3: nấc 1 = ô · nấc 2 = cuộn · nấc 3 = chi tiết) · 17 màn · khung điện thoại (web cuộn mobile). Dữ liệu lớp/GV/giải tháng là THẬT từ ERP, nội dung đề là minh hoạ. Ô vàng = chỗ Thùy quyết.</span>
+  <span class="note">15/10/2026 (bản 3: nấc 1 = ô · nấc 2 = cuộn · nấc 3 = chi tiết) · 18 màn · khung điện thoại (web cuộn mobile). Dữ liệu lớp/GV/giải tháng là THẬT từ ERP, nội dung đề là minh hoạ. Ô vàng = chỗ Thùy quyết.</span>
   <button onclick="document.querySelector('.board').classList.toggle('wide');this.textContent=document.querySelector('.board').classList.contains('wide')?'Xem bản điện thoại':'Xem bản máy tính'">Xem bản máy tính</button>
 </div>
 
@@ -189,7 +193,7 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
 <div class="frame-wrap"><h2>Nấc 1 · Trang chủ <small>/ — chỉ ô, không bài viết</small></h2>
 <div class="frame">
   <div class="hd"><div class="logo"><i><b></b><b></b><b></b><b></b></i><div>BK Academy<small>CLB Toán học và Khoa học</small></div></div><div class="menu">☰</div></div>
-  <div class="nav">Giới thiệu · Cách BK hoạt động · Đăng ký học · Tài liệu</div>
+  <div class="nav">Giới thiệu · Cách BK hoạt động · Nuôi dưỡng cảm xúc · Đăng ký học · Tài liệu</div>
   <div class="home-top">
     <div class="eye" style="color:var(--gold-l)">Cùng con, đi xa hơn</div>
     <h1>CLB Toán học và Khoa học BK Academy</h1>
@@ -198,18 +202,19 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
   <div class="home-grid">
     <a class="box b1"><span class="ic">🏫</span><b>Giới thiệu về BK</b><i>›</i></a>
     <a class="box b2"><span class="ic">🧭</span><b>Cách BK hoạt động</b><i>›</i></a>
+    <a class="box b5"><span class="ic">💛</span><b>Nuôi dưỡng cảm xúc</b><i>›</i></a>
     <a class="box b3"><span class="ic">📝</span><b>Đăng ký học tại BK</b><i>›</i></a>
-    <a class="box b4"><span class="ic">📚</span><b>Tài liệu ôn tập</b><i>›</i></a>
+    <a class="box b4 wide"><span class="ic">📚</span><b>Tài liệu ôn tập</b><i>›</i></a>
   </div>
   <div class="home-call"><a class="zalo-btn"><span class="zl-ic">Zalo</span><span>Chat Zalo với BK<small>trả lời 10:00–21:00 hằng ngày</small></span></a><p>Hotline 0963 209 309 · Số 17, Lô A10, KĐT Geleximco, Lê Trọng Tấn, An Khánh, Hoài Đức, Hà Nội</p></div>
-  <div class="ft" style="margin-top:0"><b>BK Academy</b>CLB Toán học và Khoa học<br><span style="opacity:.7">Giới thiệu · Cách BK hoạt động · Đăng ký học · Tài liệu</span></div>
+  <div class="ft" style="margin-top:0"><b>BK Academy</b>CLB Toán học và Khoa học<br><span style="opacity:.7">Giới thiệu · Cách BK hoạt động · Nuôi dưỡng cảm xúc · Đăng ký học · Tài liệu</span></div>
 </div></div>
 
 <!-- ===================== NẤC 2 · GIỚI THIỆU ===================== -->
 <div class="frame-wrap"><h2>Nấc 2 · Giới thiệu về BK <small>/gioi-thieu — cuộn, mỗi mục có "đọc chi tiết"</small></h2>
 <div class="frame">
   <div class="hd"><div class="logo"><i><b></b><b></b><b></b><b></b></i><div>BK Academy<small>CLB Toán học và Khoa học</small></div></div><div class="menu">☰</div></div>
-  <div class="nav"><b>Giới thiệu</b> · Cách BK hoạt động · Đăng ký học · Tài liệu</div>
+  <div class="nav"><b>Giới thiệu</b> · Cách BK hoạt động · Nuôi dưỡng cảm xúc · Đăng ký học · Tài liệu</div>
   <div class="hero" style="padding:26px 20px 22px"><div class="eye">Giới thiệu</div><h1 style="font-size:25px">BK Academy là ai</h1><p style="margin:0">BK Academy là hệ thống trung tâm giáo dục do thầy Đào Xuân Thùy sáng lập, lựa chọn mô hình lớp nhỏ để theo sát và thấu hiểu từng học sinh. BK chú trọng xây dựng nền tảng kiến thức, nuôi dưỡng cảm xúc và hình thành nhân cách, đồng thời từng bước ứng dụng dữ liệu để cá nhân hóa việc học. Trong hành trình phát triển, BK hướng tới mở rộng các bộ môn AI và khoa học, giúp học sinh khám phá và vận dụng kiến thức vào thực tế.</p></div>
   <div class="sec" style="padding-top:16px"><div class="stats"><div class="stat"><b>350+</b><span>học sinh đang học</span></div><div class="stat"><b>15</b><span>giáo viên đứng lớp</span></div><div class="stat"><b>30</b><span>trợ giảng</span></div></div></div>
   <div class="sec dim">
@@ -243,7 +248,7 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
 <div class="frame-wrap"><h2>Nấc 2 · Cách BK hoạt động <small>/cach-bk-hoat-dong — cuộn, 7 mục</small></h2>
 <div class="frame">
   <div class="hd"><div class="logo"><i><b></b><b></b><b></b><b></b></i><div>BK Academy<small>CLB Toán học và Khoa học</small></div></div><div class="menu">☰</div></div>
-  <div class="nav">Giới thiệu · <b>Cách BK hoạt động</b> · Đăng ký học · Tài liệu</div>
+  <div class="nav">Giới thiệu · <b>Cách BK hoạt động</b> · Nuôi dưỡng cảm xúc · Đăng ký học · Tài liệu</div>
   <div class="hero" style="padding:26px 20px 22px"><div class="eye">Cách BK hoạt động</div><h1 style="font-size:25px">Đúng người — Đúng lớp — Đúng lộ trình</h1><p style="margin:0">Từ lúc con vào BK tới từng buổi học, từng bài kiểm tra: mọi thứ được thiết kế để con học đúng sức mình và phụ huynh luôn biết con đang ở đâu.</p></div>
   <div class="sec">
     <div class="eye">1 · Phân lớp theo năng lực</div><h2 class="t">Bốn mức độ — một lộ trình</h2>
@@ -257,7 +262,7 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
     <div class="step"><i>2</i><div><b>Học dạng bài mới</b> theo đúng hệ của lớp, luyện tại chỗ</div></div>
     <div class="step"><i>3</i><div><b>Bài cuối buổi</b> (Exit Test) — đo con nắm được dạng vừa học chưa</div></div>
     <div class="step"><i>4</i><div><b>Bài tập về nhà</b> — chụp nộp trên app, trợ giảng chấm, trả kết quả từng câu</div></div>
-    <div class="step" style="margin-bottom:0"><i>5</i><div><b>Nhận xét sau buổi</b> gửi phụ huynh; cuối tháng có bài kiểm tra tháng và vinh danh</div></div>
+    <div class="step" style="margin-bottom:0"><i>5</i><div><b>Nhận xét sau buổi</b> gửi phụ huynh; cuối tháng có bài kiểm tra tháng; vinh danh tháng xem ở <b>Nuôi dưỡng cảm xúc</b></div></div>
   </div>
   <div class="sec">
     <div class="eye">3 · BK Math Map</div><h2 class="t">Điểm số cho biết kết quả. Math Map cho biết nguyên nhân.</h2>
@@ -290,11 +295,51 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
   <div class="ft"><b>BK Academy</b>Hotline 0963 209 309 · 10:00–21:00 hằng ngày</div>
 </div></div>
 
+<!-- ===================== NẤC 2 · NUÔI DƯỠNG CẢM XÚC ===================== -->
+<div class="frame-wrap"><h2>Nấc 2 · Nuôi dưỡng cảm xúc ở BK <small>/cam-xuc — 4 ý Thùy chốt 15/10 + vinh danh tháng</small></h2>
+<div class="frame">
+  <div class="hd"><div class="logo"><i><b></b><b></b><b></b><b></b></i><div>BK Academy<small>CLB Toán học và Khoa học</small></div></div><div class="menu">☰</div></div>
+  <div class="nav">Giới thiệu · Cách BK hoạt động · <b>Nuôi dưỡng cảm xúc</b> · Đăng ký học · Tài liệu</div>
+  <div class="hero" style="padding:26px 20px 22px"><div class="eye">Nuôi dưỡng cảm xúc</div><h1 style="font-size:25px">Con học tốt khi con thấy mình được hiểu</h1><p style="margin:0">BK chú trọng xây dựng nền tảng kiến thức, nuôi dưỡng cảm xúc và hình thành nhân cách. Ở BK, một học sinh dám đặt câu hỏi, tự tin trình bày suy nghĩ hay kiên trì thử lại sau một lần làm sai — đó cũng là tiến bộ.</p></div>
+  <div class="img-ph">H1 · ảnh lớp học vui, GV ngồi cùng bàn HS</div>
+  <div class="sec">
+    <div class="eye">1 · Đúng môi trường</div><h2 class="t">Được đặt vào lớp phù hợp với mình</h2>
+    <p class="lead">Con không phải gồng theo bạn giỏi hơn, cũng không phải chờ bạn chậm hơn. Phân lớp theo 4 mức năng lực để mỗi em học đúng sức mình; đủ điều kiện thì thử lớp cao hơn 2 tuần, chưa sẵn sàng thì quay lại mà không ai trách. Vào lớp C không có nghĩa là con kém.</p>
+    <a class="btn ink2 sm" style="display:inline-block">Xem hệ thống phân lớp →</a>
+  </div>
+  <div class="sec dim">
+    <div class="eye">2 · Không khí lớp học</div><h2 class="t">Thoải mái, không xa cách thầy cô</h2>
+    <p class="lead">Lớp tối đa 15 em, thầy cô biết tên và biết tính từng con. Con được hỏi khi chưa hiểu, được nói khi không đồng ý, được sai mà không bị chê. Nhận xét sau mỗi buổi gửi phụ huynh có phần <b style="color:var(--ink)">thái độ học tập</b> bên cạnh kiến thức — BK nhìn con như một người đang lớn, không chỉ là một điểm số.</p>
+    <div class="img-ph">H2 · ảnh GV/TA đang cúi xuống hướng dẫn 1 em, cả hai cười</div>
+  </div>
+  <div class="sec">
+    <div class="eye">3 · Tạo động lực</div><h2 class="t">Học có thưởng, nỗ lực được nhìn thấy</h2>
+    <p class="lead">Trên lớp: trò chơi đội trên màn hình TV cuối buổi, bảng xếp hạng buổi học. Về nhà: app Học sinh tính điểm cho mỗi lượt luyện thật, có nhiệm vụ mỗi ngày và xếp hạng theo lớp. Con được khen vì cố gắng hôm nay, không phải chờ đến kỳ thi.</p>
+    <div class="grid g2"><div class="img-ph" style="margin:0">H3 · ảnh cả lớp chơi game đội trên TV</div><div class="img-ph" style="margin:0">H4 · màn hình app HS (nhiệm vụ, điểm) — t chụp</div></div>
+  </div>
+  <div class="sec dim">
+    <div class="eye">4 · Vinh danh mỗi tháng</div><h2 class="t">Không chỉ khen điểm cao</h2>
+    <p class="lead">Sau bài kiểm tra tháng, mỗi lớp trao ba loại giải: <b style="color:var(--ink)">Xuất sắc</b> cho kết quả, <b style="color:var(--ink)">Tiến bộ</b> cho em vượt lên chính mình, <b style="color:var(--ink)">Chăm chỉ</b> cho em bền bỉ mỗi ngày.</p>
+    <div class="stats"><div class="stat"><b>41</b><span>★ Xuất sắc</span></div><div class="stat"><b>17</b><span>▲ Tiến bộ</span></div><div class="stat"><b>2</b><span>✎ Chăm chỉ</span></div></div>
+    <p class="lead" style="margin:8px 0 0;font-size:12px">Tháng 9/2026 · 60 em · 30 lớp</p>
+    <div class="img-ph">B4 · ảnh buổi trao giải tháng</div>
+    <a class="btn ink2 sm" style="display:inline-block">Xem bảng vinh danh tháng →</a>
+  </div>
+  <div class="sec">
+    <div class="eye">5 · Sự kiện vui chơi</div><h2 class="t">Có những ngày chỉ để vui</h2>
+    <p class="lead">Trung thu vừa rồi cả BK chơi hội trại trong lớp: đố vui trên TV, đội chơi, quà. Mỗi năm vài dịp như vậy để con nhớ BK không chỉ là nơi làm bài.</p>
+    <div class="grid g2"><div class="img-ph" style="margin:0">H5 · ảnh Trung thu 2026</div><div class="img-ph" style="margin:0">H6 · ảnh sự kiện khác</div></div>
+  </div>
+  <div class="sec dim"><div class="card" style="border-color:var(--gold)"><h4>Muốn con được học trong môi trường như vậy?</h4><p>Đăng ký test đầu vào miễn phí, BK tư vấn xếp lớp.</p><a class="btn ink sm" style="margin-top:8px;display:inline-block">Đăng ký học tại BK →</a></div></div>
+  <div class="float zl">Zalo</div>
+  <div class="ft"><b>BK Academy</b>Hotline 0963 209 309 · 10:00–21:00 hằng ngày</div>
+</div></div>
+
 <!-- ===================== NẤC 2 · ĐĂNG KÝ HỌC ===================== -->
 <div class="frame-wrap"><h2>Nấc 2 · Đăng ký học tại BK <small>/dang-ky — cuộn: quy trình · lớp · học phí · form</small></h2>
 <div class="frame">
   <div class="hd"><div class="logo"><i><b></b><b></b><b></b><b></b></i><div>BK Academy<small>CLB Toán học và Khoa học</small></div></div><div class="menu">☰</div></div>
-  <div class="nav">Giới thiệu · Cách BK hoạt động · <b>Đăng ký học</b> · Tài liệu</div>
+  <div class="nav">Giới thiệu · Cách BK hoạt động · Nuôi dưỡng cảm xúc · <b>Đăng ký học</b> · Tài liệu</div>
   <div class="hero" style="padding:26px 20px 22px"><div class="eye">Đăng ký học · 2026–2027</div><h1 style="font-size:25px">Ba bước để con vào đúng lớp</h1><p style="margin:0">Mọi học sinh mới đều làm bài test đầu vào miễn phí để BK biết con đang ở đâu và xếp đúng hệ.</p></div>
   <div class="sec">
     <div class="step" style="margin-top:4px"><i>1</i><div><b>Đăng ký</b> — điền form dưới hoặc gọi 0963 209 309</div></div>
@@ -351,7 +396,7 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
 <div class="frame-wrap"><h2>Nấc 3 · Chương trình THCS <small>/thcs (Tiểu học, THPT cùng khuôn)</small></h2>
 <div class="frame">
   <div class="hd"><div class="logo"><i><b></b><b></b><b></b><b></b></i><div>BK Academy<small>CLB Toán học và Khoa học</small></div></div><div class="menu">☰</div></div>
-  <div class="nav">Giới thiệu · Cách BK hoạt động · Đăng ký học · Tài liệu</div>
+  <div class="nav">Giới thiệu · Cách BK hoạt động · Nuôi dưỡng cảm xúc · Đăng ký học · Tài liệu</div>
   <div class="hero" style="padding:28px 20px 24px"><div class="eye">Tuyển sinh Toán THCS · 2026–2027</div><h1 style="font-size:24px">Đúng người — Đúng lớp — Đúng lộ trình</h1><p style="margin:0">Phân lớp theo năng lực để mỗi con học đúng sức mình, tiến bộ vững chắc suốt năm học.</p></div>
   <div class="sec">
     <div class="eye">Bốn hệ năng lực</div>
@@ -410,7 +455,7 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
 <div class="frame-wrap"><h2>Nấc 3 · Tài liệu (hub) <small>/tai-lieu</small></h2>
 <div class="frame">
   <div class="hd"><div class="logo"><i><b></b><b></b><b></b><b></b></i><div>BK Academy<small>CLB Toán học và Khoa học</small></div></div><div class="menu">☰</div></div>
-  <div class="nav">Giới thiệu · Cách BK hoạt động · Đăng ký học · Tài liệu</div>
+  <div class="nav">Giới thiệu · Cách BK hoạt động · Nuôi dưỡng cảm xúc · Đăng ký học · Tài liệu</div>
   <div class="hero" style="padding:28px 20px 24px"><div class="eye">Tài liệu</div><h1 style="font-size:24px">Đề thi, đề cương miễn phí — có đáp án</h1><p style="margin:0">Đề thật từ các trường ở Hà Nội, đáp án đã được giáo viên BK soát. Lời giải chi tiết gửi qua Zalo khi đăng ký.</p></div>
   <div class="sec">
     <div class="tabs"><span class="tab on">Tất cả</span><span class="tab">Toán 6</span><span class="tab">Toán 7</span><span class="tab">Toán 8</span><span class="tab">Toán 9</span><span class="tab">Vào 10</span></div>
@@ -442,7 +487,7 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
 <div class="frame-wrap"><h2>Nấc 3 · Tài liệu Toán 8 <small>/tai-lieu/toan-8 — trang bắt từ khoá rộng</small></h2>
 <div class="frame">
   <div class="hd"><div class="logo"><i><b></b><b></b><b></b><b></b></i><div>BK Academy<small>CLB Toán học và Khoa học</small></div></div><div class="menu">☰</div></div>
-  <div class="nav">Giới thiệu · Cách BK hoạt động · Đăng ký học · Tài liệu</div>
+  <div class="nav">Giới thiệu · Cách BK hoạt động · Nuôi dưỡng cảm xúc · Đăng ký học · Tài liệu</div>
   <div class="sec" style="padding-top:16px">
     <div class="crumb">Tài liệu › <b>Toán 8</b></div>
     <h2 class="t" style="font-size:24px">Đề thi &amp; đề cương Toán 8</h2>
@@ -473,7 +518,7 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
 <div class="frame-wrap"><h2>Nấc 3 · Trang một đề <small>/tai-lieu/de-thi-giua-ki-1-toan-8-ngoi-sao-hoang-mai-2026 — đơn vị xếp hạng</small></h2>
 <div class="frame">
   <div class="hd"><div class="logo"><i><b></b><b></b><b></b><b></b></i><div>BK Academy<small>CLB Toán học và Khoa học</small></div></div><div class="menu">☰</div></div>
-  <div class="nav">Giới thiệu · Cách BK hoạt động · Đăng ký học · Tài liệu</div>
+  <div class="nav">Giới thiệu · Cách BK hoạt động · Nuôi dưỡng cảm xúc · Đăng ký học · Tài liệu</div>
   <div class="sec" style="padding-top:16px">
     <div class="crumb">Tài liệu › <b>Toán 8</b> › Giữa kì 1</div>
     <h2 class="t" style="font-size:21px">Đề thi giữa kì 1 Toán 8 trường THCS Ngôi Sao Hoàng Mai năm học 2026–2027 (có đáp án)</h2>
@@ -513,7 +558,7 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
 <div class="frame-wrap"><h2>Nấc 3 · Cách BK dạy ① Phân lớp <small>/cach-bk-day/phan-lop — từ brochure</small></h2>
 <div class="frame">
   <div class="hd"><div class="logo"><i><b></b><b></b><b></b><b></b></i><div>BK Academy<small>CLB Toán học và Khoa học</small></div></div><div class="menu">☰</div></div>
-  <div class="nav">Giới thiệu · Cách BK hoạt động · Đăng ký học · Tài liệu</div>
+  <div class="nav">Giới thiệu · Cách BK hoạt động · Nuôi dưỡng cảm xúc · Đăng ký học · Tài liệu</div>
   <div class="cluster" style="margin-top:12px"><span class="on">Phân lớp</span><span>Bổ trợ</span><span>BK Math Map</span></div>
   <div class="hero" style="padding:28px 20px 24px"><div class="eye">Cách BK dạy · 1/3</div><h1 style="font-size:26px">Hệ thống phân lớp</h1><p style="margin:0"><i>Đúng người — Đúng lớp — Đúng lộ trình.</i> Mỗi học sinh có tốc độ tiếp thu, nền tảng và mục tiêu khác nhau; một lớp chung mọi trình độ không giúp được cả em cần củng cố lẫn em sẵn sàng bài nâng cao.</p></div>
   <div class="sec">
@@ -558,7 +603,7 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
 <div class="frame-wrap"><h2>Nấc 3 · Cách BK dạy ② Bổ trợ <small>/cach-bk-day/bo-tro — từ cẩm nang PH</small></h2>
 <div class="frame">
   <div class="hd"><div class="logo"><i><b></b><b></b><b></b><b></b></i><div>BK Academy<small>CLB Toán học và Khoa học</small></div></div><div class="menu">☰</div></div>
-  <div class="nav">Giới thiệu · Cách BK hoạt động · Đăng ký học · Tài liệu</div>
+  <div class="nav">Giới thiệu · Cách BK hoạt động · Nuôi dưỡng cảm xúc · Đăng ký học · Tài liệu</div>
   <div class="cluster" style="margin-top:12px"><span>Phân lớp</span><span class="on">Bổ trợ</span><span>BK Math Map</span></div>
   <div class="hero" style="padding:28px 20px 24px"><div class="eye">Cách BK dạy · 2/3</div><h1 style="font-size:26px">Bổ trợ học tập</h1><p style="margin:0">Năm hình thức hỗ trợ để con không bị bỏ lại phía sau — phần lớn là miễn phí, nằm trong quyền lợi của học sinh.</p></div>
   <div class="sec">
@@ -583,7 +628,7 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
 <div class="frame-wrap"><h2>Nấc 3 · Cách BK dạy ③ BK Math Map <small>/cach-bk-day/math-map — điểm khác biệt</small></h2>
 <div class="frame">
   <div class="hd"><div class="logo"><i><b></b><b></b><b></b><b></b></i><div>BK Academy<small>CLB Toán học và Khoa học</small></div></div><div class="menu">☰</div></div>
-  <div class="nav">Giới thiệu · Cách BK hoạt động · Đăng ký học · Tài liệu</div>
+  <div class="nav">Giới thiệu · Cách BK hoạt động · Nuôi dưỡng cảm xúc · Đăng ký học · Tài liệu</div>
   <div class="cluster" style="margin-top:12px"><span>Phân lớp</span><span>Bổ trợ</span><span class="on">BK Math Map</span></div>
   <div class="hero" style="padding:28px 20px 24px"><div class="eye">Cách BK dạy · 3/3</div><h1 style="font-size:26px">BK Math Map</h1><p style="margin:0">Bản đồ năng lực Toán học của riêng từng học sinh. Phụ huynh biết chính xác: con đang mạnh ở đâu, cần cải thiện gì, nên tập trung vào phần kiến thức nào.</p></div>
   <div class="sec">
@@ -623,7 +668,7 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
 <div class="frame-wrap"><h2>Nấc 3 · Học phí &amp; ưu đãi <small>/hoc-phi — từ cẩm nang PH</small></h2>
 <div class="frame">
   <div class="hd"><div class="logo"><i><b></b><b></b><b></b><b></b></i><div>BK Academy<small>CLB Toán học và Khoa học</small></div></div><div class="menu">☰</div></div>
-  <div class="nav">Giới thiệu · Cách BK hoạt động · Đăng ký học · Tài liệu</div>
+  <div class="nav">Giới thiệu · Cách BK hoạt động · Nuôi dưỡng cảm xúc · Đăng ký học · Tài liệu</div>
   <div class="hero" style="padding:28px 20px 24px"><div class="eye">Học phí</div><h1 style="font-size:26px">Rõ ràng, minh bạch, tiện lợi</h1><p style="margin:0">Mọi khoản thu, cách tính và ưu đãi đều công khai từ đầu để gia đình chủ động kế hoạch tài chính cho con.</p></div>
   <div class="sec">
     <div class="eye">Các khoản thu</div>
@@ -659,7 +704,7 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
 <div class="frame-wrap"><h2>Nấc 3 · Thầy Đào Xuân Thùy <small>/gioi-thieu/thay-dao-xuan-thuy — bài đầy đủ Thùy viết 15/10</small></h2>
 <div class="frame">
   <div class="hd"><div class="logo"><i><b></b><b></b><b></b><b></b></i><div>BK Academy<small>CLB Toán học và Khoa học</small></div></div><div class="menu">☰</div></div>
-  <div class="nav"><b>Giới thiệu</b> · Cách BK hoạt động · Đăng ký học · Tài liệu</div>
+  <div class="nav"><b>Giới thiệu</b> · Cách BK hoạt động · Nuôi dưỡng cảm xúc · Đăng ký học · Tài liệu</div>
   <div class="sec" style="padding-top:16px">
     <div class="crumb">Giới thiệu › <b>Người sáng lập</b></div>
     <div class="card he" style="align-items:center;border:0;background:transparent;padding:0 0 12px"><div class="av" style="width:84px;height:84px;border-radius:20px"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/4cc7af19-6f4e-4833-9bb1-3c9781a0ec11.png" alt=""></div><div><h2 class="t" style="margin:0;font-size:22px">Thầy Đào Xuân Thùy</h2></div></div>
@@ -683,7 +728,7 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
 <div class="frame-wrap"><h2>Nấc 3 · Đội ngũ <small>/doi-ngu — 15 người đang đứng lớp, ảnh từ ERP</small></h2>
 <div class="frame">
   <div class="hd"><div class="logo"><i><b></b><b></b><b></b><b></b></i><div>BK Academy<small>CLB Toán học và Khoa học</small></div></div><div class="menu">☰</div></div>
-  <div class="nav">Giới thiệu · Cách BK hoạt động · Đăng ký học · Tài liệu</div>
+  <div class="nav">Giới thiệu · Cách BK hoạt động · Nuôi dưỡng cảm xúc · Đăng ký học · Tài liệu</div>
   <div class="sec" style="padding-top:18px">
     <div class="eye">Đội ngũ</div><h2 class="t">Giáo viên BK Academy</h2>
     <p class="lead">Mỗi lớp có một giáo viên đứng lớp và trợ giảng theo sát từng em: chấm bài tập về nhà, trực bổ trợ, ghi nhận tiến bộ vào hệ thống.</p>
@@ -710,7 +755,7 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
 <div class="frame-wrap"><h2>Nấc 3 · Kết quả — Vinh danh tháng <small>/ket-qua — 60 giải tháng 9 thật từ ERP</small></h2>
 <div class="frame">
   <div class="hd"><div class="logo"><i><b></b><b></b><b></b><b></b></i><div>BK Academy<small>CLB Toán học và Khoa học</small></div></div><div class="menu">☰</div></div>
-  <div class="nav">Giới thiệu · Cách BK hoạt động · Đăng ký học · Tài liệu</div>
+  <div class="nav">Giới thiệu · Cách BK hoạt động · Nuôi dưỡng cảm xúc · Đăng ký học · Tài liệu</div>
   <div class="hero" style="padding:28px 20px 22px"><div class="eye">Kết quả</div><h1 style="font-size:26px">Vinh danh học sinh</h1><p style="margin:0">Mỗi tháng, sau bài kiểm tra tháng, giáo viên từng lớp chọn và trung tâm duyệt các em Xuất sắc · Tiến bộ · Chăm chỉ.</p></div>
   <div class="sec" style="padding-top:14px">
     <div class="month"><span>‹</span><b>Tháng 9 / 2026</b><span>›</span></div>
@@ -742,7 +787,7 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
 <div class="frame-wrap"><h2>Nấc 3 · Góc phụ huynh <small>/phu-huynh — thay "Tra cứu"</small></h2>
 <div class="frame">
   <div class="hd"><div class="logo"><i><b></b><b></b><b></b><b></b></i><div>BK Academy<small>CLB Toán học và Khoa học</small></div></div><div class="menu">☰</div></div>
-  <div class="nav">Giới thiệu · Cách BK hoạt động · Đăng ký học · Tài liệu</div>
+  <div class="nav">Giới thiệu · Cách BK hoạt động · Nuôi dưỡng cảm xúc · Đăng ký học · Tài liệu</div>
   <div class="sec" style="padding-top:18px">
     <div class="eye">Góc phụ huynh</div><h2 class="t">Theo dõi con mỗi ngày</h2>
     <p class="lead">Hai ứng dụng, hai tài khoản riêng. Phụ huynh đăng nhập bằng số điện thoại đã đăng ký với trung tâm.</p>
@@ -788,7 +833,7 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
 <div class="frame-wrap"><h2>Nấc 3 · Liên hệ <small>/lien-he</small></h2>
 <div class="frame">
   <div class="hd"><div class="logo"><i><b></b><b></b><b></b><b></b></i><div>BK Academy<small>CLB Toán học và Khoa học</small></div></div><div class="menu">☰</div></div>
-  <div class="nav">Giới thiệu · Cách BK hoạt động · Đăng ký học · Tài liệu</div>
+  <div class="nav">Giới thiệu · Cách BK hoạt động · Nuôi dưỡng cảm xúc · Đăng ký học · Tài liệu</div>
   <div class="sec" style="padding-top:18px">
     <div class="eye">Liên hệ</div><h2 class="t">Nói chuyện với BK Academy</h2>
     <div class="card" style="margin-bottom:10px"><h4>📞 Hotline</h4><p style="font:600 20px Lora,serif;color:var(--ink)">0963 209 309</p><p>10:00 – 21:00 hằng ngày, kể cả cuối tuần</p></div>

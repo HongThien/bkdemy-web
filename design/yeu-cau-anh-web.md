@@ -9,7 +9,7 @@
 - Ưu tiên: ★ = bắt buộc để lên web · ○ = nên có · △ = tuỳ chọn.
 - "Ai lo": **Thùy** = Thùy chọn/chụp · **t** = t tự chụp màn hình app / tự sinh.
 
-**8 ảnh bắt buộc (★):** B2 · B3 · B5 · D1 · D2a · D2b · B4 · E1.
+**11 ảnh bắt buộc (★):** B2 · B3 · B5 · D1 · D2a · D2b · B4 · E1 · H1 · H3 · H5.
 
 ---
 
@@ -57,6 +57,18 @@
 
 Các màn nấc 3 Phân lớp · Bổ trợ · Math Map · Học phí dùng lại D1, D3, D4a, D4b; Học phí không cần ảnh.
 
+## Nấc 2 — Nuôi dưỡng cảm xúc ở BK
+
+| Mã | Vị trí | Cần gì | Khổ | SL | Ưu tiên | Ai lo |
+|---|---|---|---|---|---|---|
+| H1 | Hero | **Lớp học vui**: GV ngồi cùng bàn với HS, không khí thoải mái, có nụ cười. | ngang 16:9 | 1 | ★ | Thùy |
+| H2 | Mục "Không khí lớp học" | GV/TA cúi xuống hướng dẫn 1 em, cả hai cười; góc gần. | ngang | 1 | ○ | Thùy |
+| H3 | Mục "Tạo động lực" | Cả lớp đang chơi trò chơi đội trên TV (Mở Rương / Chiếm Đất / Bắn Quà), HS giơ tay reo. | ngang | 1 | ★ | Thùy |
+| H4 | Mục "Tạo động lực" | Màn hình app HS: nhiệm vụ, điểm, xếp hạng. | ngang (iPad) | 1 | ○ | t |
+| H5 | Mục "Sự kiện vui chơi" | **Trung thu 2026**: ảnh đông, vui, có trang trí; chọn 2–3 tấm đẹp nhất. | ngang | 2–3 | ★ | Thùy |
+| H6 | Mục "Sự kiện vui chơi" | Sự kiện khác (BK Escape, sinh nhật, tổng kết…) nếu có. | ngang | 1–2 | △ | Thùy |
+| B4 | Mục "Vinh danh mỗi tháng" | (dùng lại ảnh buổi trao giải B4) | | | | |
+
 ## Nấc 2 — Đăng ký học tại BK
 
 | Mã | Vị trí | Cần gì | Khổ | SL | Ưu tiên | Ai lo |
@@ -91,7 +103,7 @@ B5 (mặt tiền) + bản đồ Google (đã có).
 
 | Ai lo | Bắt buộc ★ | Nên có ○ | Tuỳ chọn △ |
 |---|---|---|---|
-| Thùy chọn/chụp | 8 (B2 B3 B4 B5 D1 D2a D2b E1) | 4 (B1 C1 D4a F1) | 7 (A1 A2 C2 C3 D2c D4b) |
-| t tự chụp app / tự sinh / lấy ERP | 0 | 8 (D2d D2e D3 D5a D5b F2 E2 G1) | — |
+| Thùy chọn/chụp | 11 (B2 B3 B4 B5 D1 D2a D2b E1 H1 H3 H5) | 5 (B1 C1 D4a F1 H2) | 8 (A1 A2 C2 C3 D2c D4b H6) |
+| t tự chụp app / tự sinh / lấy ERP | 0 | 9 (D2d D2e D3 D5a D5b F2 E2 G1 H4) | — |
 
-Gợi ý chụp gọn trong **1 buổi học + 1 buổi trao giải**: D1, D2a, D2b, D2c, D4a lấy trong cùng 1 ca học; B4 lấy ở buổi trao giải tháng 10; B2, B3, G1 chụp cùng một buổi họp GV; B5, E1 chụp ban ngày lúc trung tâm vắng.
+Gợi ý chụp gọn trong **1 buổi học + 1 buổi trao giải**: D1, D2a, D2b, D2c, D4a lấy trong cùng 1 ca học; B4 lấy ở buổi trao giải tháng 10; H3 lấy lúc chơi game cuối buổi; H5 lục lại ảnh Trung thu đã chụp; B2, B3, G1 chụp cùng một buổi họp GV; B5, E1 chụp ban ngày lúc trung tâm vắng.
