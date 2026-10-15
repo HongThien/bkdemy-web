@@ -16,7 +16,7 @@ type Cap = "tieu_hoc" | "thcs" | "thpt";
 type GioOpt = { bat_dau: string; xong: string };
 type Buoi = { khung_id: string; ngay: string; thu: number; tu: string; den: string; gio: Record<string, GioOpt[]> };
 type FormData = {
-  lop: { lop: string; mon: { mon: string; thoi_luong_phut: number }[] }[];
+  lop: { lop: string; ten: string; mon: { mon: string; thoi_luong_phut: number }[] }[]; // ten do DB đặt ('Lớp 4 CLC')
   truong: { ten: string; cap: Cap[] }[];
   lich: Buoi[];
 };
@@ -27,7 +27,7 @@ const THU: Record<number, string> = { 1: "T2", 2: "T3", 3: "T4", 4: "T5", 5: "T6
 const THU_DAI: Record<number, string> = { 1: "Thứ 2", 2: "Thứ 3", 3: "Thứ 4", 4: "Thứ 5", 5: "Thứ 6", 6: "Thứ 7", 7: "Chủ nhật" };
 const ddmm = (ymd: string) => `${ymd.slice(8, 10)}/${ymd.slice(5, 7)}`;
 const phut = (hhmm: string) => Number(hhmm.slice(0, 2)) * 60 + Number(hhmm.slice(3, 5));
-const capCuaLop = (lop: string): Cap => (Number(lop) <= 5 ? "tieu_hoc" : Number(lop) <= 9 ? "thcs" : "thpt");
+const capCuaLop = (lop: string): Cap => { const n = parseInt(lop, 10); return n <= 5 ? "tieu_hoc" : n <= 9 ? "thcs" : "thpt"; };
 const boDau = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/đ/gi, "d").toLowerCase();
 const KHAC = "__khac__";
 
@@ -192,9 +192,9 @@ export function DangKyTestForm() {
       </Buoc>
 
       <Buoc so={2} ten="Con đang học lớp">
-        <div className="grid grid-cols-4 gap-2 sm:grid-cols-6">
+        <div className="flex flex-wrap gap-2">
           {fd.lop.map((l) => (
-            <button key={l.lop} type="button" onClick={() => chonLop(l.lop)} className={clsx(chip(lop === l.lop), "whitespace-nowrap px-2")}>Lớp {l.lop}</button>
+            <button key={l.lop} type="button" onClick={() => chonLop(l.lop)} className={clsx(chip(lop === l.lop), "whitespace-nowrap")}>{l.ten}</button>
           ))}
         </div>
       </Buoc>
