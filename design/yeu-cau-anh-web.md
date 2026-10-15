@@ -62,7 +62,7 @@ Các màn nấc 3 Phân lớp · Bổ trợ · Math Map · Học phí dùng lạ
 | Mã | Vị trí | Cần gì | Khổ | SL | Ưu tiên | Ai lo |
 |---|---|---|---|---|---|---|
 | E1 | Hero | **Test đầu vào**: HS làm bài test hoặc PH ngồi tư vấn với thầy/cô ở bàn tiếp đón. | ngang 16:9 | 1 | ★ | Thùy |
-| E2 | Card lớp — ảnh GV đứng lớp | Lấy avatar có sẵn trong ERP (11/15 người đã có). **Thiếu**: Nguyễn Công Hải · Nguyễn Mai Trang · Hoàng Thị Quỳnh Trang · Phạm Bảo Ngân · Trần Thị Thảo Nguyên (3 người sau chưa có trong team GV trên ERP). | vuông, mặt giữa khung | 5 | ○ | Thùy |
+| E2 | Card lớp — ảnh GV đứng lớp | Lấy avatar trong ERP (`nhan_su.anh_url`). Ai chưa có ảnh → ô trống (Thùy chốt 15/10). GV/TA tự cập nhật ảnh trong ERP là web tự có. | vuông | — | — | t (từ ERP) |
 
 ## Nấc 2 — Tài liệu ôn tập
 
@@ -75,7 +75,7 @@ Các màn nấc 3 Phân lớp · Bổ trợ · Math Map · Học phí dùng lạ
 
 | Mã | Vị trí | Cần gì | Khổ | SL | Ưu tiên | Ai lo |
 |---|---|---|---|---|---|---|
-| G1 | 15 card GV | Avatar: **cùng kiểu** cho cả 15 người — nền trắng/xám nhạt, vai trở lên, nhìn thẳng, áo BK, vuông ≥ 800 px. 11 người đã có trong ERP nhưng không cùng nền/khung; nếu Thùy muốn đồng bộ thì chụp lại một buổi cho cả đội. | vuông | 15 (hoặc 5 thiếu) | ○ | Thùy |
+| G1 | 15 card GV + TA | Avatar lấy từ ERP, không có → ô trống (Thùy chốt 15/10). Muốn đồng bộ nền/khung thì GV/TA tự đổi ảnh trong ERP. | vuông | — | — | t (từ ERP) |
 
 ## Nấc 3 — Vinh danh tháng
 
@@ -91,7 +91,7 @@ B5 (mặt tiền) + bản đồ Google (đã có).
 
 | Ai lo | Bắt buộc ★ | Nên có ○ | Tuỳ chọn △ |
 |---|---|---|---|
-| Thùy chọn/chụp | 8 (B2 B3 B4 B5 D1 D2a D2b E1) | 6 (B1 C1 D4a E2×5 F1 G1) | 7 (A1 A2 C2 C3 D2c D4b) |
-| t tự chụp app / tự sinh | 0 | 6 (D2d D2e D3 D5a D5b F2) | — |
+| Thùy chọn/chụp | 8 (B2 B3 B4 B5 D1 D2a D2b E1) | 4 (B1 C1 D4a F1) | 7 (A1 A2 C2 C3 D2c D4b) |
+| t tự chụp app / tự sinh / lấy ERP | 0 | 8 (D2d D2e D3 D5a D5b F2 E2 G1) | — |
 
 Gợi ý chụp gọn trong **1 buổi học + 1 buổi trao giải**: D1, D2a, D2b, D2c, D4a lấy trong cùng 1 ca học; B4 lấy ở buổi trao giải tháng 10; B2, B3, G1 chụp cùng một buổi họp GV; B5, E1 chụp ban ngày lúc trung tâm vắng.
