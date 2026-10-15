@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup web bkacademy.edu.vn — 15/10/2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1E3A5F;--gold:#C08A2E;--gold-l:#E2B45A;--paper:#FBF9F5;--paper-d:#F1ECE2;--sky:#4C6B8A;--slate:#2C3A47;--soft:#5B6773;--line:rgba(30,58,95,.12);--ok:#2E7D4F;--warn:#B23A3A}
+*{box-sizing:border-box}
+body{margin:0;background:#e9e6df;font-family:"Be Vietnam Pro",system-ui,sans-serif;color:var(--slate);font-size:14px}
+.board-head{position:sticky;top:0;z-index:9;background:var(--ink);color:#fff;padding:12px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.board-head h1{font:600 18px Lora,serif;margin:0}
+.board-head .note{font-size:12px;opacity:.8}
+.board-head button{margin-left:auto;background:var(--gold);color:#fff;border:0;border-radius:8px;padding:8px 14px;font-weight:600;cursor:pointer}
+.board{display:flex;flex-wrap:wrap;gap:28px;padding:28px;align-items:flex-start}
+.frame-wrap{display:flex;flex-direction:column;gap:8px}
+.frame-wrap>h2{font:600 14px "Be Vietnam Pro";margin:0;color:var(--ink)}
+.frame-wrap>h2 small{font-weight:400;color:var(--soft)}
+.frame{width:390px;height:820px;background:var(--paper);border-radius:28px;box-shadow:0 8px 30px rgba(0,0,0,.18);overflow:auto;border:8px solid #1b1b1b;scrollbar-width:thin}
+.board.wide .frame{width:1024px;height:900px;border-radius:12px;border-width:4px}
+.q{background:#fff6dd;border-left:3px solid var(--gold);padding:8px 10px;font-size:12px;color:#6b4e0e;margin:10px 16px;border-radius:0 8px 8px 0}
+.q b{color:#6b4e0e}
+/* site chrome */
+.hd{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:2}
+.logo{display:flex;align-items:center;gap:8px;font:600 15px Lora,serif;color:var(--ink)}
+.logo i{width:26px;height:26px;border-radius:7px;background:conic-gradient(#e2433b 0 25%,#f4b73e 0 50%,#2a9d8f 0 75%,#3b6fd6 0);display:inline-block}
+.menu{font-size:20px;color:var(--ink)}
+.nav{display:none;padding:8px 16px 12px;border-bottom:1px solid var(--line);font-size:13px;color:var(--ink);gap:14px;flex-wrap:wrap}
+.board.wide .nav{display:flex}
+.board.wide .menu{display:none}
+.nav b{color:var(--gold)}
+.float{position:sticky;bottom:14px;margin-left:auto;margin-right:14px;width:48px;height:48px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 4px 14px rgba(0,0,0,.25);z-index:3}
+.ft{background:var(--ink);color:#fff;padding:22px 16px;font-size:12px;line-height:1.7;margin-top:28px}
+.ft b{font:600 15px Lora,serif;display:block;margin-bottom:4px}
+/* blocks */
+.hero{background:var(--ink);color:#fff;padding:36px 20px 32px;position:relative;overflow:hidden}
+.hero .eye{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-l);font-weight:600}
+.hero h1{font:600 28px/1.15 Lora,serif;margin:8px 0 10px}
+.hero p{font-size:14px;line-height:1.55;opacity:.88;margin:0 0 18px}
+.hero svg{position:absolute;right:-20px;top:0;opacity:.25}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;font-weight:600;font-size:13px;border:1.5px solid transparent}
+.btn.gold{background:var(--gold);color:#fff}
+.btn.line{border-color:rgba(255,255,255,.4);color:#fff}
+.btn.ink{background:var(--ink);color:#fff}
+.btn.ink2{border-color:var(--ink);color:var(--ink)}
+.btn.sm{padding:7px 12px;font-size:12px}
+.sec{padding:24px 16px}
+.sec.dim{background:var(--paper-d)}
+.eye{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h2.t{font:600 21px/1.2 Lora,serif;color:var(--ink);margin:4px 0 6px}
+h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
+.lead{color:var(--soft);font-size:13px;line-height:1.55;margin:0 0 14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 8px;text-align:center}
+.stat b{display:block;font:600 24px Lora,serif;color:var(--ink)}
+.stat span{font-size:11px;color:var(--soft);line-height:1.3;display:block}
+.grid{display:grid;gap:10px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}
+.board.wide .g2{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
+.card h4{font:600 15px Lora,serif;color:var(--ink);margin:0 0 4px}
+.card p{margin:0;font-size:12.5px;color:var(--soft);line-height:1.5}
+.card .meta{font-size:11px;color:var(--gold);font-weight:600}
+.chev{float:right;color:var(--gold)}
+.he{display:flex;gap:10px}
+.he .lt{width:46px;height:46px;border-radius:12px;background:var(--ink);color:#fff;font:600 24px Lora,serif;display:flex;align-items:center;justify-content:center;flex:none}
+.he .lt.s{background:var(--gold)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.tab{padding:6px 11px;border-radius:999px;border:1px solid var(--line);font-size:12px;background:#fff;color:var(--ink)}
+.tab.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.lop{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-bottom:12px}
+.lop .top{background:var(--ink);color:#fff;padding:10px 14px;display:flex;justify-content:space-between;align-items:center}
+.lop .top b{font:600 18px Lora,serif}
+.lop .top i{font-style:normal;font-size:11px;background:var(--gold);padding:2px 8px;border-radius:999px}
+.lop .bd{padding:12px 14px;font-size:12.5px;display:grid;gap:8px}
+.lop .row{display:flex;justify-content:space-between;gap:8px}
+.lop .row span:first-child{color:var(--soft)}
+.lop .gv{display:flex;align-items:center;gap:8px}
+.av{width:30px;height:30px;border-radius:50%;background:var(--paper-d);border:1px solid var(--line);flex:none;overflow:hidden}
+.av img{width:100%;height:100%;object-fit:cover}
+.bar{height:6px;background:var(--paper-d);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--gold)}
+.list{list-style:none;margin:0;padding:0}
+.list li{padding:10px 0;border-bottom:1px solid var(--line);font-size:13px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.list li small{display:block;color:var(--soft);font-size:11.5px;margin-top:2px}
+.pill{font-size:10.5px;padding:2px 8px;border-radius:999px;background:var(--paper-d);color:var(--ink);font-weight:600;white-space:nowrap}
+.pill.lock{background:#fff1d6;color:#8a5a00}
+.pill.ok{background:#e4f3ea;color:var(--ok)}
+.faq details{border-bottom:1px solid var(--line);padding:9px 0;font-size:13px}
+.faq summary{font-weight:600;color:var(--ink);cursor:pointer}
+.faq p{margin:6px 0 0;color:var(--soft);font-size:12.5px;line-height:1.55}
+.form{background:#fff;border:1.5px solid var(--gold);border-radius:16px;padding:14px}
+.form h4{font:600 15px Lora,serif;color:var(--ink);margin:0 0 4px}
+.form p{font-size:12px;color:var(--soft);margin:0 0 10px}
+.in{border:1px solid var(--line);border-radius:9px;padding:9px 10px;font-size:13px;color:#889;margin-bottom:8px;background:#fff}
+.de{font-size:13px;line-height:1.6}
+.de .c{margin:10px 0}
+.de .c b{color:var(--ink)}
+.de .ans{display:grid;grid-template-columns:1fr 1fr;gap:2px 10px;font-size:12.5px;margin-top:4px}
+.tbl{width:100%;border-collapse:collapse;font-size:12px}
+.tbl th{background:var(--ink);color:#fff;padding:7px 6px;text-align:left;font-weight:600}
+.tbl td{padding:7px 6px;border-bottom:1px solid var(--line)}
+.tbl td:first-child{font:600 15px Lora,serif;color:var(--ink)}
+.tbl .s{color:var(--gold)}
+.vd{margin-bottom:14px}
+.vd .k{font:600 13px "Be Vietnam Pro";color:var(--gold);letter-spacing:.06em;text-transform:uppercase;margin:16px 0 6px}
+.vd .l{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:8px;font-size:12.5px}
+.vd .l b{font:600 14px Lora,serif;color:var(--ink);display:block;margin-bottom:4px}
+.vd .l span{display:inline-block;margin:2px 8px 2px 0}
+.vd .l em{font-style:normal;color:var(--soft)}
+.gvcard{text-align:center}
+.gvcard .av{width:76px;height:76px;margin:0 auto 8px}
+.gvcard b{display:block;font:600 14px Lora,serif;color:var(--ink)}
+.gvcard small{display:block;color:var(--gold);font-weight:600;font-size:11px;margin:2px 0}
+.gvcard p{font-size:11.5px}
+.step{display:flex;gap:10px;margin-bottom:10px;font-size:12.5px}
+.step i{flex:none;width:24px;height:24px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:600;font-size:12px}
+.map{height:200px;border-radius:14px;background:linear-gradient(135deg,#dfe7df,#cfdccf);display:flex;align-items:center;justify-content:center;color:var(--sky);font-size:12px;border:1px solid var(--line)}
+.crumb{font-size:11px;color:var(--soft);margin-bottom:6px}
+.crumb b{color:var(--ink);font-weight:500}
+.dl{display:flex;gap:8px;margin:12px 0}
+.dl .btn{flex:1;text-align:center}
+.notice{font-size:11px;color:var(--soft);background:var(--paper-d);padding:8px 10px;border-radius:8px;margin-top:8px}
+.month{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:10px 0}
+.month b{font:600 16px Lora,serif;color:var(--ink)}
+.legend{display:flex;gap:10px;font-size:11px;color:var(--soft);margin-bottom:6px}
+</style>
+</head>
+<body>
+<div class="board-head">
+  <h1>Mockup web bkacademy.edu.vn</h1>
+  <span class="note">15/10/2026 · 10 màn · khung điện thoại (web cuộn mobile). Dữ liệu lớp/GV/giải tháng là THẬT từ ERP, nội dung đề là minh hoạ. Ô vàng = chỗ Thùy quyết.</span>
+  <button onclick="document.querySelector('.board').classList.toggle('wide');this.textContent=document.querySelector('.board').classList.contains('wide')?'Xem bản điện thoại':'Xem bản máy tính'">Xem bản máy tính</button>
+</div>
+
+<div class="board">
+
+<!-- ===================== 1. TRANG CHỦ ===================== -->
+<div class="frame-wrap"><h2>1 · Trang chủ <small>/</small></h2>
+<div class="frame">
+  <div class="hd"><div class="logo"><i></i>BK Academy</div><div class="menu">☰</div></div>
+  <div class="nav">Chương trình · <b>Tài liệu</b> · Phân lớp · Đội ngũ · Kết quả · Tin tức · Liên hệ · <span style="margin-left:auto">Góc phụ huynh →</span></div>
+  <div class="hero">
+    <svg width="260" height="200" viewBox="0 0 260 200" fill="none" stroke="#fff" stroke-width="1"><path d="M0 170 C60 160 90 120 130 100 S200 40 260 20" stroke="#E2B45A" stroke-width="2.5"/><g opacity=".5"><path d="M0 40h260M0 80h260M0 120h260M0 160h260M40 0v200M80 0v200M120 0v200M160 0v200M200 0v200M240 0v200"/></g></svg>
+    <div class="eye">Hệ thống dạy Toán bài bản</div>
+    <h1>Lộ trình rõ ràng.<br>Tiến bộ nhìn thấy được.</h1>
+    <p>Đồng hành cùng con từ lớp 3 tới lớp 12 — mỗi buổi học, mỗi bài kiểm tra đều được theo dõi bằng dữ liệu, để phụ huynh luôn biết con đang ở đâu.</p>
+    <div class="btns"><a class="btn gold">Xem lớp đang mở</a><a class="btn line">Tài liệu miễn phí</a></div>
+  </div>
+  <div class="q"><b>Quyết:</b> dòng eyebrow "Hệ thống dạy Toán bài bản" giữ, KHTN/Anh/Văn chỉ ghi 1 dòng ở khối cấp học bên dưới?</div>
+  <div class="sec">
+    <div class="stats"><div class="stat"><b>350+</b><span>học sinh đang theo học</span></div><div class="stat"><b>49</b><span>lớp đang mở, lớp 3 → 12</span></div><div class="stat"><b>≤ 15</b><span>học sinh mỗi lớp</span></div></div>
+  </div>
+  <div class="sec dim">
+    <div class="eye">Chương trình</div><h2 class="t">Đồng hành theo từng cấp</h2>
+    <div class="grid">
+      <div class="card"><span class="chev">›</span><h4>Tiểu học · lớp 3–5</h4><p>3 hệ B · A · T (ôn thi vào 6 CLC)</p><p class="meta">9 lớp đang tuyển</p></div>
+      <div class="card"><span class="chev">›</span><h4>THCS · lớp 6–9</h4><p>4 hệ C · B · A · S, hướng tới thi vào 10</p><p class="meta">19 lớp đang tuyển</p></div>
+      <div class="card"><span class="chev">›</span><h4>THPT · lớp 10–12</h4><p>Thi tốt nghiệp & xét tuyển đại học</p><p class="meta">5 lớp đang tuyển</p></div>
+    </div>
+    <p class="lead" style="margin:10px 0 0;font-size:12px">Ngoài Toán, BK có lớp Khoa học tự nhiên, Tiếng Anh, Ngữ văn cho khối 5–9.</p>
+  </div>
+  <div class="sec">
+    <div class="eye">Phân lớp</div><h2 class="t">Bốn mức độ — một lộ trình</h2>
+    <p class="lead">Mỗi con học đúng sức mình. Chuyển lớp linh hoạt giữa năm, thử 2 tuần trước khi chuyển.</p>
+    <div class="grid g2">
+      <div class="card he"><div class="lt">C</div><div><h4>Củng cố nền tảng</h4><p>Mục tiêu 7+ · ≤10 hs</p></div></div>
+      <div class="card he"><div class="lt">B</div><div><h4>Vững cơ bản</h4><p>Mục tiêu 8+ · ≤12 hs</p></div></div>
+      <div class="card he"><div class="lt">A</div><div><h4>Nâng cao chọn lọc</h4><p>Mục tiêu 9+ · ≤15 hs</p></div></div>
+      <div class="card he"><div class="lt s">S</div><div><h4>Nâng cao toàn diện</h4><p>Mục tiêu 9.5+ · ≤15 hs</p></div></div>
+    </div>
+    <a class="btn ink2 sm" style="margin-top:12px;display:inline-block">Xem hệ thống phân lớp →</a>
+  </div>
+  <div class="sec dim">
+    <div class="eye">Tài liệu miễn phí</div><h2 class="t">Đề thi, đề cương mới nhất</h2>
+    <ul class="list">
+      <li><div>Đề thi GK1 Toán 8 — Ngôi Sao Hoàng Mai 2026<small>22 câu · có đáp án</small></div><span class="pill">Toán 8</span></li>
+      <li><div>Đề cương GK1 Toán 8 — Lương Thế Vinh 2026<small>30 câu · có đáp án</small></div><span class="pill">Toán 8</span></li>
+      <li><div>Đề cương GK1 Toán 8 — Đoàn Thị Điểm 2026<small>28 câu · có đáp án</small></div><span class="pill">Toán 8</span></li>
+      <li><div>Đề thi GK1 Toán 6 — Lê Quý Đôn 2026<small>20 câu · có đáp án</small></div><span class="pill">Toán 6</span></li>
+    </ul>
+    <a class="btn ink2 sm" style="margin-top:12px;display:inline-block">Xem tất cả 90 đề →</a>
+  </div>
+  <div class="sec">
+    <div class="eye">Kết quả</div><h2 class="t">Vinh danh tháng 9/2026</h2>
+    <p class="lead">60 học sinh được trao giải Xuất sắc · Tiến bộ · Chăm chỉ ở 30 lớp.</p>
+    <ul class="list">
+      <li><div>Lê Thành An<small>7K2 · Khoa học tự nhiên</small></div><span class="pill ok">★ Xuất sắc</span></li>
+      <li><div>Lê Hoàng Anh<small>10A1 · Toán</small></div><span class="pill ok">★ Xuất sắc</span></li>
+      <li><div>Phạm Ngân Khánh<small>8K1 · Khoa học tự nhiên</small></div><span class="pill">✎ Chăm chỉ</span></li>
+    </ul>
+    <a class="btn ink2 sm" style="margin-top:12px;display:inline-block">Xem cả bảng →</a>
+  </div>
+  <div class="sec dim">
+    <div class="eye">Góc phụ huynh</div><h2 class="t">Theo dõi con mỗi ngày</h2>
+    <div class="grid g2"><div class="card"><h4>Phụ huynh</h4><p>Điểm, chuyên cần, nhận xét sau buổi</p><a class="btn ink sm" style="margin-top:8px;display:inline-block">Vào app PH</a></div><div class="card"><h4>Học sinh</h4><p>Làm bài, luyện tập, xem tiến bộ</p><a class="btn gold sm" style="margin-top:8px;display:inline-block">Vào app HS</a></div></div>
+  </div>
+  <div class="float">📞</div>
+  <div class="ft"><b>BK Academy</b>Số 17, Lô A10, KĐT Geleximco, An Khánh, Hà Nội<br>Hotline 0963 209 309 · 10:00–21:00 hằng ngày<br><span style="opacity:.7">Chương trình · Tài liệu · Phân lớp · Đội ngũ · Kết quả · Tin tức · Liên hệ</span></div>
+</div></div>
+
+<!-- ===================== 2. CHƯƠNG TRÌNH THCS ===================== -->
+<div class="frame-wrap"><h2>2 · Chương trình THCS <small>/thcs (Tiểu học, THPT cùng khuôn)</small></h2>
+<div class="frame">
+  <div class="hd"><div class="logo"><i></i>BK Academy</div><div class="menu">☰</div></div>
+  <div class="nav"><b>Chương trình</b> · Tài liệu · Phân lớp · Đội ngũ · Kết quả · Tin tức · Liên hệ</div>
+  <div class="hero" style="padding:28px 20px 24px"><div class="eye">Tuyển sinh Toán THCS · 2026–2027</div><h1 style="font-size:24px">Đúng người — Đúng lớp — Đúng lộ trình</h1><p style="margin:0">Phân lớp theo năng lực để mỗi con học đúng sức mình, tiến bộ vững chắc suốt năm học.</p></div>
+  <div class="sec">
+    <div class="eye">Bốn hệ năng lực</div>
+    <div class="grid g2" style="margin-top:8px">
+      <div class="card he"><div class="lt">C</div><div><h4>7+</h4><p>Củng cố nền tảng · ≤10 hs · cần vá lỗ hổng cơ bản</p></div></div>
+      <div class="card he"><div class="lt">B</div><div><h4>8+</h4><p>Vững cơ bản · ≤12 hs · luyện nhiều lần cho thành thạo</p></div></div>
+      <div class="card he"><div class="lt">A</div><div><h4>9+</h4><p>Nâng cao chọn lọc · ≤15 hs · bứt phá có chọn lọc</p></div></div>
+      <div class="card he"><div class="lt s">S</div><div><h4>9.5+</h4><p>Nâng cao toàn diện · ≤15 hs · làm chủ 100% dạng nâng cao</p></div></div>
+    </div>
+  </div>
+  <div class="sec dim">
+    <div class="eye">Lớp đang mở</div><h2 class="t">Chọn khối của con</h2>
+    <div class="tabs"><span class="tab">Lớp 6</span><span class="tab on">Lớp 7</span><span class="tab">Lớp 8</span><span class="tab">Lớp 9</span></div>
+    <div class="lop"><div class="top"><b>7A1</b><i>Hệ A · 9+</i></div><div class="bd">
+      <div class="gv"><div class="av"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/4915b6b5-1851-4377-9dcd-a803576f5b60.jpg" alt=""></div><div><b>Tạ Quốc Cường</b><br><span style="color:var(--soft);font-size:11px">Giáo viên đứng lớp</span></div></div>
+      <div class="row"><span>Lịch học</span><span>T2 19:30–21:00 · T6 18:00–19:30</span></div>
+      <div class="row"><span>Sĩ số</span><span>8 / 15</span></div><div class="bar"><i style="width:53%"></i></div>
+      <div class="row"><span>Học phí</span><span>150.000 đ / buổi 90 phút</span></div>
+      <p style="margin:0;font-size:12px;color:var(--soft)"><b style="color:var(--ink)">Yêu cầu:</b> kiến thức cơ bản ổn định, muốn bồi dưỡng nâng cao.<br><b style="color:var(--ink)">Mục tiêu:</b> 9+ trong các kì thi trên trường.</p>
+      <a class="btn gold sm" style="text-align:center">Đăng ký test đầu vào</a>
+    </div></div>
+    <div class="lop"><div class="top"><b>7B1</b><i>Hệ B · 8+</i></div><div class="bd">
+      <div class="gv"><div class="av"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/29e583b4-8bc1-4304-88ae-87f3b0073154.jpg" alt=""></div><div><b>Phạm Thị Thùy Trang</b><br><span style="color:var(--soft);font-size:11px">Giáo viên đứng lớp</span></div></div>
+      <div class="row"><span>Lịch học</span><span>T3 18:00–19:30 · CN 08:30–10:00</span></div>
+      <div class="row"><span>Sĩ số</span><span>11 / 12 · <span style="color:var(--warn)">còn 1 chỗ</span></span></div><div class="bar"><i style="width:92%"></i></div>
+      <div class="row"><span>Học phí</span><span>150.000 đ / buổi 90 phút</span></div>
+      <a class="btn gold sm" style="text-align:center">Đăng ký test đầu vào</a>
+    </div></div>
+    <div class="lop"><div class="top" style="background:var(--gold)"><b>7S1</b><i style="background:var(--ink)">Hệ S · 9.5+</i></div><div class="bd">
+      <div class="gv"><div class="av"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/4cc7af19-6f4e-4833-9bb1-3c9781a0ec11.png" alt=""></div><div><b>Đào Xuân Thùy</b><br><span style="color:var(--soft);font-size:11px">Giáo viên đứng lớp</span></div></div>
+      <div class="row"><span>Lịch học</span><span>T4 18:00–19:30 · CN 10:15–11:45</span></div>
+      <div class="row"><span>Sĩ số</span><span>10 / 15</span></div><div class="bar"><i style="width:67%"></i></div>
+      <div class="row"><span>Học phí</span><span>150.000 đ / buổi 90 phút</span></div>
+      <a class="btn gold sm" style="text-align:center">Đăng ký test đầu vào</a>
+    </div></div>
+  </div>
+  <div class="q"><b>Quyết:</b> học phí hiện công khai trên card (đang hiện)? Nút "Đăng ký test đầu vào" = form ghi lead (tên, SĐT, lớp) hay chỉ gọi hotline?</div>
+  <div class="sec">
+    <div class="eye">Ôn thi vào 10</div><h3 class="t" style="margin-top:4px">Lớp 9 bám cấu trúc đề của Sở</h3>
+    <p class="lead">Tổng ôn theo chuyên đề rồi luyện đề; chiến dịch ôn thi miễn phí trước kỳ thi; theo dõi từng dạng bài để bổ trợ đúng chỗ hổng.</p>
+    <div class="faq">
+      <details open><summary>Con có được chuyển lớp, chuyển hệ không?</summary><p>Có các kì sát hạch định kì. Đủ điều kiện thì con học thử lớp mới 2 tuần, hai bên cùng đồng thuận mới chuyển chính thức.</p></details>
+      <details><summary>Trung tâm báo cáo tình hình học thế nào?</summary></details>
+      <details><summary>Con hơi kém thì được hỗ trợ ra sao?</summary></details>
+      <details><summary>Học phí 4 hệ có chênh lệch không?</summary></details>
+    </div>
+  </div>
+  <div class="sec dim"><div class="eye">Tài liệu THCS</div>
+    <ul class="list"><li><div>Đề thi GK1 Toán 8 — Ngôi Sao Hoàng Mai 2026</div><span class="pill">Toán 8</span></li><li><div>Đề cương GK1 Toán 8 — Lương Thế Vinh 2026</div><span class="pill">Toán 8</span></li></ul>
+  </div>
+  <div class="float">📞</div>
+  <div class="ft"><b>BK Academy</b>Số 17, Lô A10, KĐT Geleximco, An Khánh, Hà Nội<br>Hotline 0963 209 309 · 10:00–21:00 hằng ngày</div>
+</div></div>
+
+<!-- ===================== 3. TÀI LIỆU HUB ===================== -->
+<div class="frame-wrap"><h2>3 · Tài liệu (hub) <small>/tai-lieu</small></h2>
+<div class="frame">
+  <div class="hd"><div class="logo"><i></i>BK Academy</div><div class="menu">☰</div></div>
+  <div class="nav">Chương trình · <b>Tài liệu</b> · Phân lớp · Đội ngũ · Kết quả · Tin tức · Liên hệ</div>
+  <div class="hero" style="padding:28px 20px 24px"><div class="eye">Tài liệu</div><h1 style="font-size:24px">Đề thi, đề cương miễn phí — có đáp án</h1><p style="margin:0">Đề thật từ các trường ở Hà Nội, đáp án đã được giáo viên BK soát. Lời giải chi tiết gửi qua Zalo khi đăng ký.</p></div>
+  <div class="sec">
+    <div class="tabs"><span class="tab on">Tất cả</span><span class="tab">Toán 6</span><span class="tab">Toán 7</span><span class="tab">Toán 8</span><span class="tab">Toán 9</span><span class="tab">Vào 10</span></div>
+    <div class="tabs" style="margin-top:0"><span class="tab on">Mọi loại</span><span class="tab">Đề thi GK/CK</span><span class="tab">Đề cương</span><span class="tab">Trường ▾</span><span class="tab">2026 ▾</span></div>
+    <div class="eye" style="margin-top:8px">Mới cập nhật</div>
+    <ul class="list">
+      <li><div>Đề thi giữa kì 1 Toán 8 — THCS Ngôi Sao Hoàng Mai 2026–2027<small>22 câu · 90 phút · Đáp án ✓ · Lời giải 🔒</small></div><span class="pill">Toán 8</span></li>
+      <li><div>Đề cương giữa kì 1 Toán 8 — Lương Thế Vinh 2026–2027<small>30 câu · Đáp án ✓ · Lời giải 🔒</small></div><span class="pill">Toán 8</span></li>
+      <li><div>Đề cương giữa kì 1 Toán 8 — Đoàn Thị Điểm 2026–2027<small>28 câu · Đáp án ✓ · Lời giải 🔒</small></div><span class="pill">Toán 8</span></li>
+      <li><div>Đề thi giữa kì 1 Toán 8 — Nguyễn Tri Phương 2025–2026<small>25 câu · 90 phút · Đáp án ✓</small></div><span class="pill">Toán 8</span></li>
+      <li><div>Đề cương giữa kì 1 Toán 9 — Nguyễn Siêu 2026–2027<small>88 câu · Đáp án ✓ · Lời giải 🔒</small></div><span class="pill">Toán 9</span></li>
+    </ul>
+  </div>
+  <div class="sec dim">
+    <div class="eye">Theo khối</div>
+    <div class="grid g2" style="margin-top:8px">
+      <div class="card"><span class="chev">›</span><h4>Toán 6</h4><p class="meta">45 đề</p></div>
+      <div class="card"><span class="chev">›</span><h4>Toán 7</h4><p class="meta">sắp có</p></div>
+      <div class="card"><span class="chev">›</span><h4>Toán 8</h4><p class="meta">43 đề</p></div>
+      <div class="card"><span class="chev">›</span><h4>Toán 9 · Vào 10</h4><p class="meta">2 đề</p></div>
+    </div>
+  </div>
+  <div class="sec"><div class="card" style="border-color:var(--gold)"><h4>Con đang ôn thi giữa kì?</h4><p>BK có lớp theo đúng sức con, sĩ số nhỏ, bổ trợ miễn phí khi hổng kiến thức.</p><a class="btn ink sm" style="margin-top:8px;display:inline-block">Xem lớp đang mở</a></div></div>
+  <div class="float">📞</div>
+  <div class="ft"><b>BK Academy</b>Hotline 0963 209 309 · 10:00–21:00 hằng ngày</div>
+</div></div>
+
+<!-- ===================== 4. TÀI LIỆU TOÁN 8 ===================== -->
+<div class="frame-wrap"><h2>4 · Tài liệu Toán 8 <small>/tai-lieu/toan-8 — trang bắt từ khoá rộng</small></h2>
+<div class="frame">
+  <div class="hd"><div class="logo"><i></i>BK Academy</div><div class="menu">☰</div></div>
+  <div class="nav">Chương trình · <b>Tài liệu</b> · Phân lớp · Đội ngũ · Kết quả · Tin tức · Liên hệ</div>
+  <div class="sec" style="padding-top:16px">
+    <div class="crumb">Tài liệu › <b>Toán 8</b></div>
+    <h2 class="t" style="font-size:24px">Đề thi &amp; đề cương Toán 8</h2>
+    <p class="lead">Lớp 8 có 4 mốc kiểm tra trên trường: giữa kì 1 (tháng 10–11), cuối kì 1 (tháng 12–1), giữa kì 2 (tháng 3), cuối kì 2 (tháng 4–5). Đề dưới đây là đề thật của các trường ở Hà Nội những năm gần nhất, đã có đáp án do giáo viên BK soát.</p>
+    <div class="tabs"><span class="tab on">Giữa kì 1</span><span class="tab">Cuối kì 1</span><span class="tab">Giữa kì 2</span><span class="tab">Cuối kì 2</span><span class="tab">Đề cương</span></div>
+    <table class="tbl" style="font-size:12px">
+      <tr><th style="font-weight:600">Trường</th><th>Năm</th><th>Câu</th><th>Đáp án</th><th>Giải</th></tr>
+      <tr><td style="font:500 12.5px 'Be Vietnam Pro';color:var(--ink)">Ngôi Sao Hoàng Mai</td><td>2026</td><td>22</td><td class="s">✓</td><td>🔒</td></tr>
+      <tr><td style="font:500 12.5px 'Be Vietnam Pro';color:var(--ink)">Lương Thế Vinh (đề cương)</td><td>2026</td><td>30</td><td class="s">✓</td><td>🔒</td></tr>
+      <tr><td style="font:500 12.5px 'Be Vietnam Pro';color:var(--ink)">Đoàn Thị Điểm (đề cương)</td><td>2026</td><td>28</td><td class="s">✓</td><td>🔒</td></tr>
+      <tr><td style="font:500 12.5px 'Be Vietnam Pro';color:var(--ink)">Nguyễn Tri Phương</td><td>2025</td><td>25</td><td class="s">✓</td><td>🔒</td></tr>
+      <tr><td style="font:500 12.5px 'Be Vietnam Pro';color:var(--ink)">Thanh Xuân</td><td>2025</td><td>24</td><td class="s">✓</td><td>🔒</td></tr>
+      <tr><td style="font:500 12.5px 'Be Vietnam Pro';color:var(--ink)">Lê Quý Đôn</td><td>2025</td><td>20</td><td class="s">✓</td><td>🔒</td></tr>
+      <tr><td style="font:500 12.5px 'Be Vietnam Pro';color:var(--ink)">… 33 đề nữa</td><td></td><td></td><td></td><td></td></tr>
+    </table>
+    <div class="notice">Cả 39 đề giữa kì 1 cùng hiện trong một trang, cuộn dài — Google đọc được toàn bộ.</div>
+  </div>
+  <div class="sec dim">
+    <h3 class="t" style="margin-top:0">Đề giữa kì 1 Toán 8 thường ra gì?</h3>
+    <p class="lead" style="margin:0">3–4 đoạn ngắn: đa thức, hằng đẳng thức, phân thức; tứ giác, hình thang cân, đường trung bình; dạng điểm cao và dạng hay mất điểm. Đoạn này bắt từ khoá dài, nội dung do GV BK viết, mỗi khối một bài.</p>
+  </div>
+  <div class="sec"><div class="card" style="border-color:var(--gold)"><h4>Con đang học lớp 8?</h4><p>Xem 5 lớp Toán 8 đang mở, xếp theo 4 hệ C/B/A/S.</p><a class="btn ink sm" style="margin-top:8px;display:inline-block">Lớp Toán 8 đang mở →</a></div></div>
+  <div class="float">📞</div>
+  <div class="ft"><b>BK Academy</b>Hotline 0963 209 309 · 10:00–21:00 hằng ngày</div>
+</div></div>
+
+<!-- ===================== 5. TRANG 1 ĐỀ ===================== -->
+<div class="frame-wrap"><h2>5 · Trang một đề <small>/tai-lieu/de-thi-giua-ki-1-toan-8-ngoi-sao-hoang-mai-2026 — đơn vị xếp hạng</small></h2>
+<div class="frame">
+  <div class="hd"><div class="logo"><i></i>BK Academy</div><div class="menu">☰</div></div>
+  <div class="nav">Chương trình · <b>Tài liệu</b> · Phân lớp · Đội ngũ · Kết quả · Tin tức · Liên hệ</div>
+  <div class="sec" style="padding-top:16px">
+    <div class="crumb">Tài liệu › <b>Toán 8</b> › Giữa kì 1</div>
+    <h2 class="t" style="font-size:21px">Đề thi giữa kì 1 Toán 8 trường THCS Ngôi Sao Hoàng Mai năm học 2026–2027 (có đáp án)</h2>
+    <p class="lead" style="margin-bottom:6px">22 câu · 90 phút · 12 trắc nghiệm + 10 tự luận · Đáp án đã soát bởi giáo viên BK Academy</p>
+    <div class="dl"><a class="btn ink sm">⬇ Tải đề PDF</a><a class="btn ink2 sm">⬇ Tải đáp án PDF</a></div>
+    <h3 class="t">Nội dung đề</h3>
+    <div class="de">
+      <div class="c"><b>Phần I. Trắc nghiệm (3 điểm)</b></div>
+      <div class="c"><b>Câu 1.</b> Thu gọn đa thức P = 3x²y − 2xy² + x²y − xy² ta được:<div class="ans"><span>A. 4x²y − 3xy²</span><span>B. 2x²y − xy²</span><span>C. 4x²y + 3xy²</span><span>D. 2x²y + 3xy²</span></div></div>
+      <div class="c"><b>Câu 2.</b> Khai triển (2x − 3)² được kết quả là:<div class="ans"><span>A. 4x² − 9</span><span>B. 4x² − 12x + 9</span><span>C. 4x² + 12x + 9</span><span>D. 2x² − 12x + 9</span></div></div>
+      <div class="c"><b>Câu 3.</b> Hình thang cân ABCD (AB ∥ CD) có góc A = 70°. Số đo góc D bằng:<div class="ans"><span>A. 70°</span><span>B. 110°</span><span>C. 20°</span><span>D. 100°</span></div></div>
+      <div class="c" style="color:var(--soft)">… (nội dung minh hoạ; bản thật hiện đủ 22 câu, hình vẽ, cấu trúc gốc Bài 1 a–d)</div>
+      <div class="c"><b>Phần II. Tự luận (7 điểm)</b></div>
+      <div class="c"><b>Bài 1 (2 điểm).</b> Phân tích các đa thức sau thành nhân tử:<br>a) x³ − 4x &nbsp; b) x² − 2xy + y² − 9 &nbsp; c) 2x² − 5x + 2 &nbsp; d) x⁴ + 4</div>
+      <div class="c"><b>Bài 2 (1,5 điểm).</b> Cho biểu thức A = … Rút gọn A và tìm x để A = 2.</div>
+    </div>
+    <h3 class="t">Đáp án</h3>
+    <div class="card"><div class="de" style="font-size:12.5px"><b style="color:var(--ink)">Trắc nghiệm:</b> 1.A · 2.B · 3.A · 4.C · 5.D · 6.B · 7.A · 8.D · 9.C · 10.B · 11.A · 12.C<br><b style="color:var(--ink)">Bài 1:</b> a) x(x−2)(x+2) · b) (x−y−3)(x−y+3) · c) (2x−1)(x−2) · d) (x²+2x+2)(x²−2x+2)<br><b style="color:var(--ink)">Bài 2:</b> A = 2x/(x−1); A = 2 vô nghiệm … (đáp án đủ mọi bài, free)</div></div>
+    <div class="form" style="margin-top:14px">
+      <h4>🔒 Nhận lời giải chi tiết 22 câu qua Zalo</h4>
+      <p>Giáo viên BK đã giải từng bước. Để lại số Zalo, BK gửi file lời giải trong ngày.</p>
+      <div class="in">Tên phụ huynh hoặc học sinh</div>
+      <div class="in">Số điện thoại Zalo</div>
+      <div class="in">Con đang học lớp ▾</div>
+      <a class="btn gold" style="display:block;text-align:center">Nhận lời giải</a>
+      <div class="notice">Sau khi bấm: "BK đã nhận, sẽ gửi qua Zalo trong hôm nay". Lead ghi vào ERP (tên · SĐT · khối · đề nào), Thùy nhận và gửi file.</div>
+    </div>
+    <h3 class="t">Đề liên quan</h3>
+    <ul class="list"><li><div>Đề cương GK1 Toán 8 — Lương Thế Vinh 2026</div><span class="pill">Toán 8</span></li><li><div>Đề thi GK1 Toán 8 — Ngôi Sao Hoàng Mai 2025</div><span class="pill">Toán 8</span></li><li><div>Đề thi GK1 Toán 8 — Nguyễn Tri Phương 2025</div><span class="pill">Toán 8</span></li></ul>
+  </div>
+  <div class="sec dim"><div class="card" style="border-color:var(--gold)"><h4>Con muốn luyện kỹ hơn?</h4><p>5 lớp Toán 8 đang mở, xếp theo đúng sức con.</p><a class="btn ink sm" style="margin-top:8px;display:inline-block">Xem lớp Toán 8 →</a></div></div>
+  <div class="float">📞</div>
+  <div class="ft"><b>BK Academy</b>Hotline 0963 209 309 · 10:00–21:00 hằng ngày</div>
+</div></div>
+
+<!-- ===================== 6. PHÂN LỚP ===================== -->
+<div class="frame-wrap"><h2>6 · Hệ thống phân lớp <small>/phan-lop — nội dung lõi, từ brochure</small></h2>
+<div class="frame">
+  <div class="hd"><div class="logo"><i></i>BK Academy</div><div class="menu">☰</div></div>
+  <div class="nav">Chương trình · Tài liệu · <b>Phân lớp</b> · Đội ngũ · Kết quả · Tin tức · Liên hệ</div>
+  <div class="hero" style="padding:28px 20px 24px"><div class="eye">Tài liệu chính thức · 2026–2027</div><h1 style="font-size:26px">Hệ thống phân lớp</h1><p style="margin:0"><i>Đúng người — Đúng lớp — Đúng lộ trình.</i> Mỗi học sinh có tốc độ tiếp thu, nền tảng và mục tiêu khác nhau; một lớp chung mọi trình độ không giúp được cả em cần củng cố lẫn em sẵn sàng bài nâng cao.</p></div>
+  <div class="sec">
+    <div class="eye">Tổng quan</div><h2 class="t">Bốn mức độ — một lộ trình</h2>
+    <table class="tbl">
+      <tr><th></th><th>Mục tiêu</th><th>Nâng cao</th><th>Sĩ số</th><th>Bổ trợ</th></tr>
+      <tr><td>C</td><td>7+</td><td>0%</td><td>≤10</td><td>1 buổi/tuần</td></tr>
+      <tr><td>B</td><td>8+</td><td>10–20%</td><td>≤12</td><td>khi cần</td></tr>
+      <tr><td>A</td><td>9+</td><td>30–50%</td><td>≤15</td><td>khi cần</td></tr>
+      <tr><td class="s">S</td><td class="s">9.5+</td><td>60–80%</td><td>≤15</td><td>khi cần</td></tr>
+    </table>
+    <p class="notice">Học phí buổi học chính của cả 4 mức bằng nhau. Khác biệt duy nhất: buổi bổ trợ định kỳ lớp C (75.000 đ, bằng 50% buổi chính), tự động bao gồm khi đăng ký lớp C.</p>
+  </div>
+  <div class="sec dim">
+    <div class="eye">Mô tả từng mức</div>
+    <div class="tabs"><span class="tab on">Lớp C</span><span class="tab">Lớp B</span><span class="tab">Lớp A</span><span class="tab">Lớp S</span></div>
+    <div class="card he"><div class="lt">C</div><div><h4>Củng cố nền tảng · 7+</h4><p>Dành cho học sinh cần xây lại nền tảng cơ bản, học chậm — kỹ — nhiều lần để chắc gốc.</p></div></div>
+    <h3 class="t">Học sinh phù hợp</h3><p class="lead">Nền tảng còn nhiều chỗ hổng · tính toán, trình bày chưa tốt · cần thời gian vừa học mới vừa vá cũ · cần kiên nhẫn hướng dẫn lại từ đầu.</p>
+    <h3 class="t">Cách BK đồng hành</h3><p class="lead">Giáo viên giàu kinh nghiệm xử lý lỗ hổng · tốc độ chậm, lặp lại nhiều, 100% cơ bản · 1 buổi bổ trợ định kỳ/tuần ngoài 2 buổi chính.</p>
+    <div class="card" style="background:#eef3f8;border:0"><p style="color:var(--ink)"><i>Lớp C là mức có cường độ chăm sóc cao nhất tại BK. Vào Lớp C không có nghĩa là học sinh kém.</i></p></div>
+  </div>
+  <div class="sec">
+    <div class="eye">Cơ chế bổ trợ</div><h2 class="t">Phần quyền lợi của học sinh</h2>
+    <ul class="list"><li><div>Bổ trợ yếu<small>hổng một phần kiến thức → mở ngay, xử lý dứt điểm</small></div><span class="pill ok">Miễn phí</span></li><li><div>Bổ trợ ôn thi<small>trước GK, CK, thi vào 10</small></div><span class="pill ok">Miễn phí</span></li><li><div>Bổ trợ định kỳ<small>xếp sẵn trong chương trình</small></div><span class="pill ok">Miễn phí</span></li><li><div>Bổ trợ đuổi<small>HS mới vào giữa chừng, 1–1 hoặc nhóm nhỏ, 3–5 buổi</small></div><span class="pill">250.000 đ/buổi</span></li></ul>
+  </div>
+  <div class="sec dim">
+    <div class="eye">Lộ trình thăng tiến</div><h2 class="t">Chuyển lớp giữa năm</h2>
+    <p class="lead">Ba yếu tố song song: điểm bài MT · quá trình học · đánh giá giáo viên. Không yếu tố nào riêng lẻ quyết định.</p>
+    <div class="step"><i>1</i><div>Đủ điều kiện → học thử lớp cao hơn <b>2 tuần</b></div></div>
+    <div class="step"><i>2</i><div>Giáo viên đánh giá con theo được nhịp mới không</div></div>
+    <div class="step"><i>3</i><div>Song song, học sinh tự chọn có muốn chuyển không</div></div>
+    <div class="step"><i>4</i><div>Cả hai cùng đồng thuận mới chuyển chính thức</div></div>
+    <div class="step"><i>5</i><div>Chưa sẵn sàng → về lớp cũ, tiếp tục được hỗ trợ cho lần xét sau</div></div>
+  </div>
+  <div class="sec"><div class="eye">Cam kết đồng hành</div><div class="grid g2" style="margin-top:8px"><div class="card"><h4>BK Academy</h4><p>Nội dung đúng năng lực · chấm, phản hồi đúng quy trình · bổ trợ miễn phí · MT và sát hạch công bằng · trao đổi kịp thời · báo cáo định kỳ</p></div><div class="card"><h4>Gia đình</h4><p>Đi học đủ, đúng giờ · chụp BTVN nộp đúng hạn · dự họp PH · phối hợp khi có thông báo · đi đủ buổi bổ trợ</p></div></div></div>
+  <div class="sec dim"><div class="eye">Quý phụ huynh thường hỏi</div><div class="faq"><details open><summary>Con được phân vào Lớp C, có phải là học sinh kém không?</summary><p>Không. Lớp C dành cho học sinh có nền tảng còn lỗ hổng — có thể do chưa học một số phần, kỹ năng chưa hoàn thiện, hoặc cần thêm thời gian. Đây là mức có cường độ chăm sóc cao nhất tại BK.</p></details><details><summary>Khi nào con có thể chuyển lên lớp cao hơn?</summary></details><details><summary>Lớp S có gây áp lực quá tải không?</summary></details><details><summary>Học phí giữa 4 lớp có chênh lệch không?</summary></details><details><summary>… 7 câu nữa</summary></details></div><a class="btn ink2 sm" style="margin-top:12px;display:inline-block">⬇ Tải tài liệu đầy đủ (PDF, 13 trang)</a></div>
+  <div class="float">📞</div>
+  <div class="ft"><b>BK Academy</b>Hotline 0963 209 309 · 10:00–21:00 hằng ngày</div>
+</div></div>
+
+<!-- ===================== 7. ĐỘI NGŨ ===================== -->
+<div class="frame-wrap"><h2>7 · Đội ngũ <small>/doi-ngu — 15 người đang đứng lớp, ảnh từ ERP</small></h2>
+<div class="frame">
+  <div class="hd"><div class="logo"><i></i>BK Academy</div><div class="menu">☰</div></div>
+  <div class="nav">Chương trình · Tài liệu · Phân lớp · <b>Đội ngũ</b> · Kết quả · Tin tức · Liên hệ</div>
+  <div class="sec" style="padding-top:18px">
+    <div class="eye">Đội ngũ</div><h2 class="t">Giáo viên BK Academy</h2>
+    <p class="lead">Mỗi lớp có một giáo viên đứng lớp và trợ giảng theo sát từng em: chấm bài tập về nhà, trực bổ trợ, ghi nhận tiến bộ vào hệ thống.</p>
+    <div class="tabs"><span class="tab on">Tất cả</span><span class="tab">Toán</span><span class="tab">KHTN</span><span class="tab">Tiếng Anh</span></div>
+    <div class="grid g2">
+      <div class="card gvcard"><div class="av"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/4cc7af19-6f4e-4833-9bb1-3c9781a0ec11.png" alt=""></div><b>Đào Xuân Thùy</b><small>Toán · Ban chuyên môn</small><p>Đang dạy 4T1, 5T1, 6S1, 6S2, 7S1 … (16 lớp)</p></div>
+      <div class="card gvcard"><div class="av"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/29e583b4-8bc1-4304-88ae-87f3b0073154.jpg" alt=""></div><b>Phạm Thị Thùy Trang</b><small>Toán</small><p>Đang dạy 7B1, 8A2, 8B1, 9A2 … (13 lớp)</p></div>
+      <div class="card gvcard"><div class="av"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/4915b6b5-1851-4377-9dcd-a803576f5b60.jpg" alt=""></div><b>Tạ Quốc Cường</b><small>Toán</small><p>Đang dạy 6A1, 7A1, 7B2, 8A1, 9A1, 9B1</p></div>
+      <div class="card gvcard"><div class="av"></div><b>Nguyễn Công Hải</b><small>Toán</small><p>Đang dạy 8B1, 8B2, 9B2, 9C1</p></div>
+      <div class="card gvcard"><div class="av"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/338e970d-20aa-4f26-8e11-f1ae0a4c89c5.jpg" alt=""></div><b>Trần Hoàng Đạt</b><small>Toán THPT</small><p>Đang dạy 10B1, 11B1, 12B1, 12C1</p></div>
+      <div class="card gvcard"><div class="av"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/2d903a82-a07b-4365-97a4-76d0eb7257fb.jpg" alt=""></div><b>Phạm Anh Ngọc</b><small>Khoa học tự nhiên</small><p>Đang dạy 7K1, 7K2, 8K1, 9K1, 9K2, 9K3</p></div>
+      <div class="card gvcard"><div class="av"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/ac3127b1-acbb-4a81-ab2f-cf610c285373.jpeg" alt=""></div><b>Nguyễn Quỳnh Mai</b><small>Toán Tiểu học</small><p>Đang dạy 4A2, 5A2</p></div>
+      <div class="card gvcard"><div class="av"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/a7accc97-4bd4-48e3-9ec1-c5c3399ddee8.jpeg" alt=""></div><b>Nguyễn Thu Trà</b><small>Toán Tiểu học</small><p>Đang dạy 3A1, 5A1</p></div>
+      <div class="card gvcard"><div class="av"></div><b>Nguyễn Mai Trang</b><small>Tiếng Anh</small><p>Đang dạy 8E1, 9E1</p></div>
+      <div class="card gvcard"><div class="av"></div><b>… 6 người nữa</b><small>&nbsp;</small><p>Hoàng Thị Quỳnh Trang, Phạm Bảo Ngân, Trần Thị Thảo Nguyên, Nguyễn Thị Vân Anh, Nguyễn Hà Giang, Nguyễn Linh Uyên</p></div>
+    </div>
+    <div class="notice">Dòng "Đang dạy …" lấy live từ phân công lớp trong ERP, không nhập tay. Không có ảnh → ô tròn trống. Dòng giới thiệu riêng (học vấn, kinh nghiệm) thêm sau khi từng người gửi.</div>
+  </div>
+  <div class="float">📞</div>
+  <div class="ft"><b>BK Academy</b>Hotline 0963 209 309 · 10:00–21:00 hằng ngày</div>
+</div></div>
+
+<!-- ===================== 8. VINH DANH THÁNG ===================== -->
+<div class="frame-wrap"><h2>8 · Kết quả — Vinh danh tháng <small>/ket-qua — 60 giải tháng 9 thật từ ERP</small></h2>
+<div class="frame">
+  <div class="hd"><div class="logo"><i></i>BK Academy</div><div class="menu">☰</div></div>
+  <div class="nav">Chương trình · Tài liệu · Phân lớp · Đội ngũ · <b>Kết quả</b> · Tin tức · Liên hệ</div>
+  <div class="hero" style="padding:28px 20px 22px"><div class="eye">Kết quả</div><h1 style="font-size:26px">Vinh danh học sinh</h1><p style="margin:0">Mỗi tháng, sau bài kiểm tra tháng, giáo viên từng lớp chọn và trung tâm duyệt các em Xuất sắc · Tiến bộ · Chăm chỉ.</p></div>
+  <div class="sec" style="padding-top:14px">
+    <div class="month"><span>‹</span><b>Tháng 9 / 2026</b><span>›</span></div>
+    <div class="stats"><div class="stat"><b>41</b><span>★ Xuất sắc</span></div><div class="stat"><b>17</b><span>▲ Tiến bộ</span></div><div class="stat"><b>2</b><span>✎ Chăm chỉ</span></div></div>
+    <div class="tabs" style="margin-top:12px"><span class="tab on">Tất cả</span><span class="tab">Tiểu học</span><span class="tab">THCS</span><span class="tab">THPT</span></div>
+    <div class="vd">
+      <div class="k">Khối 9 · 15 em</div>
+      <div class="l"><b>9K2 · Khoa học tự nhiên</b><span>★ Vũ Lê Bình</span><span>▲ <em>…</em></span></div>
+      <div class="l"><b>9K3 · Khoa học tự nhiên</b><span>★ Lê Nhân Bảo Quân</span></div>
+      <div class="l"><b>9A1 · Toán</b><span>★ …</span><span>★ …</span><span>▲ …</span></div>
+      <div class="k">Khối 8 · 12 em</div>
+      <div class="l"><b>8K1 · Khoa học tự nhiên</b><span>★ Đỗ Bảo Châu</span><span>✎ Phạm Ngân Khánh</span></div>
+      <div class="l"><b>8S1 · Toán</b><span>★ …</span><span>▲ …</span></div>
+      <div class="k">Khối 7 · 13 em</div>
+      <div class="l"><b>7K2 · Khoa học tự nhiên</b><span>★ Lê Thành An</span></div>
+      <div class="l"><b>7K1 · Khoa học tự nhiên</b><span>★ Nguyễn Tường Anh</span></div>
+      <div class="k">Khối 10 · 2 em</div>
+      <div class="l"><b>10A1 · Toán</b><span>★ Lê Hoàng Anh</span><span>★ …</span></div>
+      <div class="l" style="text-align:center;color:var(--soft)">… khối 4, 4T, 5, 5T, 6, 11</div>
+    </div>
+    <div class="notice">Tên hiện đầy đủ (bảng vinh danh đã gửi cả lớp). Không đưa ảnh học sinh lên web công khai cho tới khi có đồng ý của phụ huynh. Tháng mới lên web sau khi Thùy bấm "Công bố" trong Trao giải.</div>
+  </div>
+  <div class="q"><b>Quyết:</b> tên đầy đủ (đề xuất) hay rút gọn "Lê Thành A."? Có ghi điểm MT bên cạnh giải Xuất sắc không (đề xuất: không, chỉ tên + giải)?</div>
+  <div class="float">📞</div>
+  <div class="ft"><b>BK Academy</b>Hotline 0963 209 309 · 10:00–21:00 hằng ngày</div>
+</div></div>
+
+<!-- ===================== 9. GÓC PHỤ HUYNH ===================== -->
+<div class="frame-wrap"><h2>9 · Góc phụ huynh <small>/phu-huynh — thay "Tra cứu"</small></h2>
+<div class="frame">
+  <div class="hd"><div class="logo"><i></i>BK Academy</div><div class="menu">☰</div></div>
+  <div class="nav">Chương trình · Tài liệu · Phân lớp · Đội ngũ · Kết quả · Tin tức · Liên hệ · <b style="margin-left:auto">Góc phụ huynh</b></div>
+  <div class="sec" style="padding-top:18px">
+    <div class="eye">Góc phụ huynh</div><h2 class="t">Theo dõi con mỗi ngày</h2>
+    <p class="lead">Hai ứng dụng, hai tài khoản riêng. Phụ huynh đăng nhập bằng số điện thoại đã đăng ký với trung tâm.</p>
+    <div class="card" style="margin-bottom:10px"><h4>📱 App Phụ huynh</h4><p>Nhận xét sau mỗi buổi · điểm kiểm tra tháng · chuyên cần · thời khoá biểu · nộp ảnh bài tập về nhà · học phí.</p><a class="btn ink sm" style="margin-top:10px;display:inline-block">Mở ph.bkacademy.edu.vn</a></div>
+    <div class="card"><h4>🎮 App Học sinh</h4><p>Làm bài trên lớp và ở nhà · tự luyện theo dạng · xem tiến bộ · nhiệm vụ và xếp hạng.</p><a class="btn gold sm" style="margin-top:10px;display:inline-block">Mở hs.bkacademy.edu.vn</a></div>
+  </div>
+  <div class="sec dim">
+    <div class="eye">Lần đầu dùng app Phụ huynh</div>
+    <div class="step" style="margin-top:8px"><i>1</i><div>Mở ph.bkacademy.edu.vn trên điện thoại, nhập số điện thoại đã đăng ký</div></div>
+    <div class="step"><i>2</i><div>Thêm vào màn hình chính (Safari: Chia sẻ → Thêm vào MH chính) để mở như app</div></div>
+    <div class="step"><i>3</i><div>Bật thông báo để nhận nhận xét sau mỗi buổi học</div></div>
+    <div class="step"><i>4</i><div>Cuối tháng xem báo cáo tháng và điểm MT của con</div></div>
+    <div class="notice">Mỗi bước kèm 1 ảnh chụp màn hình app thật (t tự chụp).</div>
+  </div>
+  <div class="sec">
+    <div class="eye">Thông báo chung</div>
+    <div class="card"><h4>Lịch nghỉ 20/10</h4><p>Trung tâm nghỉ ngày 20/10, các lớp học bù theo lịch giáo viên thông báo trong app. <em style="color:var(--soft)">(ô text Thùy sửa khi cần; trống thì ẩn)</em></p></div>
+  </div>
+  <div class="sec dim"><div class="card"><h4>Cần hỗ trợ?</h4><p>Hotline 0963 209 309 · 10:00–21:00 hằng ngày</p><a class="btn ink2 sm" style="margin-top:8px;display:inline-block">📞 Gọi ngay</a></div></div>
+  <div class="float">📞</div>
+  <div class="ft"><b>BK Academy</b>Hotline 0963 209 309 · 10:00–21:00 hằng ngày</div>
+</div></div>
+
+<!-- ===================== 10. LIÊN HỆ ===================== -->
+<div class="frame-wrap"><h2>10 · Liên hệ <small>/lien-he</small></h2>
+<div class="frame">
+  <div class="hd"><div class="logo"><i></i>BK Academy</div><div class="menu">☰</div></div>
+  <div class="nav">Chương trình · Tài liệu · Phân lớp · Đội ngũ · Kết quả · Tin tức · <b>Liên hệ</b></div>
+  <div class="sec" style="padding-top:18px">
+    <div class="eye">Liên hệ</div><h2 class="t">Nói chuyện với BK Academy</h2>
+    <div class="card" style="margin-bottom:10px"><h4>📞 Hotline</h4><p style="font:600 20px Lora,serif;color:var(--ink)">0963 209 309</p><p>10:00 – 21:00 hằng ngày, kể cả cuối tuần</p></div>
+    <div class="card" style="margin-bottom:10px"><h4>📍 Cơ sở</h4><p>Số 17, Lô A10, KĐT Geleximco, An Khánh, Hà Nội</p><div class="map" style="margin-top:10px">[Google Maps nhúng — đã có trên web]</div><a class="btn ink2 sm" style="margin-top:10px;display:inline-block">Chỉ đường</a></div>
+    <div class="form"><h4>Để lại số, BK gọi lại</h4><p>Trong giờ làm việc, BK gọi lại trong 30 phút.</p><div class="in">Tên phụ huynh</div><div class="in">Số điện thoại</div><div class="in">Con đang học lớp ▾</div><div class="in" style="min-height:52px">Bố mẹ muốn hỏi gì (không bắt buộc)</div><a class="btn gold" style="display:block;text-align:center">Gửi</a></div>
+    <div class="notice">Form này + form "nhận lời giải" + nút "đăng ký test đầu vào" ghi vào cùng một bảng lead trong ERP (nguồn khác nhau), Thùy nhận.</div>
+  </div>
+  <div class="q"><b>Quyết:</b> "BK gọi lại trong 30 phút" là cam kết thật được không, hay ghi "trong ngày"?</div>
+  <div class="float">📞</div>
+  <div class="ft"><b>BK Academy</b>Số 17, Lô A10, KĐT Geleximco, An Khánh, Hà Nội<br>Hotline 0963 209 309 · 10:00–21:00 hằng ngày</div>
+</div></div>
+
+</div>
+</body>
+</html>
