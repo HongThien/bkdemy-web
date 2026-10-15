@@ -117,11 +117,11 @@ export async function CapHocLanding({
         </div>
       </Section>
 
-      {/* ⑤ LIÊN HỆ ZALO — CTA cuối trang duy nhất, không form */}
+      {/* ⑤ ĐĂNG KÝ TEST — form online ở /dang-ky-test (15/10) + Zalo/hotline */}
       <Section id="dang-ky" className="scroll-mt-16 text-center">
         <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">Đăng ký test xếp lớp</h2>
         <p className="mx-auto mt-2 max-w-md text-sm text-slate-soft">
-          Nhắn Zalo hoặc gọi hotline để BK xếp lịch test cho con.
+          Bố mẹ tự chọn giờ test online, hoặc nhắn Zalo / gọi hotline để BK xếp lịch cho con.
         </p>
         <div className="mx-auto mt-6 max-w-sm space-y-3 text-sm text-slate">
           <p>
@@ -136,7 +136,8 @@ export async function CapHocLanding({
           </p>
           <p>{SITE.address || "—"}</p>
         </div>
-        <div className="mt-6">
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
+          <Button href="/dang-ky-test">Đăng ký test online</Button>
           <Button href={SITE.zaloUrl} target="_blank" variant="gold">
             Nhắn Zalo
           </Button>

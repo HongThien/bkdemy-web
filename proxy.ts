@@ -20,6 +20,7 @@ const DUOC_PHEP = [
   "/khoi-10",
   "/khoi-11",
   "/khoi-12",
+  "/dang-ky-test", // PH đăng ký lịch test (Thùy 15/10) — link gửi qua Zalo
   "/opengraph-image",
 ];
 
