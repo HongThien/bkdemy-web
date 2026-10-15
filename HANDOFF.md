@@ -1,6 +1,6 @@
 # HANDOFF — bkdemy-web (site marketing bkacademy.edu.vn)
 
-> Đọc file này trước khi làm tiếp. Project MỚI (bắt đầu 2026-07-07), tách biệt hoàn toàn
+> Đọc file này trước khi làm tiếp — **mục ③ là bản mới nhất (15/10/2026), ① và ② mô tả bản code đang chạy (07/2026) sẽ được dựng lại theo ③**. Project MỚI (bắt đầu 2026-07-07), tách biệt hoàn toàn
 > khỏi `bkdemy-erp-v2` — xem `CLAUDE.md` + `BKDEMY_WEB_SPEC.md` + `SPEC-tuyen-sinh-khoi-7.md`
 > (file spec khối 7 hiện chỉ có ở `C:\Users\Admin\Downloads\SPEC-tuyen-sinh-khoi-7.md`,
 > CHƯA copy vào repo — nên copy vào để không mất khi đổi máy).
@@ -49,21 +49,41 @@
 
 ---
 
-## ③ Việc cần làm tiếp (cập nhật 13/10/2026 — đợt "fill nội dung")
+## ③ Trạng thái & việc tiếp theo (cập nhật 15/10/2026 — sau phiên thiết kế lại với Thùy)
 
-**Đã xong so với bản 07/2026:** repo GitHub `HongThien/bkdemy-web` đã có (origin) · migration `0002_gv_dung_lop_anh` đã áp (cột + view có thật trên bkdemy-ph) · domain `bkacademy.edu.vn` đã gắn (308 → www; `proxy.ts` còn chặn mọi trang ngoài tuyển sinh).
+### Quyết định thiết kế đã chốt 15/10 (nguồn: phiên chat, Thùy chốt từng điểm)
+- **Web dành cho người MỚI** (PH tiềm năng, referral). KHÔNG làm vùng riêng cho PH đang học — họ dùng app PH/HS.
+- **3 nấc:** nấc 1 = trang chủ **chỉ ô** (như ERP), không bài viết · nấc 2 = trang **cuộn** theo mục, mỗi mục có "Đọc chi tiết →" · nấc 3 = trang chi tiết. KHÔNG làm 2 tầng ô (PH phải chọn rồi quay lại chọn — bất tiện).
+- **Tầng 1 = 5 ô:** Giới thiệu về BK · Cách BK hoạt động · Nuôi dưỡng cảm xúc · Đăng ký học tại BK · Tài liệu ôn tập (ô ngang dưới cùng). Trên lưới: logo + tagline "Cùng con, đi xa hơn" + 1 dòng "CLB Toán học và Khoa học BK Academy" + 3 con số. Dưới lưới: nút **Chat Zalo** (zalo cá nhân Thùy `zalo.me/0963209309`), SĐT ghi nhỏ. Ô chỉ icon + tên, không dòng phụ.
+- **Tên gọi:** "CLB Toán học và Khoa học BK Academy" (không "trung tâm Toán", không "BKdemy" trên web). Logo 4 màu của cẩm nang. **Thùy = thầy** (xưng "thầy Đào Xuân Thùy").
+- **Bỏ Zalo OA**, chỉ Zalo cá nhân + hotline 0963 209 309. Giờ 10:00–21:00 hằng ngày. Địa chỉ 1 bản: Số 17, Lô A10, KĐT Geleximco, Lê Trọng Tấn, An Khánh, Hoài Đức, Hà Nội. Tuyển dụng: để sau.
+- **Giới thiệu về BK:** ① đoạn Thùy viết (hệ thống trung tâm, lớp nhỏ, kiến thức + cảm xúc + nhân cách, dữ liệu, hướng AI & khoa học) + 3 số · ② Thầy Đào Xuân Thùy: ảnh + đúng 3 chức danh (Cựu thủ khoa khối chuyên Toán ĐH KHTN ĐHQGHN · Giám đốc Sư phạm Công ty STUDYNOW · Kinh nghiệm 13 năm giảng dạy môn Toán), KHÔNG chú thích thêm, nút đọc bài đầy đủ (bài 7 đoạn Thùy viết, màn nấc 3 riêng) · ③ Giáo viên & trợ giảng — mở bằng **4 môn Toán · Ngữ văn · Tiếng Anh · KHTN**, avatar lấy từ ERP, không có → ô trống · ④ Cơ sở + bản đồ. Mục "Toán là trục chính" đã bỏ; Vinh danh KHÔNG ở trang này.
+- **Nuôi dưỡng cảm xúc** (ô riêng vì là trụ 2 của định vị): 4 ý Thùy — phân lớp đúng môi trường · không khí lớp học thoải mái, không xa cách thầy cô · gamification (trên lớp + app HS) · sự kiện vui chơi (Trung thu) — cộng **Vinh danh tháng** (3 loại giải, số tháng 9: 41 · 17 · 2) đặt ở đây.
+- **Cách BK hoạt động:** phân lớp · một buổi học diễn ra thế nào · BK Math Map · bổ trợ 5 hình thức · ôn thi · 2 app · cam kết 2 phía + tải cẩm nang. Nấc 3: Phân lớp (brochure) · Bổ trợ · Math Map (từ cẩm nang PH 2026, 18 trang, file ở Downloads).
+- **Đăng ký học:** 3 bước (đăng ký → test đầu vào miễn phí → xếp lớp) · lớp đang mở theo cấp/khối (live) · học phí & ưu đãi (150k/buổi, học liệu 30k, bổ trợ miễn phí, −5/−10/−5%, giới thiệu PH mới 500k) · form đăng ký test (ghi lead) · FAQ.
+- **Tài liệu = mũi nhọn SEO.** Chỉ đề thi + đề cương (tài liệu BK giữ lại; kho câu nội bộ không public). Mỗi đề = 1 trang HTML riêng (text đề + đáp án free + "Nhận lời giải chi tiết qua Zalo" = form lead) + trang khối-môn + hub. Tiêu đề = loại + kỳ + môn + khối + trường + năm + "có đáp án"; **ghi tên trường thật**. Sinh tĩnh theo lô từ Kho đề thi ERP (1 lô = 1 commit), Thùy duyệt lô ở phiên chat (tạm), sau này trên web. **Lô đầu = Toán 8** (39 đề GK1 + 4 đề cương). Lead (lời giải, test đầu vào, gọi lại) → 1 bảng trong ERP qua role chỉ INSERT, **Thùy nhận** và gửi file qua Zalo.
+- **Bảng vàng = giải tháng** trong ERP (`giai_thuong`, đọc bằng service role — `claude_build` thấy 0 dòng). Tên hiện đầy đủ, KHÔNG ảnh HS. Lên web sau khi tháng được "công bố" (tháng 9 chưa bấm).
+- **Ảnh:** `design/yeu-cau-anh-web.md` — mã A1…H6; Thùy chụp/chọn 11 bắt buộc (B2 B3 B4 B5 D1 D2a D2b E1 H1 H3 H5) + 5 nên có; avatar GV/TA, ảnh app, bìa đề: t tự lo. Trong mockup, khung gạch vàng = chỗ đặt ảnh.
 
-**13/10/2026 đã điền (commit cùng ngày):** 3 con số trang chủ (350+ HS · 49 lớp · ≤15 HS/lớp — số đếm ERP 13/10) · câu chuyện `/gioi-thieu` (NHÁP) · 5 trang cấp học mục tiêu/đối tượng/lộ trình (NHÁP từ brochure + lớp thật) · 12 GV tên/ảnh/môn thật từ team Giáo viên ERP · mô tả 2 vị trí tuyển dụng (NHÁP) · bản đồ Google nhúng (không cần key) · bài tin tức đầu tiên `content/posts/he-thong-phan-lop-2026-2027.mdx` · mặc định `hocUrl` sửa `hoc.` → `hs.bkacademy.edu.vn` (`hoc.` không có DNS). Mỗi file JSON có `_ghiChu` ghi rõ chỗ nào là nháp.
+### Sản phẩm của phiên
+- `design/mockup-web-2026-10.html` — **bản 3.7**, 18 màn (nấc 1 · 5 trang nấc 2 · 12 màn nấc 3), nút đổi bản máy tính. Cách xem: mở file, hoặc `npx serve -l 3106 design` (Browser pane không chụp được file://).
+- `design/yeu-cau-anh-web.md` — phiếu ảnh.
+- Nội dung JSON điền 13/10 (`content/data/*`, bài MDX) vẫn trên vercel.app, sẽ được dựng lại theo cấu trúc mới; giữ làm nguồn text.
 
-1. **Thùy duyệt/sửa 4 bản NHÁP** ngay trong `content/data/`: `gioi-thieu.json` (cauChuyen — thiếu năm thành lập, người sáng lập) · `programs.json` (5 cấp) · `careers.json` (2 vị trí — thiếu lương/quyền lợi) · `teachers.json` (ai được lên web; 3 GV đang đứng lớp nhưng không ở team GV: Hoàng Thị Quỳnh Trang, Phạm Bảo Ngân, Trần Thị Thảo Nguyên — thêm?).
-2. **Facts chỉ Thùy có:** `site.json` → `workingHours` · `zaloUrl` thật (brochure ghi Zalo OA @BKacademy, chưa có link) · `careerApplyUrl` (Google Form) · `teachers.json` → `education`/`intro` từng GV (24 badge TODO còn lại ở `/doi-ngu`).
-3. **Vị thế công khai:** hero vẫn "Hệ thống dạy Toán bài bản" trong khi ERP đang mở 6 lớp KHTN · 4 Tiếng Anh · 1 Văn (53/19/5 HS). Thùy quyết: web chỉ nói Toán, hay thêm 3 môn (cần trang chương trình + GV cho từng môn).
-4. **Bảng vàng + khai giảng** (`thanh_tich_cong_khai` / `khai_giang` trên bkdemy-ph) vẫn TRỐNG — web tự ẩn section. Điền qua Supabase Table Editor khi có; lớp đang tuyển chưa có lịch (5T2 0 HS, 5A3 2 HS) là ứng viên cho `khai_giang`.
-5. **Gỡ `proxy.ts`** (mở toàn bộ trang trên domain thật) — sau khi Thùy duyệt mục 1–2. Kiểm Vercel env `NEXT_PUBLIC_HOC_URL`: nếu đang trỏ `hoc.` thì đổi sang `hs.`.
-6. (Cũ, chưa xác nhận) `alter role web_lead_writer with password` + API route + form đăng ký ở section ⑤ trang khối — chỉ làm khi Thùy muốn nhận lead từ web.
-7. Ba con số trang chủ là số đếm TAY ngày 13/10 — muốn tự cập nhật thì tạo view công khai trên bkdemy-ph (đếm `hoc_sinh_live` / `erp_lop`) rồi `lib/data.ts` đọc; cần Thùy duyệt SQL.
+### Còn chờ Thùy
+1. Học phí 150k/buổi hiện công khai trên card lớp? (đang hiện)
+2. Chương trình giới thiệu PH mới 500k có lên web không? (t đề xuất có)
+3. Câu chữ 5 mục trang Cảm xúc (t nháp từ 4 ý của Thùy) · 3–4 dòng còn lại nếu muốn ở Giới thiệu.
+4. Ảnh theo phiếu.
 
-**Máy này (WBPC):** `.env.local` đã tạo 13/10 (copy anon key bkdemy-ph từ `../bkdemy-ph-app/.env.local`). Cache `.next` cũ làm `next dev` 500 (global-error manifest) — `npm run build` rồi `npx next start -p 3105` chạy OK.
+### Việc tiếp theo (thứ tự)
+1. Viết `SPEC-web-v2.md` trong repo này từ mục ③ + mockup 3.7 (cây 3 nấc, thông tin từng màn, nguồn dữ liệu, luật lead, luật Tài liệu, luật vinh danh).
+2. **Tài liệu lô Toán 8**: script sinh trang đề + PDF đề/đáp án (+ PDF lời giải ẩn) từ Kho đề thi ERP → `content/tai-lieu/…` → trang `/tai-lieu`, `/tai-lieu/toan-8`, `/tai-lieu/<slug>` + form lead. Cần: bảng lead ERP + mở rộng role `web_lead_writer` (Thùy chạy SQL).
+3. Dựng lại shell theo mockup: trang chủ 5 ô → 5 trang nấc 2 → nấc 3 (tái dùng `/tieu-hoc /thcs /thpt /khoi-N` cho lớp đang mở; bỏ `/chuong-trinh/*` tĩnh, `/tra-cuu`, `/tuyen-dung`, `/lien-he` riêng).
+4. Vinh danh tháng: sync `giai_thuong` đã công bố → `thanh_tich_cong_khai` (bkdemy-ph) theo lô.
+5. Gỡ `proxy.ts` khi Thùy duyệt bản dựng thật. Kiểm Vercel env `NEXT_PUBLIC_HOC_URL` (phải là `hs.`).
+
+**Máy này (WBPC):** `.env.local` đã tạo 13/10 (anon key bkdemy-ph copy từ `../bkdemy-ph-app/.env.local`). Cache `.next` cũ làm `next dev` 500 — `npm run build` rồi `npx next start -p 3105`. Push master = Vercel tự deploy (~60 s).
 
 ## Khởi động ở máy MỚI
 1. `git clone <url-sau-khi-push>` (hoặc copy thư mục nếu chưa kịp push).
