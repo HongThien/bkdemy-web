@@ -171,6 +171,16 @@ export function DangKyTestForm() {
     );
   }
 
+  // Lộc chưa dựng khung lịch / chưa khai thời lượng ⇒ chưa có gì để chọn: chỉ đường Zalo, không bày form rỗng
+  if (fd.lop.length === 0 || fd.lich.length === 0) {
+    return (
+      <div className="rounded-2xl border border-ink/10 bg-white p-6 text-center text-slate-soft shadow-sm">
+        <p>Lịch test online đang được cập nhật. Bố mẹ nhắn Zalo để trung tâm xếp lịch cho con nhé.</p>
+        <a href={SITE.zaloUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex rounded-full bg-gold px-6 py-3 text-sm font-semibold text-white">Nhắn Zalo</a>
+      </div>
+    );
+  }
+
   return (
     <div className="rounded-2xl border border-ink/10 bg-white p-5 shadow-sm sm:p-8">
       <Buoc so={1} ten="Thông tin của con">
