@@ -76,6 +76,13 @@ body{margin:0;background:#e9e6df;font-family:"Be Vietnam Pro",system-ui,sans-ser
 .box.wide{grid-column:1/-1;aspect-ratio:auto;flex-direction:row;justify-content:flex-start;gap:14px;padding:14px 18px;text-align:left}.box.wide .ic{margin:0}.board.wide .box.wide{grid-column:span 2}
 .img-ph{margin:12px 16px 0;height:120px;border-radius:12px;border:1.5px dashed var(--gold);background:#fff8e8;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px;font-size:11.5px;color:#8a5a00}
 .sec .img-ph{margin:10px 0 0}
+.tree{background:#fff;border:1px solid var(--line);border-radius:14px;padding:6px 12px}
+.tree .tr1,.tree .tr2{display:flex;flex-direction:column;padding:8px 0;border-bottom:1px solid var(--line);font-size:12.5px}
+.tree .tr1{padding-top:12px}.tree .tr1 b{font:600 15px Lora,serif;color:var(--ink)}
+.tree .tr2{margin-left:18px;padding-left:12px;border-left:2px solid var(--gold);border-bottom:0;padding-top:6px;padding-bottom:6px}
+.tree .tr2 b{color:var(--ink);font-weight:600}
+.tree span{color:var(--soft);font-size:12px}
+.tree .tr1:last-child{border-bottom:0}
 .gv-row .more{display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:var(--ink)}
 .menu{font-size:20px;color:var(--ink)}
 .nav{display:none;padding:8px 16px 12px;border-bottom:1px solid var(--line);font-size:13px;color:var(--ink);gap:14px;flex-wrap:wrap}
@@ -222,19 +229,26 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
     <div class="card he" style="align-items:flex-start"><div class="av" style="width:64px;height:64px;border-radius:14px"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/4cc7af19-6f4e-4833-9bb1-3c9781a0ec11.png" alt=""></div><div><h4>Thầy Đào Xuân Thùy</h4><ul class="list" style="margin-top:8px"><li style="padding:7px 0"><div>Cựu thủ khoa khối chuyên Toán, ĐH Khoa học Tự nhiên, ĐHQG Hà Nội</div></li><li style="padding:7px 0"><div>Giám đốc Sư phạm Công ty STUDYNOW</div></li><li style="padding:7px 0;border-bottom:0"><div>Kinh nghiệm 13 năm giảng dạy môn Toán</div></li></ul><a class="btn ink2 sm" style="margin-top:10px;display:inline-block">Đọc bài đầy đủ về thầy Thùy →</a></div></div>
   </div>
   <div class="sec">
-    <div class="eye">Giáo viên &amp; trợ giảng</div><h2 class="t">Bốn môn, mỗi lớp một giáo viên và trợ giảng theo sát</h2>
-    <p class="lead">Giáo viên đứng lớp và dạy. Trợ giảng chấm bài tập về nhà, trực bổ trợ, ghi nhận tiến bộ của từng em vào hệ thống. Trợ giảng giỏi được đào tạo lên giáo viên.</p>
-    <div class="grid g2" style="margin-bottom:4px"><div class="card" style="padding:10px"><h4 style="font-size:14px">Toán</h4><p style="font-size:11.5px">Lớp 3 → 12 · 4 hệ năng lực</p></div><div class="card" style="padding:10px"><h4 style="font-size:14px">Ngữ văn</h4><p style="font-size:11.5px">THCS</p></div><div class="card" style="padding:10px"><h4 style="font-size:14px">Tiếng Anh</h4><p style="font-size:11.5px">Lớp 5 → 9</p></div><div class="card" style="padding:10px"><h4 style="font-size:14px">Khoa học tự nhiên</h4><p style="font-size:11.5px">Lớp 7 → 9</p></div></div>
-    <div class="gv-row">
-      <div class="av"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/29e583b4-8bc1-4304-88ae-87f3b0073154.jpg" alt=""></div>
-      <div class="av"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/4915b6b5-1851-4377-9dcd-a803576f5b60.jpg" alt=""></div>
-      <div class="av"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/338e970d-20aa-4f26-8e11-f1ae0a4c89c5.jpg" alt=""></div>
-      <div class="av"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/2d903a82-a07b-4365-97a4-76d0eb7257fb.jpg" alt=""></div>
-      <div class="av"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/ac3127b1-acbb-4a81-ab2f-cf610c285373.jpeg" alt=""></div>
-      <div class="av"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/a7accc97-4bd4-48e3-9ec1-c5c3399ddee8.jpeg" alt=""></div>
-      <div class="av more">+9</div>
+    <div class="eye">Giáo viên &amp; trợ giảng</div><h2 class="t">Hệ thống giáo viên Trẻ trung và Tâm lý</h2>
+    <div class="tabs"><span class="tab on">Tất cả</span><span class="tab">Toán</span><span class="tab">Ngữ văn</span><span class="tab">Tiếng Anh</span><span class="tab">KHTN</span></div>
+    <div class="grid g2">
+      <div class="card gvcard" style="padding:12px"><div class="av" style="width:64px;height:64px"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/4cc7af19-6f4e-4833-9bb1-3c9781a0ec11.png" alt=""></div><b style="font-size:13px">Đào Xuân Thùy</b><small>Toán</small><p style="color:#8a5a00;font-size:11px;margin-top:4px">[1 dòng giới thiệu — Thùy bổ sung]</p></div>
+      <div class="card gvcard" style="padding:12px"><div class="av" style="width:64px;height:64px"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/29e583b4-8bc1-4304-88ae-87f3b0073154.jpg" alt=""></div><b style="font-size:13px">Phạm Thị Thùy Trang</b><small>Toán</small><p style="color:#8a5a00;font-size:11px;margin-top:4px">[1 dòng giới thiệu — Thùy bổ sung]</p></div>
+      <div class="card gvcard" style="padding:12px"><div class="av" style="width:64px;height:64px"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/4915b6b5-1851-4377-9dcd-a803576f5b60.jpg" alt=""></div><b style="font-size:13px">Tạ Quốc Cường</b><small>Toán</small><p style="color:#8a5a00;font-size:11px;margin-top:4px">[1 dòng giới thiệu — Thùy bổ sung]</p></div>
+      <div class="card gvcard" style="padding:12px"><div class="av" style="width:64px;height:64px"></div><b style="font-size:13px">Nguyễn Công Hải</b><small>Toán</small><p style="color:#8a5a00;font-size:11px;margin-top:4px">[1 dòng giới thiệu — Thùy bổ sung]</p></div>
+      <div class="card gvcard" style="padding:12px"><div class="av" style="width:64px;height:64px"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/338e970d-20aa-4f26-8e11-f1ae0a4c89c5.jpg" alt=""></div><b style="font-size:13px">Trần Hoàng Đạt</b><small>Toán</small><p style="color:#8a5a00;font-size:11px;margin-top:4px">[1 dòng giới thiệu — Thùy bổ sung]</p></div>
+      <div class="card gvcard" style="padding:12px"><div class="av" style="width:64px;height:64px"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/2d903a82-a07b-4365-97a4-76d0eb7257fb.jpg" alt=""></div><b style="font-size:13px">Phạm Anh Ngọc</b><small>Khoa học tự nhiên</small><p style="color:#8a5a00;font-size:11px;margin-top:4px">[1 dòng giới thiệu — Thùy bổ sung]</p></div>
+      <div class="card gvcard" style="padding:12px"><div class="av" style="width:64px;height:64px"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/ac3127b1-acbb-4a81-ab2f-cf610c285373.jpeg" alt=""></div><b style="font-size:13px">Nguyễn Quỳnh Mai</b><small>Toán</small><p style="color:#8a5a00;font-size:11px;margin-top:4px">[1 dòng giới thiệu — Thùy bổ sung]</p></div>
+      <div class="card gvcard" style="padding:12px"><div class="av" style="width:64px;height:64px"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/a7accc97-4bd4-48e3-9ec1-c5c3399ddee8.jpeg" alt=""></div><b style="font-size:13px">Nguyễn Thu Trà</b><small>Toán</small><p style="color:#8a5a00;font-size:11px;margin-top:4px">[1 dòng giới thiệu — Thùy bổ sung]</p></div>
+      <div class="card gvcard" style="padding:12px"><div class="av" style="width:64px;height:64px"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/fdbb8660-4cea-4908-b4be-0a0457825247.jpg" alt=""></div><b style="font-size:13px">Nguyễn Thị Vân Anh</b><small>Toán</small><p style="color:#8a5a00;font-size:11px;margin-top:4px">[1 dòng giới thiệu — Thùy bổ sung]</p></div>
+      <div class="card gvcard" style="padding:12px"><div class="av" style="width:64px;height:64px"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/b2cd9844-021a-4153-b082-e7c34ccc07e1.jpeg" alt=""></div><b style="font-size:13px">Nguyễn Hà Giang</b><small>Toán</small><p style="color:#8a5a00;font-size:11px;margin-top:4px">[1 dòng giới thiệu — Thùy bổ sung]</p></div>
+      <div class="card gvcard" style="padding:12px"><div class="av" style="width:64px;height:64px"><img src="https://osrvycilwshkzhljuxef.supabase.co/storage/v1/object/public/avatars/d9b483b9-6d58-44dc-8157-fd950f38bcde.jpg" alt=""></div><b style="font-size:13px">Nguyễn Linh Uyên</b><small>Toán</small><p style="color:#8a5a00;font-size:11px;margin-top:4px">[1 dòng giới thiệu — Thùy bổ sung]</p></div>
+      <div class="card gvcard" style="padding:12px"><div class="av" style="width:64px;height:64px"></div><b style="font-size:13px">Nguyễn Mai Trang</b><small>Tiếng Anh</small><p style="color:#8a5a00;font-size:11px;margin-top:4px">[1 dòng giới thiệu — Thùy bổ sung]</p></div>
+      <div class="card gvcard" style="padding:12px"><div class="av" style="width:64px;height:64px"></div><b style="font-size:13px">Hoàng Thị Quỳnh Trang</b><small>Toán</small><p style="color:#8a5a00;font-size:11px;margin-top:4px">[1 dòng giới thiệu — Thùy bổ sung]</p></div>
+      <div class="card gvcard" style="padding:12px"><div class="av" style="width:64px;height:64px"></div><b style="font-size:13px">Phạm Bảo Ngân</b><small>Toán</small><p style="color:#8a5a00;font-size:11px;margin-top:4px">[1 dòng giới thiệu — Thùy bổ sung]</p></div>
+      <div class="card gvcard" style="padding:12px"><div class="av" style="width:64px;height:64px"></div><b style="font-size:13px">Trần Thị Thảo Nguyên</b><small>Toán</small><p style="color:#8a5a00;font-size:11px;margin-top:4px">[1 dòng giới thiệu — Thùy bổ sung]</p></div>
     </div>
-    <a class="btn ink2 sm" style="margin-top:12px;display:inline-block">Xem đội ngũ 15 giáo viên →</a>
+    <div class="notice">Ảnh + tên + môn lấy từ ERP (ai chưa có ảnh → ô trống). Dòng giới thiệu từng người: Thùy bổ sung dần, thiếu thì web không hiện dòng đó.</div>
   </div>
   <div class="sec dim">
     <div class="eye">Cơ sở</div>
@@ -245,7 +259,7 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
 </div></div>
 
 <!-- ===================== NẤC 2 · CÁCH BK HOẠT ĐỘNG ===================== -->
-<div class="frame-wrap"><h2>Nấc 2 · Cách BK hoạt động <small>/cach-bk-hoat-dong — cuộn, 7 mục</small></h2>
+<div class="frame-wrap"><h2>Nấc 2 · Cách BK hoạt động <small>/cach-bk-hoat-dong — cuộn, 5 mục</small></h2>
 <div class="frame">
   <div class="hd"><div class="logo"><i><b></b><b></b><b></b><b></b></i><div>BK Academy<small>CLB Toán học và Khoa học</small></div></div><div class="menu">☰</div></div>
   <div class="nav">Giới thiệu · <b>Cách BK hoạt động</b> · Nuôi dưỡng cảm xúc · Đăng ký học · Tài liệu</div>
@@ -257,12 +271,19 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
     <a class="btn ink2 sm" style="margin-top:10px;display:inline-block">Đọc chi tiết hệ thống phân lớp →</a>
   </div>
   <div class="sec dim">
-    <div class="eye">2 · Một buổi học ở BK</div><h2 class="t">90 phút, kết thúc bằng bài kiểm tra ngắn</h2>
-    <div class="step" style="margin-top:8px"><i>1</i><div><b>Điểm danh</b> — phụ huynh thấy ngay con đã vào lớp</div></div>
-    <div class="step"><i>2</i><div><b>Học dạng bài mới</b> theo đúng hệ của lớp, luyện tại chỗ</div></div>
-    <div class="step"><i>3</i><div><b>Bài cuối buổi</b> (Exit Test) — đo con nắm được dạng vừa học chưa</div></div>
-    <div class="step"><i>4</i><div><b>Bài tập về nhà</b> — chụp nộp trên app, trợ giảng chấm, trả kết quả từng câu</div></div>
-    <div class="step" style="margin-bottom:0"><i>5</i><div><b>Nhận xét sau buổi</b> gửi phụ huynh; cuối tháng có bài kiểm tra tháng; vinh danh tháng xem ở <b>Nuôi dưỡng cảm xúc</b></div></div>
+    <div class="eye">2 · Các hoạt động học tập ở BK</div><h2 class="t">Học chính · Học bổ trợ · Kiểm tra khảo sát tháng</h2>
+    <div class="tree">
+      <div class="tr1"><b>Học chính</b><span>nơi các con được truyền đạt kiến thức</span></div>
+      <div class="tr2"><b>Test cuối giờ</b><span>đánh giá buổi học chính của con có hiệu quả không</span></div>
+      <div class="tr2"><b>Bài tập về nhà</b><span>con thực hành kiến thức đã học</span></div>
+      <div class="tr1"><b>Học bổ trợ</b><span>nơi các con được bổ trợ kiến thức</span></div>
+      <div class="tr2"><b>Bổ trợ bù</b><span>khi con nghỉ học</span></div>
+      <div class="tr2"><b>Bổ trợ yếu</b><span>khi con có kiến thức chưa đạt</span></div>
+      <div class="tr2"><b>Bổ trợ đuổi</b><span>khi con vào lớp chậm</span></div>
+      <div class="tr2"><b>Bổ trợ ôn thi</b><span>để chuẩn bị cho các kỳ thi</span></div>
+      <div class="tr1"><b>Kiểm tra khảo sát tháng</b><span>hoạt động đánh giá quan trọng nhất: việc học của con có hiệu quả không</span></div>
+    </div>
+    <a class="btn ink2 sm" style="margin-top:10px;display:inline-block">Đọc chi tiết 5 hình thức bổ trợ →</a>
   </div>
   <div class="sec">
     <div class="eye">3 · BK Math Map</div><h2 class="t">Điểm số cho biết kết quả. Math Map cho biết nguyên nhân.</h2>
@@ -272,21 +293,12 @@ h3.t{font:600 16px Lora,serif;color:var(--ink);margin:14px 0 6px}
     <a class="btn ink2 sm" style="margin-top:10px;display:inline-block">Đọc chi tiết BK Math Map →</a>
   </div>
   <div class="sec dim">
-    <div class="eye">4 · Bổ trợ</div><h2 class="t">Không để con bị bỏ lại</h2>
-    <ul class="list"><li><div>Bổ trợ bù<small>con nghỉ → học bù phần đã bỏ lỡ</small></div><span class="pill ok">Miễn phí</span></li><li><div>Bổ trợ yếu<small>hổng kiến thức → 3 mức: 15–30 phút · 60 phút với TA · 60 phút với GV</small></div><span class="pill ok">Miễn phí</span></li><li><div>Bổ trợ đuổi<small>vào lớp sau các bạn → 2–4 buổi nhóm nhỏ</small></div><span class="pill">250k/buổi</span></li></ul>
-    <a class="btn ink2 sm" style="margin-top:10px;display:inline-block">Đọc chi tiết 5 hình thức bổ trợ →</a>
-  </div>
-  <div class="sec">
-    <div class="eye">5 · Ôn thi</div><h2 class="t">Chiến dịch trước mỗi kỳ thi</h2>
-    <p class="lead" style="margin:0">Trước kiểm tra giữa kỳ, cuối kỳ, thi vào lớp 10: hệ thống kiến thức, ôn trọng tâm, luyện nhiều dạng đề. Nhiều khung giờ ban ngày, miễn phí cho học sinh BK.</p>
-  </div>
-  <div class="sec dim">
-    <div class="eye">6 · Hai ứng dụng</div><h2 class="t">Phụ huynh theo dõi, học sinh tự luyện</h2>
+    <div class="eye">4 · Hai ứng dụng</div><h2 class="t">Phụ huynh theo dõi, học sinh tự luyện</h2>
     <div class="grid g2"><div class="card"><h4>📱 App Phụ huynh</h4><p>Nhận xét sau buổi · điểm kiểm tra tháng · chuyên cần · thời khoá biểu · nộp ảnh bài tập · học phí</p></div><div class="card"><h4>🎮 App Học sinh</h4><p>Làm bài trên lớp và ở nhà · tự luyện đúng dạng còn yếu · xem tiến bộ · nhiệm vụ, xếp hạng</p></div></div>
     <div class="notice">Kèm 2 ảnh chụp màn hình app thật.</div>
   </div>
   <div class="sec">
-    <div class="eye">7 · Cam kết hai phía</div>
+    <div class="eye">5 · Cam kết hai phía</div>
     <div class="grid g2" style="margin-top:8px"><div class="card"><h4>BK Academy</h4><p>Nội dung đúng năng lực · chấm, phản hồi đúng quy trình · bổ trợ miễn phí · sát hạch công bằng · báo cáo định kỳ</p></div><div class="card"><h4>Gia đình</h4><p>Đi học đủ, đúng giờ · nộp bài tập đúng hạn · dự họp PH · phối hợp khi có thông báo</p></div></div>
     <a class="btn ink2 sm" style="margin-top:12px;display:inline-block">⬇ Cẩm nang đồng hành (PDF)</a>
   </div>
