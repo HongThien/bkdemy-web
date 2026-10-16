@@ -1,0 +1,30 @@
+{
+  "_ghiChu": "Từ 'Cẩm nang đồng hành cùng BK Academy 2026' phần B (trang 10–15).",
+  "hinhThuc": [
+    {
+      "ten": "Bổ trợ bù", "khi": "khi con nghỉ học", "phi": "Miễn phí",
+      "moTa": "Khi con có buổi học vắng vì lý do khách quan, BK sắp xếp lịch bổ trợ để con được học bù, nắm lại đầy đủ kiến thức. BK ưu tiên sắp xếp theo thứ tự:",
+      "buoc": ["Lịch bổ trợ cố định của khối — học sinh được ưu tiên xếp vào các lịch bổ trợ đã có sẵn của khối.", "Đến sớm / ở lại sau ca học — khoảng 30–45 phút để học bù phần kiến thức đã bỏ lỡ.", "Buổi bổ trợ riêng — nếu các phương án trên chưa phù hợp, BK sắp xếp một buổi riêng phù hợp với tình hình thực tế."]
+    },
+    {
+      "ten": "Bổ trợ yếu", "khi": "khi con có kiến thức chưa đạt", "phi": "Miễn phí",
+      "moTa": "Thông qua quá trình học tập, làm bài kiểm tra và theo dõi trên lớp, BK xác định những phần kiến thức con còn yếu, từ đó sắp xếp hình thức bổ trợ phù hợp theo 3 mức:",
+      "buoc": ["Mức nhẹ — ôn tập thêm 15–30 phút: đến sớm hoặc ở lại ở buổi học tiếp theo để ôn phần kiến thức còn yếu.", "Mức trung bình — 1 buổi riêng khoảng 60 phút với trợ giảng để củng cố và luyện tập.", "Mức nặng — 1 buổi riêng khoảng 60 phút với giáo viên để ôn tập chuyên sâu và xây dựng lại nền tảng."]
+    },
+    {
+      "ten": "Bổ trợ đuổi", "khi": "khi con vào lớp chậm", "phi": "250.000 đ/buổi (90 phút)",
+      "moTa": "Áp dụng khi học sinh tham gia một lớp sau các bạn, trong khi lớp đã học trước một phần chương trình. BK tổ chức một lộ trình bổ trợ ngắn để con bổ sung phần kiến thức đã học trước và theo kịp tiến độ hiện tại.",
+      "buoc": ["Hình thức: nhóm nhỏ 1–1 hoặc 1–2.", "Thời lượng: 90 phút/buổi, thông thường cần khoảng 2–4 buổi.", "Có phí vì phần kiến thức cần bổ sung đã được lớp học trước thời điểm con tham gia. Quyết định có cần hay không là thống nhất giữa giáo viên, gia đình và học sinh."]
+    },
+    {
+      "ten": "Bổ trợ ôn thi", "khi": "để chuẩn bị cho các kỳ thi", "phi": "Miễn phí",
+      "moTa": "Khi học sinh cần ôn tập cho các kỳ kiểm tra, kỳ thi quan trọng: kiểm tra giữa kỳ, cuối kỳ, thi chuyển cấp, các kỳ thi khác theo kế hoạch của nhà trường.",
+      "buoc": ["Hệ thống kiến thức — ôn tập và củng cố kiến thức trọng tâm.", "Ôn tập trọng tâm — tập trung vào những nội dung quan trọng.", "Luyện tập với nhiều dạng đề — làm quen cấu trúc đề thi, rèn kỹ năng làm bài. Nhiều khung giờ ban ngày, nhiều buổi, linh hoạt lựa chọn."]
+    },
+    {
+      "ten": "Tự luyện trên app", "khi": "mỗi ngày, ở nhà", "phi": "Miễn phí",
+      "moTa": "App Học sinh của BK giúp mỗi em có lộ trình luyện tập cá nhân hóa, bám sát những dạng bài còn yếu. Con chủ động ôn luyện tại nhà, làm bài và xem đáp án chi tiết ngay trên app.",
+      "buoc": ["Biết mình đang yếu dạng nào — app phân tích kết quả làm bài và hiển thị rõ những dạng bài con còn yếu.", "Hệ thống tự động gợi ý bài tập — chỉ cần bấm Tự luyện, app gợi ý bài phù hợp với đúng dạng con cần cải thiện.", "Làm bài và xem đáp án chi tiết — mỗi câu hỏi đều có đáp án và lời giải từng bước. Đăng nhập tại hs.bkacademy.edu.vn, tài khoản và mật khẩu là mã học sinh của con."]
+    }
+  ]
+}

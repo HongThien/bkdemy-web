@@ -1,15 +1,15 @@
 {
-  "_ghiChu": "Nội dung nhân sự/marketing sửa (sau này qua Decap CMS). Chuỗi rỗng \"\" = chưa cập nhật, web tự hiện badge TODO(content) — đừng tự gõ chữ TODO vào giá trị. homeStats: số đếm từ ERP ngày 13/10/2026 (HS trạng thái đang học = 351; lớp trạng thái đang học = 49 gồm 38 Toán · 6 KHTN · 4 Tiếng Anh · 1 Văn) — cập nhật tay khi số đổi đáng kể, hoặc chuyển sang view công khai trên bkdemy-ph khi có. 'Tối đa 15' là CHÍNH SÁCH sĩ số (Thùy chốt 07/2026), không phải số đếm.",
-  "address": "Số 17, Lô A10, KĐT Geleximco, An Khánh, Hà Nội",
+  "_ghiChu": "Nội dung nhân sự/marketing sửa. Số liệu (HS, lớp, GV, TA) KHÔNG ở đây — ở thong-ke.json do scripts/web/xuat-cho-web.mjs (ERP) sinh. Zalo = Zalo cá nhân Thùy (Thùy 15/10, bỏ OA).",
+  "name": "BK Academy",
+  "subtitle": "CLB Toán học và Khoa học",
+  "tagline": "Cùng con, đi xa hơn",
+  "address": "Số 17, Lô A10, KĐT Geleximco, Lê Trọng Tấn, An Khánh, Hoài Đức, Hà Nội",
   "hotline": "0963 209 309",
-  "zaloUrl": "https://zalo.me",
-  "workingHours": "",
+  "zaloUrl": "https://zalo.me/0963209309",
+  "workingHours": "10:00 – 21:00 hằng ngày",
   "mapEmbedSrc": "https://www.google.com/maps?q=S%E1%BB%91+17+L%C3%B4+A10+K%C4%90T+Geleximco+An+Kh%C3%A1nh+H%C3%A0+N%E1%BB%99i&z=16&output=embed",
   "careerApplyUrl": "",
   "careerApplyEmail": "tuyendung@bkacademy.edu.vn",
-  "homeStats": [
-    { "value": "350+", "label": "Học sinh đang theo học" },
-    { "value": "49", "label": "Lớp đang mở, từ lớp 3 đến lớp 12" },
-    { "value": "≤ 15", "label": "Học sinh mỗi lớp" }
-  ]
+  "camNangPdf": "",
+  "phanLopPdf": "/brochure/BK-Brochure-2026-2027.pdf"
 }

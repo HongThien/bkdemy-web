@@ -1,131 +1,63 @@
 import Link from "next/link";
-import { getBangVang } from "@/lib/data";
-import { CAP_HOC, CTA_TRA_CUU, SITE } from "@/lib/site-config";
-import { Section, SectionTitle, Card, Button, Stat, TodoContent } from "@/components/ui";
-import { ProgressCurve } from "@/components/ProgressCurve";
-import { BangVangItem } from "@/components/BangVangItem";
+import clsx from "clsx";
+import { SITE, HOME_STATS } from "@/lib/site-config";
+import { StatRow } from "@/components/PageHero";
+import { ZaloButton, DongLienHe } from "@/components/ZaloButton";
 
-export default async function Home() {
-  const bangVang = (await getBangVang()).slice(0, 8);
+// Trang chủ = NẤC 1: chỉ ô, không bài viết (Thùy chốt 15/10). Web dành cho người MỚI.
+const O = [
+  { href: "/gioi-thieu", ten: "Giới thiệu về BK", icon: "🏫", bg: "bg-[#EEF3F9]", ic: "bg-[#D7E3F1]" },
+  { href: "/cach-bk-hoat-dong", ten: "Cách BK hoạt động", icon: "🧭", bg: "bg-[#FBF3E4]", ic: "bg-[#F3E2BE]" },
+  { href: "/cam-xuc", ten: "Nuôi dưỡng cảm xúc", icon: "💛", bg: "bg-[#FDEEEE]", ic: "bg-[#F6D3D3]" },
+  { href: "/dang-ky", ten: "Đăng ký học tại BK", icon: "📝", bg: "bg-[#EAF5EE]", ic: "bg-[#CFE8D8]" },
+  { href: "/tai-lieu", ten: "Tài liệu ôn tập", icon: "📚", bg: "bg-[#F5EEF7]", ic: "bg-[#E5D6EA]", rong: true },
+];
 
+export default function Home() {
   return (
     <>
-      {/* HERO */}
-      <section className="relative overflow-hidden bg-ink text-white">
-        <ProgressCurve className="pointer-events-none absolute inset-0 h-full w-full opacity-40" />
-        <div className="relative mx-auto max-w-6xl px-6 py-24 sm:py-32">
-          <div className="max-w-2xl">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-gold-light">
-              Hệ thống dạy Toán bài bản
-            </p>
-            <h1 className="font-display text-4xl font-semibold leading-tight sm:text-5xl">
-              Lộ trình rõ ràng. Tiến bộ nhìn thấy được.
+      <section className="bg-ink text-white">
+        <div className="mx-auto max-w-6xl px-6 py-9 sm:py-12 lg:grid lg:grid-cols-[1fr_440px] lg:items-center lg:gap-12">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-gold-light">{SITE.tagline}</p>
+            <h1 className="mt-2 font-display text-[26px] font-semibold leading-tight sm:text-4xl">
+              {SITE.subtitle} {SITE.name}
             </h1>
-            <p className="mt-5 text-lg text-white/85">
-              BKdemy đồng hành cùng con từ Tiểu học tới THPT — mỗi buổi học, mỗi bài kiểm tra
-              đều được theo dõi bằng dữ liệu, để phụ huynh luôn biết con đang ở đâu.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button href="/chuong-trinh" variant="gold">
-                Xem chương trình
-              </Button>
-              <Button href={CTA_TRA_CUU.href} variant="secondary" className="border-white/30 text-white hover:bg-white/10">
-                {CTA_TRA_CUU.label}
-              </Button>
-            </div>
+          </div>
+          <div className="mt-6 lg:mt-0">
+            <StatRow dark items={HOME_STATS} />
           </div>
         </div>
       </section>
 
-      {/* CON SỐ THẬT */}
-      <Section className="grid grid-cols-1 gap-8 sm:grid-cols-3">
-        {SITE.homeStats.map((s) => (
-          <Stat key={s.label} value={s.value || <TodoContent>số liệu</TodoContent>} label={s.label} />
-        ))}
-      </Section>
-
-      {/* 4 KHỐI CHƯƠNG TRÌNH */}
-      <Section className="bg-paper-dim/60 !max-w-none">
-        <div className="mx-auto max-w-6xl">
-          <SectionTitle
-            eyebrow="Chương trình"
-            title="Đồng hành theo từng cấp học"
-            description="Mỗi cấp một lộ trình riêng, bám sát mục tiêu và độ khó phù hợp."
-          />
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-            {CAP_HOC.map((c) => (
-              <Link key={c.slug} href={`/chuong-trinh/${c.slug}`}>
-                <Card className="h-full hover:border-gold/40">
-                  <p className="font-display text-lg font-semibold text-ink">{c.ten}</p>
-                  <p className="mt-2 text-sm text-slate-soft">{c.moTa}</p>
-                </Card>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* VÌ SAO BKDEMY */}
-      <Section>
-        <SectionTitle title="Vì sao phụ huynh chọn BKdemy" />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
-          {[
-            {
-              title: "Lộ trình rõ ràng",
-              desc: "Chương trình theo cấp học, mục tiêu cụ thể cho từng giai đoạn — không học tràn lan.",
-            },
-            {
-              title: "Minh bạch bằng dữ liệu",
-              desc: "Kết quả học, chuyên cần, tiến bộ của con — phụ huynh xem được bất cứ lúc nào.",
-            },
-            {
-              title: "Theo sát từng con",
-              desc: "Mỗi học sinh được đo tiến bộ theo từng dạng bài, không chỉ theo điểm số chung chung.",
-            },
-            {
-              title: "Đội ngũ bài bản",
-              desc: "Giáo viên được đào tạo và giám sát chất lượng giảng dạy thường xuyên.",
-            },
-          ].map((f) => (
-            <Card key={f.title}>
-              <p className="font-display text-lg font-semibold text-ink">{f.title}</p>
-              <p className="mt-2 text-sm text-slate-soft">{f.desc}</p>
-            </Card>
+      <section className="mx-auto max-w-6xl px-6 py-6 sm:py-10">
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-5">
+          {O.map((o) => (
+            <Link
+              key={o.href}
+              href={o.href}
+              className={clsx(
+                "relative flex items-center justify-center rounded-3xl border border-ink/10 p-4 text-center transition-shadow hover:shadow-md",
+                o.bg,
+                o.rong ? "col-span-2 flex-row gap-4 py-5 lg:col-span-1 lg:aspect-square lg:flex-col lg:gap-0" : "aspect-square flex-col"
+              )}
+            >
+              <span className={clsx("flex h-14 w-14 flex-none items-center justify-center rounded-2xl text-3xl", o.ic, !o.rong && "mb-3", o.rong && "lg:mb-3")}>
+                {o.icon}
+              </span>
+              <span className="font-display text-[17px] font-semibold leading-tight text-ink">{o.ten}</span>
+              <span className="absolute bottom-3 right-4 text-lg text-gold" aria-hidden="true">
+                ›
+              </span>
+            </Link>
           ))}
         </div>
-      </Section>
 
-      {/* BẢNG VÀNG PREVIEW — chỉ hiện khi có dữ liệu thật (đúng luật thiếu-data=không-có-dòng) */}
-      {bangVang.length > 0 && (
-        <Section className="bg-paper-dim/60 !max-w-none">
-          <div className="mx-auto max-w-6xl">
-            <div className="flex items-end justify-between gap-4">
-              <SectionTitle eyebrow="Bảng vàng" title="Thành tích học sinh" />
-              <Link href="/bang-vang" className="hidden shrink-0 text-sm font-semibold text-ink hover:text-gold sm:block">
-                Xem tất cả →
-              </Link>
-            </div>
-            <div className="mt-8 flex snap-x gap-4 overflow-x-auto pb-4">
-              {bangVang.map((item) => (
-                <BangVangItem key={item.id} item={item} />
-              ))}
-            </div>
-            <Link href="/bang-vang" className="mt-4 block text-sm font-semibold text-ink hover:text-gold sm:hidden">
-              Xem tất cả →
-            </Link>
-          </div>
-        </Section>
-      )}
-
-      {/* DẢI TRA CỨU */}
-      <Section className="text-center">
-        <SectionTitle center title="Theo dõi kết quả học của con" description="Xem điểm, chuyên cần và tiến bộ của con bất cứ lúc nào." />
-        <div className="mt-6">
-          <Button href={CTA_TRA_CUU.href} variant="gold">
-            {CTA_TRA_CUU.label}
-          </Button>
+        <div className="mx-auto mt-8 max-w-md">
+          <ZaloButton className="w-full" />
+          <DongLienHe className="mt-3 text-center" />
         </div>
-      </Section>
+      </section>
     </>
   );
 }

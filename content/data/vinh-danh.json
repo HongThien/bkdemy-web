@@ -1,0 +1,528 @@
+{
+  "_ghiChu": "Sinh từ giai_thuong (ERP) qua scripts/web/xuat-cho-web.mjs. Tên hiện đầy đủ, không ảnh HS (Thùy 15/10). Chỉ chạy sau khi tháng đã chốt/công bố.",
+  "thang": "2026-09",
+  "da_cong_bo": false,
+  "tong": {
+    "xuat_sac": 41,
+    "tien_bo": 17,
+    "cham_chi": 2
+  },
+  "so_hs": 60,
+  "so_lop": 32,
+  "khoi": [
+    {
+      "khoi": "11",
+      "lop": [
+        {
+          "ten_lop": "11A1",
+          "khoi": "11",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Vũ Khắc Triệu"
+            }
+          ]
+        },
+        {
+          "ten_lop": "11B1",
+          "khoi": "11",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Vũ Mai Diệu Anh"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "khoi": "10",
+      "lop": [
+        {
+          "ten_lop": "10A1",
+          "khoi": "10",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Lê Tuệ Minh"
+            }
+          ]
+        },
+        {
+          "ten_lop": "10B1",
+          "khoi": "10",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Mai Thanh Huyền"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "khoi": "9",
+      "lop": [
+        {
+          "ten_lop": "9A1",
+          "khoi": "9",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Lê Thu Trà"
+            }
+          ]
+        },
+        {
+          "ten_lop": "9A2",
+          "khoi": "9",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Nguyễn Việt Nam Anh"
+            },
+            {
+              "loai": "tien_bo",
+              "ho_ten": "Lê Nhân Bảo Quân"
+            },
+            {
+              "loai": "tien_bo",
+              "ho_ten": "Nguyễn Như Ngọc"
+            }
+          ]
+        },
+        {
+          "ten_lop": "9B1",
+          "khoi": "9",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Nguyễn Trung Hiếu"
+            },
+            {
+              "loai": "tien_bo",
+              "ho_ten": "Triệu Như Ý"
+            }
+          ]
+        },
+        {
+          "ten_lop": "9B2",
+          "khoi": "9",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Nguyễn Huy Tuệ Minh"
+            },
+            {
+              "loai": "tien_bo",
+              "ho_ten": "Vân Giang"
+            }
+          ]
+        },
+        {
+          "ten_lop": "9K1",
+          "khoi": "9",
+          "mon": "Khoa học tự nhiên",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Nguyễn Trọng Hiếu"
+            },
+            {
+              "loai": "tien_bo",
+              "ho_ten": "Trịnh Bảo Ngọc"
+            }
+          ]
+        },
+        {
+          "ten_lop": "9K2",
+          "khoi": "9",
+          "mon": "Khoa học tự nhiên",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Vũ Lê Bình"
+            }
+          ]
+        },
+        {
+          "ten_lop": "9K3",
+          "khoi": "9",
+          "mon": "Khoa học tự nhiên",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Lê Nhân Bảo Quân"
+            }
+          ]
+        },
+        {
+          "ten_lop": "9S1",
+          "khoi": "9",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Nguyễn Trọng Hiếu"
+            },
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Phạm Quang Nhật"
+            },
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Trần Mạnh Tiến"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "khoi": "8",
+      "lop": [
+        {
+          "ten_lop": "8A1",
+          "khoi": "8",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Đỗ Văn Huy"
+            }
+          ]
+        },
+        {
+          "ten_lop": "8A2",
+          "khoi": "8",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Vũ Mai Diệu Oanh"
+            },
+            {
+              "loai": "tien_bo",
+              "ho_ten": "Tạ Hoàng Thảo"
+            }
+          ]
+        },
+        {
+          "ten_lop": "8B1",
+          "khoi": "8",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Nguyễn Gia Linh"
+            },
+            {
+              "loai": "tien_bo",
+              "ho_ten": "Nguyễn Khương Duy"
+            },
+            {
+              "loai": "cham_chi",
+              "ho_ten": "Nguyễn Vân Khánh"
+            }
+          ]
+        },
+        {
+          "ten_lop": "8K1",
+          "khoi": "8",
+          "mon": "Khoa học tự nhiên",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Đỗ Bảo Châu"
+            },
+            {
+              "loai": "cham_chi",
+              "ho_ten": "Phạm Ngân Khánh"
+            }
+          ]
+        },
+        {
+          "ten_lop": "8S1",
+          "khoi": "8",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Phạm Gia Linh"
+            },
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Phạm Ngân Khánh"
+            },
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Trần Thị Vân Khánh"
+            },
+            {
+              "loai": "tien_bo",
+              "ho_ten": "Nguyễn Hải Minh Châu"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "khoi": "7",
+      "lop": [
+        {
+          "ten_lop": "7A1",
+          "khoi": "7",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Phạm Đoàn Tuệ Nhi"
+            },
+            {
+              "loai": "tien_bo",
+              "ho_ten": "Đinh Thế Bảo"
+            }
+          ]
+        },
+        {
+          "ten_lop": "7B1",
+          "khoi": "7",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Mai Gia Bảo"
+            }
+          ]
+        },
+        {
+          "ten_lop": "7B2",
+          "khoi": "7",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Lê Hải Anh"
+            }
+          ]
+        },
+        {
+          "ten_lop": "7K1",
+          "khoi": "7",
+          "mon": "Khoa học tự nhiên",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Nguyễn Tường Anh"
+            }
+          ]
+        },
+        {
+          "ten_lop": "7K2",
+          "khoi": "7",
+          "mon": "Khoa học tự nhiên",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Lê Thành An"
+            }
+          ]
+        },
+        {
+          "ten_lop": "7S1",
+          "khoi": "7",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Phạm Nguyên Khôi"
+            },
+            {
+              "loai": "tien_bo",
+              "ho_ten": "Chu Khánh Linh"
+            },
+            {
+              "loai": "tien_bo",
+              "ho_ten": "Nguyễn Minh Châu"
+            }
+          ]
+        },
+        {
+          "ten_lop": "7S2",
+          "khoi": "7",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Nguyễn Huy Trường Phúc"
+            },
+            {
+              "loai": "tien_bo",
+              "ho_ten": "Ngô Gia Linh"
+            }
+          ]
+        },
+        {
+          "ten_lop": "7S3",
+          "khoi": "7",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Nguyễn Tường Anh"
+            },
+            {
+              "loai": "tien_bo",
+              "ho_ten": "Minh Nhi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "khoi": "6",
+      "lop": [
+        {
+          "ten_lop": "6A1",
+          "khoi": "6",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Phạm Việt Anh"
+            },
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Trần Nguyễn Uyên Nhi"
+            },
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Vũ Thùy Dương"
+            }
+          ]
+        },
+        {
+          "ten_lop": "6S1",
+          "khoi": "6",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Bùi Ngọc Diệp"
+            },
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Trần Phương Thảo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "khoi": "5T",
+      "lop": [
+        {
+          "ten_lop": "5T1",
+          "khoi": "5T",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Vũ Phan Gia Bảo"
+            },
+            {
+              "loai": "tien_bo",
+              "ho_ten": "Nguyễn Anh Văn"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "khoi": "5",
+      "lop": [
+        {
+          "ten_lop": "5A1",
+          "khoi": "5",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Đoàn Minh Phương"
+            }
+          ]
+        },
+        {
+          "ten_lop": "5A2",
+          "khoi": "5",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Đinh Tú Anh"
+            },
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Vũ Anh Thư"
+            },
+            {
+              "loai": "tien_bo",
+              "ho_ten": "Trần Ngọc Hân"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "khoi": "4T",
+      "lop": [
+        {
+          "ten_lop": "4T1",
+          "khoi": "4T",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Vũ Minh Khôi"
+            },
+            {
+              "loai": "tien_bo",
+              "ho_ten": "Đào Trọng Hiếu"
+            },
+            {
+              "loai": "tien_bo",
+              "ho_ten": "Đinh Ngọc Ánh"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "khoi": "4",
+      "lop": [
+        {
+          "ten_lop": "4A1",
+          "khoi": "4",
+          "mon": "Toán",
+          "giai": [
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Bùi Phạm Hoàng Nam"
+            },
+            {
+              "loai": "xuat_sac",
+              "ho_ten": "Trần Ngọc Hà Anh"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

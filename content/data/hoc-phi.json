@@ -1,0 +1,37 @@
+{
+  "_ghiChu": "Từ 'Cẩm nang đồng hành cùng BK Academy 2026' phần A (trang 4–9). Chương trình giới thiệu PH mới (500k) đang chờ Thùy chốt có công khai không — cờ hienGioiThieu.",
+  "hienGioiThieu": true,
+  "khoanThu": [
+    { "ten": "Học phí học chính", "gia": "150.000 đ/buổi", "moTa": "Đơn giá × số buổi học thực tế của lớp trong tháng. Buổi 90 phút, 4 hệ C/B/A/S bằng nhau." },
+    { "ten": "Phí học liệu", "gia": "30.000 đ/lớp/tháng", "moTa": "Khoản phụ thu phục vụ học tập." },
+    { "ten": "Bổ trợ định kỳ Lớp C", "gia": "75.000 đ/buổi", "moTa": "1 buổi/tuần ngoài 2 buổi học chính, bằng 50% buổi chính, tự động bao gồm khi đăng ký Lớp C." },
+    { "ten": "Bổ trợ đuổi", "gia": "250.000 đ/buổi", "moTa": "Chỉ khi cần: học sinh vào lớp sau các bạn, 2–4 buổi 90 phút, nhóm 1–1 hoặc 1–2." },
+    { "ten": "Bổ trợ yếu · bù · ôn thi · app tự luyện", "gia": "Miễn phí", "moTa": "Phần quyền lợi của học sinh — không thu thêm phí." }
+  ],
+  "phatSinh": "Các khoản phí phát sinh khác (nếu có): BK thông báo rõ nội dung và chi phí trước khi thực hiện, chỉ thực hiện khi có sự đồng ý của phụ huynh.",
+  "uuDai": [
+    { "muc": "−5%", "dieuKien": "Đăng ký 2–3 môn" },
+    { "muc": "−10%", "dieuKien": "Đăng ký 4 môn" },
+    { "muc": "−5% / học sinh", "dieuKien": "Gia đình có từ 2 anh chị em cùng học tại BK" }
+  ],
+  "uuDaiGhiChu": "Chỉ áp dụng trên học phí học chính. Mức ưu đãi tối đa 10%, không cộng dồn vượt mức này. Áp dụng từ tháng tiếp theo, sau khi học sinh đã học ổn định 1 tháng và hoàn tất thanh toán tháng đầu tiên. Phí học liệu và phí bổ trợ đuổi không thuộc phạm vi khuyến mại.",
+  "gioiThieu": [
+    { "muc": "500.000 đ", "ai": "Người giới thiệu nhận toàn bộ" },
+    { "muc": "500.000 đ", "ai": "Gia đình mới nhận toàn bộ" },
+    { "muc": "300.000 đ + 300.000 đ", "ai": "Cả hai cùng nhận" }
+  ],
+  "gioiThieuGhiChu": "Khi giới thiệu một gia đình mới đến BK Academy, phụ huynh chọn 1 trong 3 cách nhận ưu đãi. Khoản ưu đãi được ghi nhận sau khi gia đình mới học ổn định 1 tháng và hoàn tất thanh toán tháng đầu tiên.",
+  "chuKy": [
+    { "ten": "Trong tháng học", "moTa": "Con tham gia học theo lịch chính thức. Trung tâm ghi nhận số buổi học thực tế." },
+    { "ten": "Cuối tháng", "moTa": "BK tổng hợp số buổi và tính học phí theo chính sách hiện hành (các ưu đãi nếu có)." },
+    { "ten": "Đầu tháng sau", "moTa": "Học phí tháng mới được cập nhật trên app Phụ huynh. BK gửi thông báo đến phụ huynh." },
+    { "ten": "Thanh toán", "moTa": "Chuyển khoản theo thông tin tài khoản của BK · tiền mặt tại trung tâm · thanh toán trên app Phụ huynh. Chưa ghi nhận sau 3 ngày, BK nhắc lại 1 lần." }
+  ],
+  "faq": [
+    { "hoi": "Con nghỉ học thì có được trừ học phí không?", "dap": "Không trừ học phí. Trong trường hợp con nghỉ học nhưng lớp vẫn tổ chức học theo lịch, học phí vẫn được tính đủ. Con sẽ được bố trí học bổ trợ bù miễn phí để đảm bảo không bị thiếu kiến thức." },
+    { "hoi": "Con bắt đầu học giữa tháng thì học phí tính thế nào?", "dap": "Tính theo số buổi thực tế từ ngày con bắt đầu học trong tháng. Nếu con học lệch tiến độ so với lớp, trung tâm có thể sắp xếp các buổi bổ trợ đuổi (nếu cần) để con theo kịp chương trình." },
+    { "hoi": "Con dừng học giữa tháng thì sao?", "dap": "Học phí tính theo số buổi con đã học thực tế trong tháng. Phí học liệu (nếu có) được xem xét dựa trên phần đã phát sinh. Bố mẹ vui lòng thông báo sớm với trung tâm để được hỗ trợ và hướng dẫn cụ thể." },
+    { "hoi": "Con nghỉ dài ngày thì có được xem xét học phí không?", "dap": "Có thể được xem xét. Nếu con nghỉ trên 20% số buổi trong tháng và có lý do phù hợp (sức khỏe, việc gia đình...), trung tâm sẽ xem xét riêng từng trường hợp. Bố mẹ vui lòng liên hệ để được tư vấn chi tiết." },
+    { "hoi": "Nếu cả lớp không học thì buổi đó có tính học phí không?", "dap": "Không tính học phí. Trong trường hợp cả lớp không học (do giáo viên nghỉ, lịch học được điều chỉnh hoặc các lý do khách quan từ trung tâm), buổi học đó không tính học phí." }
+  ]
+}

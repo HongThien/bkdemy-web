@@ -3,8 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { NAV_LINKS, CTA_TRA_CUU } from "@/lib/site-config";
-import { Button } from "@/components/ui";
+import { NAV_LINKS, SITE } from "@/lib/site-config";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -12,23 +11,18 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-ink/10 bg-paper/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-        <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
-          <Image src="/Logo.png" alt="BKdemy" width={172} height={25} priority className="h-6 w-auto sm:h-7" />
+        <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+          <Image src="/Logo.png" alt={SITE.name} width={186} height={27} priority className="h-6 w-auto sm:h-7" />
+          <span className="hidden text-xs font-medium text-slate-soft sm:block">{SITE.subtitle}</span>
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">
           {NAV_LINKS.map((l) => (
             <Link key={l.href} href={l.href} className="text-sm font-medium text-slate hover:text-ink">
-              {l.label}
+              {l.ngan}
             </Link>
           ))}
         </nav>
-
-        <div className="hidden lg:block">
-          <Button href={CTA_TRA_CUU.href} variant="gold">
-            {CTA_TRA_CUU.label}
-          </Button>
-        </div>
 
         <button
           type="button"
@@ -58,11 +52,6 @@ export function SiteHeader() {
                 </Link>
               </li>
             ))}
-            <li className="pt-2">
-              <Button href={CTA_TRA_CUU.href} variant="gold" className="w-full">
-                {CTA_TRA_CUU.label}
-              </Button>
-            </li>
           </ul>
         </nav>
       )}

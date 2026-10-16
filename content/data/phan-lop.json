@@ -1,0 +1,74 @@
+{
+  "_ghiChu": "Từ brochure 'Hệ thống phân lớp 2026–2027' (public/brochure/BK-Brochure-2026-2027.pdf). Sửa nội dung thì sửa cả PDF.",
+  "pdf": "/brochure/BK-Brochure-2026-2027.pdf",
+  "muc": [
+    {
+      "he": "C", "ten": "Củng cố nền tảng", "mucTieu": "7+", "nangCao": "0%", "siSo": "4–7 (tối đa 10)", "boTro": "1 buổi/tuần · 75.000 đ/buổi",
+      "moTa": "Dành cho học sinh cần xây lại nền tảng cơ bản, học chậm — kỹ — nhiều lần để chắc gốc.",
+      "phuHop": ["Nền tảng kiến thức cơ bản còn nhiều chỗ hổng.", "Kỹ năng tính toán và trình bày chưa tốt.", "Cần thêm thời gian để vừa học bài mới vừa vá hổng cũ.", "Cần được kiên nhẫn hướng dẫn lại từ đầu ở nhiều phần."],
+      "dieuKien": ["Học sinh: đi học và làm bài tập đầy đủ, nghiêm túc. Có mong muốn tiến bộ, học nghiêm túc kể cả trong buổi bổ trợ.", "Phụ huynh: thực hiện đầy đủ các yêu cầu hỗ trợ học tập của trung tâm. Đưa con đi đầy đủ các buổi học chính và buổi bổ trợ."],
+      "dongHanh": ["Giáo viên giàu kinh nghiệm xử lý lỗ hổng, kiên nhẫn, biết xây dựng tự tin cho học sinh.", "Tốc độ chậm, lặp lại nhiều, trọng tâm tính toán và trình bày. 100% kiến thức cơ bản — không pha nâng cao.", "1 buổi bổ trợ định kỳ/tuần xuyên suốt năm học, ngoài 2 buổi học chính. Học phí bổ trợ 75.000 đ/buổi, bằng 50% buổi chính, tự động bao gồm khi đăng ký lớp C."],
+      "luuY": "Lớp C là mức có cường độ chăm sóc cao nhất tại BK — sĩ số nhỏ nhất, giáo viên được chọn kỹ, có buổi bổ trợ định kỳ riêng. Vào Lớp C không có nghĩa là học sinh kém."
+    },
+    {
+      "he": "B", "ten": "Vững cơ bản", "mucTieu": "8+", "nangCao": "10–20%", "siSo": "5–10 (tối đa 12)", "boTro": "Miễn phí · theo thực tế",
+      "moTa": "Dành cho học sinh đã đủ nền tảng cơ bản, cần luyện tập nhiều lần để cơ bản trở nên thành thạo.",
+      "phuHop": ["Nền tảng kiến thức cơ bản đã đủ, không bị hổng.", "Tiếp thu kiến thức cơ bản ổn định nhưng nhanh quên, cần luyện tập nhiều lần.", "Kỹ năng tính toán và trình bày đang trong quá trình hoàn thiện.", "Tập trung tốt nhất vào việc làm chủ chương trình cốt lõi."],
+      "dieuKien": ["Học lực: nền tảng cơ bản đã ổn, không còn lỗ hổng đáng kể. Tốc độ tiếp thu theo kịp các bạn Lớp B.", "Học sinh: đi học và làm bài tập đầy đủ, nghiêm túc. Có mong muốn tiến bộ.", "Phụ huynh: thực hiện đầy đủ các yêu cầu hỗ trợ học tập. Đưa con đi đầy đủ các buổi học."],
+      "dongHanh": ["Giáo viên vững chuyên môn cơ bản, có khả năng luyện tập theo nhịp độ ổn định.", "80–90% kiến thức cơ bản · 10–20% tiếp xúc nâng cao mức làm quen. Trọng tâm là luyện tập nhiều lần để cơ bản trở nên thành thạo.", "Khi học sinh gặp vấn đề ở một phần kiến thức cụ thể, BK mở buổi bổ trợ yếu riêng — không cố định lịch, kích hoạt khi cần. Miễn phí."],
+      "luuY": "Lớp B là mức nền tảng của hệ thống — đa số học sinh nên dành ít nhất một học kỳ ở mức này để thành thạo phần cơ bản trước khi xét lên Lớp A."
+    },
+    {
+      "he": "A", "ten": "Nâng cao chọn lọc", "mucTieu": "9+", "nangCao": "30–50%", "siSo": "10–15", "boTro": "Miễn phí · theo thực tế",
+      "moTa": "Dành cho học sinh đã vững cơ bản, muốn bứt phá lên nâng cao có chọn lọc để chinh phục kỳ thi vào lớp 10.",
+      "phuHop": ["Nắm vững kiến thức cơ bản, tốc độ tiếp thu nhanh.", "Có dư thời gian sau khi học cơ bản để tiếp xúc nâng cao.", "Có ý thức và quyết tâm với phần lớn các dạng bài nâng cao thông dụng.", "Sẵn sàng học mở rộng nhưng có thể còn dè dặt với những dạng khó nhất."],
+      "dieuKien": ["Học lực: vững toàn bộ kiến thức cơ bản. Tốc độ tiếp thu nhanh, không cần ôn lại nhiều lần. Có tinh thần muốn học nâng cao để bứt phá.", "Học sinh: tất cả yêu cầu của Lớp B. Chủ động làm bài nâng cao được giao, không nản khi gặp bài khó.", "Phụ huynh: tất cả yêu cầu của Lớp B."],
+      "dongHanh": ["Giáo viên có chuyên môn nâng cao, biết cách dạy phù hợp với học sinh có nền cơ bản tốt nhưng chưa hoàn toàn xuất sắc.", "30–50% nâng cao · 50–70% cơ bản chất lượng cao. Tiếp xúc khoảng 50% các dạng nâng cao trong chương trình thi vào lớp 10.", "Khi học sinh chưa thành thạo cơ bản, BK mở bổ trợ cơ bản. Khi cần luyện thêm dạng nâng cao khó, BK mở bổ trợ nâng cao theo nhóm nhỏ. Miễn phí cho cả hai."],
+      "luuY": "Lớp A là mức cân bằng giữa vững cơ bản và mở rộng nâng cao — phù hợp với học sinh có mục tiêu vào trường THPT top đầu nhưng chưa cần tiếp cận 100% dạng khó nhất."
+    },
+    {
+      "he": "S", "ten": "Nâng cao toàn diện", "mucTieu": "9.5+", "nangCao": "60–80%", "siSo": "10–15", "boTro": "Miễn phí",
+      "moTa": "Dành cho học sinh có nền tảng vững, tâm lý ổn định với bài khó, sẵn sàng làm chủ 100% dạng nâng cao thi vào lớp 10.",
+      "phuHop": ["Nắm vững kiến thức cơ bản rất nhanh, có thể tự tổng kết.", "Tâm lý vững vàng khi gặp bài khó, không nản, không ngại tìm lời giải.", "Chủ động đặt câu hỏi khi không hiểu, không bỏ qua phần chưa nắm chắc.", "Gia đình và học sinh cùng quyết tâm cao về thái độ học tập."],
+      "dieuKien": ["Học lực: làm chủ phần lớn các dạng nâng cao thông dụng từ Lớp A. Tốc độ học cơ bản rất nhanh, có khả năng tự tổng kết. Sẵn sàng tiếp cận 100% dạng nâng cao.", "Học sinh: không bỏ bài trong bất kỳ tình huống nào. Chủ động hỏi giáo viên ngay khi gặp bài không làm được. Không ngại khó, sẵn sàng tự nghiên cứu thêm ngoài giờ học.", "Phụ huynh: tất cả yêu cầu của Lớp A. Cùng học sinh cam kết duy trì thái độ học tập nghiêm túc xuyên suốt năm học."],
+      "dongHanh": ["Chuyên môn nâng cao sâu nhất tại BK. Có kinh nghiệm dẫn dắt học sinh top trường chuyên.", "60–80% nâng cao · 20–40% cơ bản dạng tổng kết nhanh. Làm chủ 100% dạng nâng cao trong chương trình thi vào lớp 10.", "Chuyên sâu phần nâng cao, nghiêng về hỏi đáp các bài khó học sinh tự gặp khi luyện ngoài giờ. Miễn phí."],
+      "luuY": "Lớp S yêu cầu thái độ học nghiêm như một điều kiện thường trực. Học sinh không duy trì được sẽ được trao đổi và đề xuất chuyển về Lớp A."
+    }
+  ],
+  "boTro": [
+    { "ten": "Bổ trợ yếu", "moTa": "Khi học sinh gặp vấn đề cụ thể ở một phần kiến thức, giáo viên mở buổi bổ trợ riêng để xử lý dứt điểm trước khi chuyển sang nội dung mới.", "phi": "Miễn phí" },
+    { "ten": "Bổ trợ ôn thi", "moTa": "Trước các kỳ thi quan trọng (kiểm tra giữa kỳ, cuối kỳ tại trường, kỳ thi vào lớp 10), BK mở các buổi ôn tập tổng hợp.", "phi": "Miễn phí" },
+    { "ten": "Bổ trợ định kỳ theo lịch", "moTa": "Các buổi bổ trợ đã được sắp xếp sẵn trong chương trình học của từng lớp.", "phi": "Miễn phí" },
+    { "ten": "Bổ trợ đuổi", "moTa": "Dành cho học sinh mới chuyển vào BK chưa theo kịp tiến độ lớp hiện tại. Buổi học bù 1–1 hoặc nhóm nhỏ giúp học sinh bắt kịp các bạn trong lớp.", "phi": "250.000 đ/buổi" }
+  ],
+  "tieuChiChuyen": [
+    { "ten": "Điểm bài MT", "moTa": "Điểm các bài kiểm tra cuối chương tại BK — phản ánh mức độ làm chủ kiến thức." },
+    { "ten": "Quá trình học tập", "moTa": "Mức độ tham gia trên lớp, hoàn thành BTVN, kết quả các bài kiểm tra nhỏ." },
+    { "ten": "Đánh giá giáo viên", "moTa": "Nhận định về thái độ học tập và khả năng theo được nhịp lớp mới." }
+  ],
+  "thuDem": [
+    "Học sinh đủ điều kiện được học thử lớp cao hơn trong 2 tuần.",
+    "Sau 2 tuần, giáo viên đánh giá xem học sinh có theo được nhịp lớp mới không.",
+    "Song song, học sinh tự lựa chọn xem có muốn chuyển chính thức không.",
+    "Chỉ khi cả hai phía cùng đồng thuận, học sinh mới chuyển lớp chính thức.",
+    "Nếu một trong hai chưa sẵn sàng, học sinh quay lại lớp cũ và tiếp tục được hỗ trợ chuẩn bị cho lần xét tiếp theo."
+  ],
+  "chuyenXuong": "Khi học sinh không theo nổi lớp hiện tại, BK chủ động trao đổi với gia đình trước khi đề xuất chuyển xuống — học đúng mức giúp con tiến bộ, học sai mức dễ dẫn đến mất hứng thú hoặc tự ti. Riêng Lớp S, BK theo dõi sát tiêu chí thái độ học tập; học sinh không duy trì được dù đã được nhắc nhở sẽ được đề xuất chuyển về Lớp A.",
+  "camKet": {
+    "bk": ["Thiết kế nội dung chương trình phù hợp với năng lực từng mức.", "Giáo viên giảng dạy, chấm và phản hồi BTVN, MT theo đúng quy trình.", "Duy trì các buổi bổ trợ miễn phí khi học sinh cần (bổ trợ yếu, ôn thi, định kỳ).", "Tổ chức MT định kỳ và sát hạch chuyển lớp công bằng, minh bạch.", "Trao đổi kịp thời với gia đình khi học sinh có dấu hiệu cần điều chỉnh.", "Báo cáo định kỳ về tình hình học tập của con."],
+    "giaDinh": ["Đưa con đi học đầy đủ và đúng giờ theo lịch của trung tâm.", "Hỗ trợ con hoàn thành các nhiệm vụ học tập: chụp ảnh BTVN, nộp đúng hạn.", "Tham dự đầy đủ các buổi họp phụ huynh.", "Phối hợp với giáo viên khi có thông báo về tình hình học tập của con.", "Đưa con tham gia đầy đủ các buổi bổ trợ khi giáo viên đề xuất."]
+  },
+  "faq": [
+    { "hoi": "Con tôi được phân vào Lớp C, như vậy con có phải là học sinh kém không?", "dap": "Không. Việc phân vào Lớp C không có nghĩa con là học sinh kém. Lớp C dành cho học sinh có nền tảng kiến thức cơ bản còn lỗ hổng — điều này có thể đến từ nhiều nguyên nhân: chưa được học một số phần ở các năm trước, kỹ năng tính toán và trình bày chưa kịp hoàn thiện, hoặc đơn giản là cần thêm thời gian. Mục tiêu của Lớp C là xây cho con nền tảng cơ bản thật chắc, làm bước đệm để thăng tiến lên Lớp B. Đây là mức có cường độ chăm sóc cao nhất tại BK." },
+    { "hoi": "Khi nào con tôi có thể chuyển lên lớp cao hơn?", "dap": "BK xét chuyển lớp khi học sinh đạt đủ ba điều kiện: điểm các bài MT tốt và ổn định, quá trình học tập trên lớp tích cực, và giáo viên đánh giá con đủ năng lực theo nhịp lớp cao hơn. Không có lịch xét cố định — BK xét linh hoạt khi giáo viên thấy học sinh đã sẵn sàng. Khi đủ điều kiện, con sẽ được học thử lớp cao hơn trong 2 tuần." },
+    { "hoi": "Lớp S có gây áp lực quá tải cho học sinh không?", "dap": "Lớp S có cường độ học cao và yêu cầu nghiêm về thái độ — đây là sự thật BK không che giấu. Tuy nhiên, áp lực này không phải áp lực quá tải, mà là cường độ phù hợp với nhóm học sinh đã được chọn lọc — những em có nền tảng vững, tiếp thu nhanh, và có tâm lý ổn định với bài khó. Nếu một học sinh vào Lớp S nhưng cảm thấy quá tải, BK chủ động trao đổi với gia đình và đề xuất chuyển con về Lớp A." },
+    { "hoi": "Học phí giữa 4 lớp có chênh lệch không?", "dap": "Học phí buổi học chính giữa 4 lớp bằng nhau — 150.000 đ/buổi. BK không tính học phí cao hơn cho mức cao hơn. Khoản phí khác biệt duy nhất là buổi bổ trợ định kỳ Lớp C — 75.000 đ/buổi (chỉ bằng 50% buổi học chính), tự động bao gồm khi đăng ký Lớp C." },
+    { "hoi": "Nếu con đang học Lớp A/S mà không theo nổi, BK xử lý thế nào?", "dap": "BK theo dõi sát tình hình học tập của mọi học sinh. Khi nhận thấy con có dấu hiệu không theo kịp nhịp lớp, giáo viên sẽ: (1) trao đổi trực tiếp với con để hiểu nguyên nhân, (2) đề xuất phương án hỗ trợ — bổ trợ yếu miễn phí, điều chỉnh phương pháp, hoặc tăng thời gian luyện tập, (3) nếu sau một thời gian con vẫn không cải thiện, BK trao đổi với gia đình và đề xuất chuyển con về mức phù hợp hơn. Quyết định chuyển xuống lớp không bao giờ được đưa ra đột ngột." },
+    { "hoi": "Sĩ số mỗi lớp khoảng bao nhiêu học sinh?", "dap": "Lớp C: 4–7 học sinh (nhỏ nhất). Lớp B: 5–10 học sinh. Lớp A: 10–15 học sinh. Lớp S: 10–15 học sinh. BK duy trì sĩ số tối đa 15 học sinh/lớp ở mọi mức để đảm bảo chất lượng giảng dạy." },
+    { "hoi": "BK có đảm bảo con tôi đạt được mục tiêu đầu ra của lớp không?", "dap": "BK thiết kế chương trình và lộ trình của mỗi lớp với mục tiêu đầu ra rõ ràng — 7+ cho Lớp C, 8+ cho Lớp B, 9+ cho Lớp A, 9.5+ cho Lớp S. Đây là mục tiêu BK định hướng, dựa trên kinh nghiệm thực tế qua nhiều năm. BK không đưa ra cam kết tuyệt đối về điểm số vì kết quả cuối cùng phụ thuộc vào nhiều yếu tố ngoài tầm kiểm soát của trung tâm. Tuy nhiên, BK cam kết: thiết kế nội dung đủ để học sinh đạt được mục tiêu, giáo viên theo sát và hỗ trợ kịp thời, duy trì các buổi bổ trợ miễn phí khi cần." },
+    { "hoi": "Con tôi đang học ở BK nhưng kết quả ở trường chưa tốt, có cần chuyển xuống lớp thấp hơn không?", "dap": "Không tự động. BK đánh giá năng lực học sinh dựa trên nhiều dữ liệu — không chỉ điểm ở trường. Kết quả ở trường có thể bị ảnh hưởng bởi nhiều yếu tố (cách ra đề, thang điểm, tình huống cụ thể của bài thi). Nếu kết quả ở trường liên tục dưới mức mục tiêu, BK chủ động: xem xét điểm các bài MT tại BK để đối chiếu, trao đổi với con và gia đình để hiểu nguyên nhân, đề xuất buổi bổ trợ yếu miễn phí nếu có lỗ hổng cụ thể, chỉ đề xuất chuyển lớp khi đã thử các biện pháp hỗ trợ mà chưa cải thiện." },
+    { "hoi": "Bổ trợ Lớp C có bắt buộc đóng phí không, có thể từ chối không?", "dap": "Buổi bổ trợ định kỳ Lớp C là mặc định bao gồm khi đăng ký Lớp C, không phải tùy chọn. Lý do là vì buổi bổ trợ này là yếu tố then chốt để học sinh Lớp C đạt được mục tiêu — bỏ qua buổi bổ trợ tức là bỏ qua một phần quan trọng trong chương trình. Trong một số trường hợp đặc biệt, Quý Phụ huynh có thể trao đổi trực tiếp với BK để xem xét không tham gia bổ trợ — tuy nhiên trong trường hợp này, BK không thể đảm bảo học sinh đạt được mục tiêu đầu ra của Lớp C như đã thiết kế." },
+    { "hoi": "Học sinh mới vào BK có cần bổ trợ đuổi không, ai quyết định?", "dap": "Không phải mọi học sinh mới đều cần bổ trợ đuổi. BK chỉ đề xuất bổ trợ đuổi khi học sinh chuyển vào giữa kỳ và lớp đã học một số nội dung con chưa được tiếp xúc, hoặc sau buổi học đầu tiên giáo viên nhận thấy con cần được học bù để theo kịp các bạn. Quyết định có cần bổ trợ đuổi hay không là sự thống nhất giữa giáo viên — gia đình — học sinh. Bổ trợ đuổi có phí 250.000 đ/buổi và thường kéo dài 3–5 buổi tùy mức độ." },
+    { "hoi": "Con tôi bị xếp vào lớp thấp hơn năng lực thực sự, BK có cơ chế nào để con được đánh giá lại không?", "dap": "Có. BK hiểu rằng một buổi sát hạch có thể không phản ánh đúng năng lực thực sự của con. Khi Quý Phụ huynh cảm thấy con bị xếp thấp hơn năng lực, có hai cách: (1) đề nghị đánh giá lại — liên hệ trực tiếp với BK để xin một buổi đánh giá bổ sung trong vòng 1–2 tuần; (2) để con học thử lớp đã phân rồi xét chuyển sớm — nếu thực sự con vượt nhịp lớp hiện tại sau vài tuần đầu, BK sẽ cho con thử đệm 2 tuần ở lớp cao hơn theo cơ chế thường quy." }
+  ]
+}

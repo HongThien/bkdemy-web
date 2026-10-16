@@ -1,0 +1,1206 @@
+{
+  "_ghiChu": "Sinh từ tai_lieu (Kho đề thi ERP). Trang đề thật sinh theo lô ở bước sau — hiện chỉ dùng cho hub Tài liệu.",
+  "ngay": "16/10/2026",
+  "de": [
+    {
+      "ten": "Đề cương ôn tập giữa học kì I Toán 6 năm 2026–2027 — Trường TH, THCS & THPT Ngôi Sao Hoàng Mai",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_cuong",
+      "truong": "Trường TH, THCS & THPT Ngôi Sao Hoàng Mai",
+      "nam": 2026,
+      "so_cau": 88,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 6 năm 2024-2025 — Phòng GD&ĐT huyện Chương Mỹ, Hà Nội",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 6 năm 2024-2025 — Phòng GD&ĐT Quốc Oai, Hà Nội (đề chính thức)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 6 năm 2024-2025 — THCS Ngô Sĩ Liên, quận Hoàn Kiếm (đề chính thức)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 6 năm 2024-2025 — THCS Ngọc Lâm, quận Long Biên (mã đề 601)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 6 năm 2024-2025 — THCS Phan Đình Giót, quận Thanh Xuân (đề chính thức)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 6 năm 2024-2025 — THCS Phúc Đồng, quận Long Biên, Hà Nội (mã đề 601)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 6 năm 2024-2025 — THCS và THPT M.V. Lô-mô-nô-xốp, Nam Từ Liêm (đề 02)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 6 năm 2024-2025 — Trường BMS (mã đề 101)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 6 năm 2025-2026 — Cụm chuyên môn số 14 (bộ sách Cánh Diều)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 6 năm 2025-2026 — Cụm chuyên môn số 14, bộ sách Chân trời sáng tạo (đề không ghi mã đề)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 6 năm 2025-2026 — Cụm chuyên môn số 14, bộ sách Kết nối tri thức (đề không ghi mã đề)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 6 năm 2025-2026 — Phòng Văn hóa – Xã hội xã Đông Anh, Hà Nội (đề chính thức)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 6 năm 2025-2026 — THCS Ái Mộ, phường Bồ Đề, Hà Nội (mã đề 601)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 6 năm 2025-2026 — THCS Lê Ngọc Hân (bộ đề CKI 6, đề 26)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 6 năm 2025-2026 — THCS Ngô Sĩ Liên, phường Cửa Nam, Hà Nội (đề chính thức)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 6 năm 2025-2026 — THCS Ngọc Lâm, phường Bồ Đề (mã đề T601)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 6 năm 2025-2026 — THCS Ngọc Thụy, phường Bồ Đề, Hà Nội (đề 01)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 6 năm 2025-2026 — THCS Phúc Đồng, phường Phúc Lợi (mã đề 601)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 6 năm 2025-2026 — THCS Tân Triều, Hà Nội (đề không ghi mã đề)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2024-2025 — mã đề 101 (bộ đề GKI 6, đề 1)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2024-2025 — Phòng GD&ĐT huyện Đan Phượng, Hà Nội (bộ Cánh Diều)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2024-2025 — THCS Ngô Gia Tự, quận Long Biên (đề số 04)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2024-2025 — THCS Nguyễn Công Trứ, quận Ba Đình (bộ đề GKI 6, đề 3)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2024-2025 — THCS Phúc Lợi, quận Long Biên (đề số 1)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2024-2025 — THCS Thạch Bàn, Long Biên (mã đề 601)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2024-2025 — THCS Thanh Am, quận Long Biên (mã đề T6-GKI-101)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2024-2025 — THCS Thanh Quan (đề 1, kiểm tra ngày 31/10/2024)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2024-2025 — THCS Vạn Phúc, huyện Thanh Trì, Hà Nội (bộ đề GKI 6, đề 6)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2024-2025 — THCS Vạn Phúc, quận Hà Đông (bộ đề GKI 6, đề 25)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2025-2026 — THCS Ái Mộ, phường Bồ Đề (mã đề 601)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2025-2026 — THCS Bát Tràng, xã Bát Tràng, Hà Nội (đề số 1, bộ đề GKI 6, đề 11)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2025-2026 — THCS Chúc Sơn (bộ đề GKI 6, đề 13)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2025-2026 — THCS Lê Ngọc Hân (bộ đề GKI 6, đề 14)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2025-2026 — THCS Nghĩa Tân, phường Nghĩa Đô (đề chính thức)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2025-2026 — THCS Nghĩa Tân, phường Nghĩa Đô (đề minh hoạ số 1)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2025-2026 — THCS Nghĩa Tân, phường Nghĩa Đô (đề minh hoạ số 4)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2025-2026 — THCS Nghĩa Tân, phường Nghĩa Đô (đề minh hoạ, đề số 3)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2025-2026 — THCS Nghĩa Tân, phường Nghĩa Đô (mã đề: đề minh hoạ số 2)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2025-2026 — THCS Ngô Gia Tự, phường Việt Hưng (mã đề 01)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2025-2026 — THCS Nguyễn Bỉnh Khiêm, phường Phúc Lợi (mã đề 601)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2025-2026 — THCS Phú Châu (bộ đề GKI 6, đề 19)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2025-2026 — THCS Tam Hiệp (bộ đề GKI 6, đề 20)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2025-2026 — THCS Trưng Vương (đề chính thức)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2025-2026 — Trường TH, THCS & THPT Đa Trí Tuệ, Hà Nội (mã đề 02)",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 6 năm 2025-2026 — Trường THCS & THPT Lương Thế Vinh, Hà Nội",
+      "khoi": "6",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề cương ôn tập giữa học kì 1 Toán 7 — THCS Ngôi Sao Hoàng Mai",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_cuong",
+      "truong": "le",
+      "nam": null,
+      "so_cau": 81,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề cương ôn tập giữa học kì 1 Toán 7 — THCS Tây Mỗ",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_cuong",
+      "truong": "le",
+      "nam": null,
+      "so_cau": 81,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 7 năm 2024-2025 — Phòng GD-ĐT Bình Xuyên, huyện Bình Xuyên (Gia Khánh)",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": 17,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 7 năm 2024-2025 — THCS Nguyễn Trãi, huyện Núi Thành (mã đề A)",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": 20,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 7 năm 2024-2025 — THCS Yên Lạc, Phòng GD&ĐT Yên Lạc",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": 14,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 7 năm 2025-2026 — Phòng Văn hóa - Xã hội, xã Đông Anh (đề chính thức)",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 11,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 7 năm 2025-2026 — THCS Lê Lợi, phường Ngũ Hành Sơn",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 16,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 7 năm 2025-2026 — THCS Nghĩa An, xã Nghĩa Khánh (mã đề 101)",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 19,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 7 năm 2025-2026 — THCS Nguyễn Huệ, phường Hải Châu (Đề chính thức)",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 19,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 7 năm 2025-2026 — THCS Nguyễn Trường Tộ (đề chính thức)",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 17,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 7 năm 2025-2026 — THCS Phước Bửu (Đề 1)",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 15,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 7 năm 2025-2026 — THCS Phương Đông, xã Trà Liên (không ghi mã đề)",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 18,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 7 năm 2025-2026 — THCS Tây Sơn, phường Hoà Cường",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 16,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 7 năm 2025-2026 — THCS Thái Thịnh (đề chính thức)",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 17,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra cuối học kì 1 Toán 7 năm 2025-2026 — THCS Thành Công, phường Giảng Võ",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 10,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra đánh giá cuối học kì 1 Toán 7 năm 2025-2026 — THCS Tân Triều",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 16,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 7 năm 2024-2025 — THCS Vạn Phúc, huyện Thanh Trì, Hà Nội",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": 18,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 7 năm 2025-2026 — THCS Ba Đồn, phường Ba Đồn (mã đề 01)",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 23,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 7 năm 2025-2026 — THCS Bát Tràng, xã Bát Tràng (mã đề: Đề 1)",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 21,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 7 năm 2025-2026 — THCS Chu Văn An, phường Thanh Khê (mã đề A)",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 21,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 7 năm 2025-2026 — THCS Lê Thị Hồng Gấm, phường Thanh Khê (mã đề B)",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 22,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 7 năm 2025-2026 — THCS Lý Tự Trọng (đề không ghi quận / phường / xã và không ghi mã đề)",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 18,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 7 năm 2025-2026 — THCS Nguyễn Trường Tộ (đề chính thức)",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 17,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 7 năm 2025-2026 — THCS Phúc Hòa, xã Phúc Thọ (đề chính thức)",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 21,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 7 năm 2025-2026 — THCS Phương Đông, xã Trà Liên (không ghi mã đề)",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 19,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 7 năm 2025-2026 — THCS Quế Thuận (đề chính)",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 20,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 7 năm 2025-2026 — THCS Thanh Miện (đề chẵn)",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 22,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 7 năm 2025-2026 — THCS Trưng Vương (đề chính thức)",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 15,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 7 năm 2025-2026 — THCS Trưng Vương, phường Hải Châu (không ghi mã đề)",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 20,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 7 năm 2025-2026 — THCS Vĩnh Niệm, phường An Biên",
+      "khoi": "7",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": 22,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề cương ôn tập giữa học kì I Toán 8 năm 2026–2027 — Trường TH, THCS & THPT Ngôi Sao Hoàng Mai",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_cuong",
+      "truong": "Trường TH, THCS & THPT Ngôi Sao Hoàng Mai",
+      "nam": 2026,
+      "so_cau": 59,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề cương ôn tập giữa học kì I Toán 8 năm 2026–2027 — Trường THCS & THPT Lương Thế Vinh, Hà Nội",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_cuong",
+      "truong": "Trường THCS & THPT Lương Thế Vinh",
+      "nam": 2026,
+      "so_cau": 57,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề cương ôn tập giữa học kì I Toán 8 năm 2026–2027 — Trường THCS Đoàn Thị Điểm, Hà Nội",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_cuong",
+      "truong": "Trường THCS Đoàn Thị Điểm",
+      "nam": 2026,
+      "so_cau": 84,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề đánh giá giữa học kì 1 Toán 8 năm 2024-2025 — THCS Tân Bình, TP. Hải Dương (đề chính thức)",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề khảo sát chất lượng giữa học kì 1 Toán 8 năm 2024-2025 — Phòng GD&ĐT huyện Vụ Bản",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề khảo sát chất lượng giữa học kì 1 Toán 8 năm 2024-2025 — Phòng GD&ĐT huyện Xuân Trường",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề khảo sát chất lượng giữa học kì 1 Toán 8 năm 2024-2025 — THCS Mỹ Tiến, thành phố Nam Định",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề khảo sát giữa học kì 1 Toán 8 năm 2025-2026 — THCS Tống Văn Trân, phường Nam Định",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2024-2025 — đề không ghi tên trường",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2024-2025 — Phòng GD&ĐT huyện Sơn Động",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2024-2025 — Phòng GD&ĐT huyện Tân Yên",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2024-2025 — Phòng GD&ĐT huyện Trực Ninh",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2024-2025 — THCS Ba Đình, quận Ba Đình (Hà Nội)",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2024-2025 — THCS Hoàng Văn Thụ (mã đề T801)",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2024-2025 — THCS Ngô Quyền, quận Lê Chân",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2024-2025 — THCS Nguyễn Công Trứ, quận Ba Đình",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2024-2025 — THCS Tam Khương, quận Đống Đa",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2024-2025 — THCS Thị trấn Cái Rồng, Vân Đồn (Quảng Ninh)",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2024-2025 — THCS Vạn Phúc, huyện Thanh Trì (Hà Nội)",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2024-2025 — THCS Vạn Phúc, quận Hà Đông",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — THCS Bát Tràng, xã Bát Tràng (đề 1)",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — THCS Bát Tràng, xã Bát Tràng (đề 2)",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — THCS Chu Văn An, phường Yên Sở (đề số 2 — đề chính thức)",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — THCS Chuyên Mỹ",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — THCS Hoàng Hoa Thám, phường Ngọc Hà, Hà Nội",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — THCS Lý Tự Trọng",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — THCS Nguyễn Chơn, phường Thanh Khê",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — THCS Nguyễn Du, phường Hoàn Kiếm",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — THCS Nguyễn Huy Tưởng",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — THCS Nguyên Khê, xã Phúc Thịnh (mã đề 02)",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — THCS Nguyễn Trãi (mã đề 2)",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — THCS Nguyễn Trường Tộ",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — THCS Nội Duệ, xã Tiên Du",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — THCS Phú Lâm, xã Tiên Du",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — THCS Phương Đông, xã Trà Liên",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — THCS Quán Toan, phường Hồng An",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — THCS Quán Toan, phường Hồng An (đề 2)",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — THCS Quế Thuận (mã đề A)",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — THCS Quế Thuận (mã đề B)",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — THCS Văn Khê, phường Hà Đông",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — THCS Văn Yên, phường Hà Đông",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề kiểm tra giữa học kì 1 Toán 8 năm 2025-2026 — Trường TH&THCS Vạn An, phường Kinh Bắc",
+      "khoi": "8",
+      "mon": "Toán",
+      "kieu": "de_thi",
+      "truong": "le",
+      "nam": 2025,
+      "so_cau": null,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề cương ôn tập giữa học kì I Toán 9 — THCS & THPT Nguyễn Siêu (Hà Nội) 2026–2027",
+      "khoi": "9",
+      "mon": "Toán",
+      "kieu": "de_cuong",
+      "truong": "le",
+      "nam": 2026,
+      "so_cau": 88,
+      "da_duyet": false
+    },
+    {
+      "ten": "Đề cương ôn tập giữa học kì I Toán 9 — THCS Tây Mỗ (Hà Nội)",
+      "khoi": "9",
+      "mon": "Toán",
+      "kieu": "de_cuong",
+      "truong": "le",
+      "nam": 2024,
+      "so_cau": 55,
+      "da_duyet": false
+    }
+  ]
+}
