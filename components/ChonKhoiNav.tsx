@@ -1,8 +1,8 @@
 import Link from "next/link";
 import clsx from "clsx";
 
-// Khối 3 tạm ẩn — ERP chưa có lớp thật, thêm lại khi có (Thùy chốt 2026-07).
-const TOAN_BO_KHOI = ["4", "5", "6", "7", "8", "9", "10", "11", "12"];
+// Khối 3 đã bật lại 2026-11-18 — ERP có lớp 3A1 (trước đó ẩn vì chưa có lớp thật).
+const TOAN_BO_KHOI = ["3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
 
 // Thanh chuyển khối — hiện ở MỌI trang tuyển sinh (1 khối riêng /khoi-N, và cả
 // 3 trang gộp /tieu-hoc /thcs /thpt) để PH có con học nhiều khối khác nhau
