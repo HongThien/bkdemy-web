@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
   // Cây web 3 nấc (15/10/2026) thay các route cũ — giữ file cũ, chỉ chuyển hướng (chưa xoá: luật xoá CLAUDE.md).
   async redirects() {
     return [
+      // 20/11 (Thùy): vào link trang chủ → đi thẳng form đăng ký test (tạm thời, 307). Gỡ dòng này để trả lại trang chủ 5 ô.
+      { source: "/", destination: "/dang-ky-test", permanent: false },
       { source: "/doi-ngu", destination: "/gioi-thieu", permanent: true },
       { source: "/lien-he", destination: "/gioi-thieu", permanent: true },
       { source: "/bang-vang", destination: "/cam-xuc/vinh-danh", permanent: true },
