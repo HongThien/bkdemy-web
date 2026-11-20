@@ -1,29 +1,33 @@
 "use client";
 
 // Khung 3 tab của /dang-ky-test — link gửi cho PH ĐÃ nhắn Zalo.
-// Cả 3 khối luôn được dựng, chỉ ẩn/hiện ⇒ PH điền dở form, sang xem Phân lớp / Cẩm nang
+// Cả 3 khối luôn được dựng, chỉ ẩn/hiện ⇒ PH điền dở form, sang xem Lớp học / Cẩm nang
 // rồi quay lại vẫn còn nguyên. Nội dung từng tab do app/dang-ky-test/page.tsx truyền vào.
-// Link mở thẳng tab bằng #: /dang-ky-test#phan-lop · #cam-nang (mặc định: đăng ký).
+// Link mở thẳng tab bằng #: /dang-ky-test#lop-hoc · #cam-nang (mặc định: đăng ký).
 import { useEffect, useState, useSyncExternalStore, type ReactNode } from "react";
 import clsx from "clsx";
 import { CAM_NANG_MUC } from "./CamNang";
 
 const TABS = [
   { id: "dang-ky", ten: "Đăng ký test", an: false },
-  { id: "phan-lop", ten: "Phân lớp", an: false },
+  { id: "lop-hoc", ten: "Lớp học", an: false },
   { id: "cam-nang", ten: "Cẩm nang BK", an: false },
   // Chờ gom feedback thật của phụ huynh — có nội dung thì thêm khối + đổi an: false
   { id: "feedback", ten: "Phụ huynh nói gì", an: true },
 ].filter((t) => !t.an);
-type TabId = "dang-ky" | "phan-lop" | "cam-nang";
+type TabId = "dang-ky" | "lop-hoc" | "cam-nang";
 
 function theoDoiHash(cb: () => void) {
   window.addEventListener("hashchange", cb);
   return () => window.removeEventListener("hashchange", cb);
 }
-const layHash = () => window.location.hash.slice(1);
+// #phan-lop = tên tab cũ (link đã gửi) ⇒ vẫn mở tab Lớp học
+const layHash = () => {
+  const h = window.location.hash.slice(1);
+  return h === "phan-lop" ? "lop-hoc" : h;
+};
 
-export function TrangDangKyTest({ dangKy, phanLop, camNang }: { dangKy: ReactNode; phanLop: ReactNode; camNang: ReactNode }) {
+export function TrangDangKyTest({ dangKy, lopHoc, camNang }: { dangKy: ReactNode; lopHoc: ReactNode; camNang: ReactNode }) {
   const hash = useSyncExternalStore(theoDoiHash, layHash, () => "");
   const tab: TabId = TABS.some((t) => t.id === hash) ? (hash as TabId) : "dang-ky";
 
@@ -84,8 +88,8 @@ export function TrangDangKyTest({ dangKy, phanLop, camNang }: { dangKy: ReactNod
         {dangKy}
       </div>
 
-      <div role="tabpanel" id="khoi-phan-lop" aria-labelledby="tab-phan-lop" hidden={tab !== "phan-lop"}>
-        {phanLop}
+      <div role="tabpanel" id="khoi-lop-hoc" aria-labelledby="tab-lop-hoc" hidden={tab !== "lop-hoc"}>
+        {lopHoc}
         <div className="pb-16 text-center">
           <button
             type="button"
