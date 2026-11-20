@@ -4,32 +4,27 @@
 // (project ERP, xem bkdemy-erp-v2/spec-dang-ky-test.md) — web KHÔNG giữ key ERP nào,
 // chỉ biết URL function (NEXT_PUBLIC_DANG_KY_TEST_URL). Giờ hợp lệ / giờ xong / môn mở
 // theo lớp đều do DB trả; ở đây chỉ hiển thị + làm mờ lựa chọn chồng giờ giữa các môn.
-// Chỉ 2 ô gõ: tên con + SĐT. Còn lại là chọn.
+// Luồng (Thùy 20/11): chọn MÔN → chọn LỊCH test → gõ tên con + SĐT. KHÔNG hỏi lớp / trường.
+// Thời lượng bài test theo (môn × nhóm: Tiểu học · Tiểu học CLC · THCS–THPT) — DB trả trong `mon_web`.
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import clsx from "clsx";
 import { SITE } from "@/lib/site-config";
 
 const API = process.env.NEXT_PUBLIC_DANG_KY_TEST_URL ?? "";
 
-type Cap = "tieu_hoc" | "thcs" | "thpt";
 type GioOpt = { bat_dau: string; xong: string };
 type Buoi = { khung_id: string; ngay: string; thu: number; tu: string; den: string; gio: Record<string, GioOpt[]> };
-type FormData = {
-  lop: { lop: string; ten: string; mon: { mon: string; thoi_luong_phut: number }[] }[]; // ten do DB đặt ('Lớp 4 CLC')
-  truong: { ten: string; cap: Cap[] }[];
-  lich: Buoi[];
-};
+type MonWeb = { nhom: string; ten_nhom: string; mon: string; thoi_luong_phut: number }; // DB đặt tên nhóm ('Tiểu học CLC')
+type FormData = { mon_web?: MonWeb[]; lich: Buoi[] };
 type Chon = { khung_id: string; ngay: string; gio_bat_dau: string | null };
+type MonChon = { nhom: string; chon: Chon | null };
 type KetQua = { ho_ten_hs: string; mon: { mon: string; ngay: string; thu: number; gio_bat_dau: string; gio_xong: string }[] };
 
 const THU: Record<number, string> = { 1: "T2", 2: "T3", 3: "T4", 4: "T5", 5: "T6", 6: "T7", 7: "CN" };
 const THU_DAI: Record<number, string> = { 1: "Thứ 2", 2: "Thứ 3", 3: "Thứ 4", 4: "Thứ 5", 5: "Thứ 6", 6: "Thứ 7", 7: "Chủ nhật" };
 const ddmm = (ymd: string) => `${ymd.slice(8, 10)}/${ymd.slice(5, 7)}`;
 const phut = (hhmm: string) => Number(hhmm.slice(0, 2)) * 60 + Number(hhmm.slice(3, 5));
-const capCuaLop = (lop: string): Cap => { const n = parseInt(lop, 10); return n <= 5 ? "tieu_hoc" : n <= 9 ? "thcs" : "thpt"; };
-const boDau = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/đ/gi, "d").toLowerCase();
-const KHAC = "__khac__";
 
 function chip(on: boolean, dis = false) {
   return clsx(
@@ -59,11 +54,7 @@ export function DangKyTestForm() {
   const [loiTai, setLoiTai] = useState<string | null>(null);
   const [ten, setTen] = useState("");
   const [sdt, setSdt] = useState("");
-  const [lop, setLop] = useState<string | null>(null);
-  const [truong, setTruong] = useState<string | null>(null);
-  const [truongGo, setTruongGo] = useState("");
-  const [tim, setTim] = useState("");
-  const [mon, setMon] = useState<Record<string, Chon | null>>({});
+  const [mon, setMon] = useState<Record<string, MonChon>>({}); // khoá = tên môn (mỗi môn 1 lựa chọn nhóm + 1 lịch)
   const [bay, setBay] = useState(""); // ô bẫy bot — người thật không thấy
   const [dangGui, setDangGui] = useState(false);
   const [loi, setLoi] = useState<string | null>(null);
@@ -76,51 +67,38 @@ export function DangKyTestForm() {
       .catch((e) => setLoiTai(e.message ?? "Không tải được lịch test."));
   }, []);
 
-  const monCuaLop = useMemo(() => fd?.lop.find((x) => x.lop === lop)?.mon ?? [], [fd, lop]);
-  const tl = (m: string) => monCuaLop.find((x) => x.mon === m)?.thoi_luong_phut ?? 0;
-  const truongLoc = useMemo(() => {
-    if (!fd) return [];
-    const cap = lop ? capCuaLop(lop) : null;
-    const q = boDau(tim.trim());
-    return fd.truong.filter((t) => (!cap || t.cap.length === 0 || t.cap.includes(cap)) && (!q || boDau(t.ten).includes(q)));
-  }, [fd, lop, tim]);
-
-  function chonLop(l: string) {
-    setLop(l);
-    const conMo = new Set((fd?.lop.find((x) => x.lop === l)?.mon ?? []).map((m) => m.mon));
-    setMon((p) => Object.fromEntries(Object.keys(p).filter((m) => conMo.has(m)).map((m) => [m, null])));
-    if (truong && truong !== KHAC) {
-      const t = fd?.truong.find((x) => x.ten === truong);
-      if (t && t.cap.length && !t.cap.includes(capCuaLop(l))) setTruong(null);
-    }
-  }
-  const tichMon = (m: string) => setMon((p) => { const n = { ...p }; if (m in n) delete n[m]; else n[m] = null; return n; });
+  const tl = (m: string) => fd?.mon_web?.find((x) => x.mon === m && x.nhom === mon[m]?.nhom)?.thoi_luong_phut ?? 0;
+  // Bấm lại đúng lựa chọn đang tích = bỏ; bấm lựa chọn khác của CÙNG môn = đổi nhóm (xoá lịch đã chọn vì thời lượng có thể đổi)
+  const tichMon = (m: MonWeb) =>
+    setMon((p) => {
+      const n = { ...p };
+      if (n[m.mon]?.nhom === m.nhom) delete n[m.mon];
+      else n[m.mon] = { nhom: m.nhom, chon: null };
+      return n;
+    });
   const biChong = (m: string, ngay: string, bd: string) => {
     const a0 = phut(bd), a1 = a0 + tl(m);
-    return Object.entries(mon).some(([m2, c]) => m2 !== m && c?.gio_bat_dau && c.ngay === ngay && a0 < phut(c.gio_bat_dau) + tl(m2) && phut(c.gio_bat_dau) < a1);
+    return Object.entries(mon).some(([m2, c]) => m2 !== m && c.chon?.gio_bat_dau && c.chon.ngay === ngay && a0 < phut(c.chon.gio_bat_dau) + tl(m2) && phut(c.chon.gio_bat_dau) < a1);
   };
 
   const monTich = Object.keys(mon);
-  const truongChot = truong === KHAC ? truongGo.trim() : truong;
   const sdtSo = sdt.replace(/\D/g, "").replace(/^84/, "0");
   const thieu: string[] = [];
+  if (monTich.length === 0) thieu.push("môn");
+  monTich.forEach((m) => { if (!mon[m].chon?.gio_bat_dau) thieu.push(`giờ test ${m}`); });
   if (ten.trim().length < 2) thieu.push("họ tên con");
   if (!/^0[35789]\d{8}$/.test(sdtSo)) thieu.push("SĐT");
-  if (!lop) thieu.push("lớp");
-  if (!truongChot || truongChot.length < 2) thieu.push("trường");
-  if (monTich.length === 0) thieu.push("môn");
-  monTich.forEach((m) => { if (!mon[m]?.gio_bat_dau) thieu.push(`giờ test ${m}`); });
 
   async function gui() {
-    if (thieu.length || !lop || !truongChot) return;
+    if (thieu.length) return;
     setDangGui(true); setLoi(null);
     try {
       const r = await fetch(API, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          ho_ten_hs: ten, sdt_ph: sdt, lop, truong: truongChot, truong_tu_go: truong === KHAC, website: bay,
-          mon: monTich.map((m) => ({ mon: m, khung_id: mon[m]!.khung_id, ngay: mon[m]!.ngay, gio_bat_dau: mon[m]!.gio_bat_dau })),
+          ho_ten_hs: ten, sdt_ph: sdt, website: bay,
+          mon: monTich.map((m) => ({ mon: m, nhom: mon[m].nhom, khung_id: mon[m].chon!.khung_id, ngay: mon[m].chon!.ngay, gio_bat_dau: mon[m].chon!.gio_bat_dau })),
         }),
       });
       const d = await r.json().catch(() => ({}));
@@ -171,8 +149,8 @@ export function DangKyTestForm() {
     );
   }
 
-  // Lộc chưa dựng khung lịch / chưa khai thời lượng ⇒ chưa có gì để chọn: chỉ đường Zalo, không bày form rỗng
-  if (fd.lop.length === 0 || fd.lich.length === 0) {
+  // Lộc chưa dựng khung lịch / chưa khai thời lượng (hoặc DB chưa có mon_web) ⇒ chưa có gì để chọn: chỉ đường Zalo, không bày form rỗng
+  if (!fd.mon_web?.length || fd.lich.length === 0) {
     return (
       <div className="rounded-2xl border border-ink/10 bg-white p-6 text-center text-slate-soft shadow-sm">
         <p>Lịch test online đang được cập nhật. Bố mẹ nhắn Zalo để trung tâm xếp lịch cho con nhé.</p>
@@ -183,67 +161,36 @@ export function DangKyTestForm() {
 
   return (
     <div className="rounded-2xl border border-ink/10 bg-white p-5 shadow-sm sm:p-8">
-      <Buoc so={1} ten="Thông tin của con">
-        <div className="grid gap-3 sm:grid-cols-2">
-          <input className={input} placeholder="Họ tên của con" autoComplete="off" value={ten} onChange={(e) => setTen(e.target.value)} />
-          <input className={input} placeholder="Số điện thoại bố/mẹ" type="tel" inputMode="tel" autoComplete="tel" value={sdt} onChange={(e) => setSdt(e.target.value)} />
-        </div>
-        <input tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 opacity-0" name="website" value={bay} onChange={(e) => setBay(e.target.value)} />
-      </Buoc>
-
-      <Buoc so={2} ten="Con đang học lớp">
+      <Buoc so={1} ten="Môn đăng ký test">
         <div className="flex flex-wrap gap-2">
-          {fd.lop.map((l) => (
-            <button key={l.lop} type="button" onClick={() => chonLop(l.lop)} className={clsx(chip(lop === l.lop), "whitespace-nowrap")}>{l.ten}</button>
-          ))}
+          {fd.mon_web!.map((m) => {
+            const on = mon[m.mon]?.nhom === m.nhom;
+            return (
+              <button key={m.mon + m.nhom} type="button" onClick={() => tichMon(m)} className={chip(on)}>
+                <span className="mr-1.5">{on ? "☑" : "☐"}</span>
+                {m.mon} <span className={clsx("text-sm font-normal", on ? "text-white/75" : "text-slate-soft")}>· {m.ten_nhom} · {m.thoi_luong_phut}′</span>
+              </button>
+            );
+          })}
         </div>
-      </Buoc>
-
-      <Buoc so={3} ten="Trường của con">
-        {truong && truong !== KHAC ? (
-          <div className="flex flex-wrap items-center gap-3">
-            <span className="rounded-xl bg-ink px-4 py-2.5 text-[15px] font-medium text-white">{truong}</span>
-            <button type="button" onClick={() => setTruong(null)} className="text-sm text-slate-soft underline">Chọn lại</button>
-          </div>
-        ) : truong === KHAC ? (
-          <div className="space-y-2">
-            <input autoFocus className={input} placeholder="Gõ tên trường của con" value={truongGo} onChange={(e) => setTruongGo(e.target.value)} />
-            <button type="button" onClick={() => setTruong(null)} className="text-sm text-slate-soft underline">Chọn từ danh sách</button>
-          </div>
-        ) : (
-          <div>
-            <input className={input} placeholder="🔎 Tìm trường…" value={tim} onChange={(e) => setTim(e.target.value)} />
-            <div className="mt-3 flex max-h-56 flex-wrap gap-2 overflow-y-auto">
-              {truongLoc.map((t) => (
-                <button key={t.ten} type="button" onClick={() => setTruong(t.ten)} className={chip(false)}>{t.ten}</button>
-              ))}
-              <button type="button" onClick={() => { setTruong(KHAC); setTruongGo(tim); }}
-                className="rounded-xl border border-dashed border-ink/30 px-3.5 py-2.5 text-[15px] text-slate-soft hover:border-ink">
-                + Trường khác
-              </button>
-            </div>
-          </div>
-        )}
-      </Buoc>
-
-      <Buoc so={4} ten="Môn đăng ký test">
-        {!lop ? <p className="text-sm text-slate-soft">Bố mẹ chọn lớp trước nhé.</p> : (
-          <div className="flex flex-wrap gap-2">
-            {monCuaLop.map((m) => (
-              <button key={m.mon} type="button" onClick={() => tichMon(m.mon)} className={chip(m.mon in mon)}>
-                <span className="mr-1.5">{m.mon in mon ? "☑" : "☐"}</span>{m.mon}
-              </button>
-            ))}
-          </div>
-        )}
       </Buoc>
 
       {monTich.map((m, i) => (
-        <Buoc key={m} so={5 + i} ten={`Lịch test môn ${m}`}>
+        <Buoc key={m} so={2 + i} ten={`Lịch test môn ${m}`}>
           <p className="mb-3 rounded-lg bg-paper px-3 py-2 text-sm text-slate">Bài test dự kiến <b>{tl(m)} phút</b></p>
-          <LichMon lich={fd.lich} tl={tl(m)} chon={mon[m]} onChon={(c) => setMon((p) => ({ ...p, [m]: c }))} biChong={(ngay, bd) => biChong(m, ngay, bd)} />
+          <LichMon lich={fd.lich} tl={tl(m)} chon={mon[m].chon} onChon={(c) => setMon((p) => ({ ...p, [m]: { ...p[m], chon: c } }))} biChong={(ngay, bd) => biChong(m, ngay, bd)} />
         </Buoc>
       ))}
+
+      {monTich.length > 0 && (
+        <Buoc so={2 + monTich.length} ten="Thông tin của con">
+          <div className="grid gap-3 sm:grid-cols-2">
+            <input className={input} placeholder="Họ tên của con" autoComplete="off" value={ten} onChange={(e) => setTen(e.target.value)} />
+            <input className={input} placeholder="Số điện thoại bố/mẹ" type="tel" inputMode="tel" autoComplete="tel" value={sdt} onChange={(e) => setSdt(e.target.value)} />
+          </div>
+          <input tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 opacity-0" name="website" value={bay} onChange={(e) => setBay(e.target.value)} />
+        </Buoc>
+      )}
 
       <div className="border-t border-ink/10 pt-5">
         {loi && <p className="mb-3 rounded-xl bg-rose-50 px-4 py-3 text-sm text-rose-700">{loi}</p>}

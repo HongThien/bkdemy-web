@@ -17,7 +17,7 @@ const KHOI = ["3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
 
 export const metadata: Metadata = {
   title: "Đăng ký test xếp lớp",
-  description: "Bố mẹ chọn lịch test cho con — trung tâm sẽ liên hệ lại xác nhận.",
+  description: "Bố mẹ chọn môn và lịch test cho con — trung tâm sẽ liên hệ lại xác nhận.",
 };
 
 export default async function DangKyTestPage() {
@@ -29,7 +29,7 @@ export default async function DangKyTestPage() {
           <p className="mb-2 text-sm font-semibold tracking-wide text-gold uppercase">BKdemy</p>
           <h1 className="font-display text-3xl font-semibold text-ink sm:text-4xl">Đăng ký test xếp lớp</h1>
           <p className="mt-3 mb-8 text-slate-soft">
-            Bố mẹ chọn lớp, trường, môn và giờ test phù hợp. Mỗi môn một ca riêng — hệ thống báo luôn giờ con làm xong để bố mẹ tiện đón.
+            Bố mẹ chọn môn và giờ test phù hợp, rồi để lại tên con và số điện thoại. Mỗi môn một ca riêng — hệ thống báo luôn giờ con làm xong để bố mẹ tiện đón.
           </p>
           <DangKyTestForm />
         </div>
