@@ -39,6 +39,11 @@ export function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
+  // Trang chủ (5 ô, mockup 3.9) mở trên domain thật — Thùy 20/11. Trang con của 5 ô vẫn rào.
+  if (pathname === "/") {
+    return NextResponse.next();
+  }
+
   const hopLe = DUOC_PHEP.some((p) => pathname === p || pathname.startsWith(`${p}/`));
   if (hopLe) {
     return NextResponse.next();
