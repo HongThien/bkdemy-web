@@ -29,7 +29,7 @@ export default async function DangKyTestPage() {
           <p className="mb-2 text-sm font-semibold tracking-wide text-gold uppercase">BKdemy</p>
           <h1 className="font-display text-3xl font-semibold text-ink sm:text-4xl">Đăng ký test xếp lớp</h1>
           <p className="mt-3 mb-8 text-slate-soft">
-            Bố mẹ chọn môn, khối và giờ test phù hợp, rồi để lại tên con và số điện thoại. Mỗi môn một ca riêng — hệ thống báo luôn thời gian làm bài và giờ con làm xong để bố mẹ tiện đón.
+            Bố mẹ chọn môn, khối và ca test phù hợp (con đến bất cứ lúc nào trong khung giờ của ca), rồi để lại tên con và số điện thoại. Hệ thống báo luôn thời gian làm bài của từng môn.
           </p>
           <DangKyTestForm />
         </div>

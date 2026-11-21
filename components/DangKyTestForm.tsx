@@ -16,21 +16,23 @@ import { SITE } from "@/lib/site-config";
 
 const API = process.env.NEXT_PUBLIC_DANG_KY_TEST_URL ?? "";
 
-type GioOpt = { bat_dau: string; xong: string };
-type Buoi = { khung_id: string; ngay: string; thu: number; tu: string; den: string; gio: Record<string, GioOpt[]> };
+type Ca = { khung_id: string; ngay: string; thu: number; tu: string; den: string }; // 1 ca test = 1 ngày × 1 khung giờ
 type Khoi = { lop: string; ten: string; mon: { mon: string; thoi_luong_phut: number }[] }; // ten do DB đặt ('Lớp 4 CLC')
-type FormData = { lop: Khoi[]; lich: Buoi[] };
-type Chon = { khung_id: string; ngay: string; gio_bat_dau: string | null };
+type FormData = { lop: Khoi[]; ca?: Ca[] };
+type Chon = { khung_id: string; ngay: string };
 type KetQua = {
   ho_ten_hs: string;
   ten_lop?: string | null;
-  mon: { mon: string; ngay: string; thu: number; gio_bat_dau: string; gio_xong: string; thoi_luong_phut: number }[];
+  mon: { mon: string; ngay: string; thu: number; gio_mo: string; gio_dong: string; thoi_luong_phut: number }[];
 };
 
-const THU: Record<number, string> = { 1: "T2", 2: "T3", 3: "T4", 4: "T5", 5: "T6", 6: "T7", 7: "CN" };
 const THU_DAI: Record<number, string> = { 1: "Thứ 2", 2: "Thứ 3", 3: "Thứ 4", 4: "Thứ 5", 5: "Thứ 6", 6: "Thứ 7", 7: "Chủ nhật" };
 const ddmm = (ymd: string) => `${ymd.slice(8, 10)}/${ymd.slice(5, 7)}`;
-const phut = (hhmm: string) => Number(hhmm.slice(0, 2)) * 60 + Number(hhmm.slice(3, 5));
+// "Tối thứ 3", "Sáng thứ 7", "Chiều chủ nhật" — theo giờ mở ca
+const tenCa = (c: { thu: number; tu: string }) => {
+  const h = Number(c.tu.slice(0, 2));
+  return `${h < 12 ? "Sáng" : h < 17 ? "Chiều" : "Tối"} ${THU_DAI[c.thu].toLowerCase()}`;
+};
 const tenKhoi = (ten: string) => ten.replace(/^Lớp/, "Khối"); // DB gọi "Lớp 4 CLC", web hiện "Khối 4 CLC"
 
 function chip(on: boolean, dis = false) {
@@ -94,18 +96,14 @@ export function DangKyTestForm() {
   }
   function chonKhoi(l: string) {
     setLop(l);
-    setLichChon({}); // thời lượng đổi theo khối ⇒ chọn lại lịch
+    setLichChon({}); // đổi khối ⇒ chọn lại ca
   }
-  const biChong = (m: string, ngay: string, bd: string) => {
-    const a0 = phut(bd), a1 = a0 + tl(m);
-    return Object.entries(lichChon).some(([m2, c]) => m2 !== m && c?.gio_bat_dau && c.ngay === ngay && a0 < phut(c.gio_bat_dau) + tl(m2) && phut(c.gio_bat_dau) < a1);
-  };
 
   const sdtSo = sdt.replace(/\D/g, "").replace(/^84/, "0");
   const thieu: string[] = [];
   if (monChon.length === 0) thieu.push("môn");
   if (monChon.length > 0 && !lop) thieu.push("khối");
-  if (lop) monChon.forEach((m) => { if (!lichChon[m]?.gio_bat_dau) thieu.push(`giờ test ${m}`); });
+  if (lop) monChon.forEach((m) => { if (!lichChon[m]) thieu.push(`ca test ${m}`); });
   if (ten.trim().length < 2) thieu.push("họ tên con");
   if (!/^0[35789]\d{8}$/.test(sdtSo)) thieu.push("SĐT");
 
@@ -118,7 +116,8 @@ export function DangKyTestForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ho_ten_hs: ten, sdt_ph: sdt, lop, website: bay,
-          mon: monChon.map((m) => ({ mon: m, khung_id: lichChon[m]!.khung_id, ngay: lichChon[m]!.ngay, gio_bat_dau: lichChon[m]!.gio_bat_dau })),
+          // Không gửi giờ bắt đầu: đăng ký theo CA, con đến bất cứ lúc nào trong ca (Thùy 21/11)
+          mon: monChon.map((m) => ({ mon: m, khung_id: lichChon[m]!.khung_id, ngay: lichChon[m]!.ngay })),
         }),
       });
       const d = await r.json().catch(() => ({}));
@@ -146,14 +145,18 @@ export function DangKyTestForm() {
             {kq.mon.map((m) => (
               <div key={m.mon} className="rounded-xl bg-paper px-4 py-3 text-sm text-slate">
                 <div className="font-semibold text-ink">{m.mon}{khoi ? ` · ${khoi}` : ""}</div>
-                <div>{THU_DAI[m.thu]} {ddmm(m.ngay)} · bắt đầu <b>{m.gio_bat_dau}</b></div>
-                <div>Thời gian làm bài <b>{m.thoi_luong_phut} phút</b> · dự kiến xong <b>{m.gio_xong}</b></div>
+                <div>{tenCa({ thu: m.thu, tu: m.gio_mo })} · {THU_DAI[m.thu]} {ddmm(m.ngay)}</div>
+                <div>Con đến bất cứ lúc nào từ <b>{m.gio_mo}</b> đến <b>{m.gio_dong}</b></div>
+                <div>Thời gian làm bài <b>{m.thoi_luong_phut} phút</b></div>
               </div>
             ))}
+            {kq.mon.length > 1 && (
+              <p className="px-1 text-sm text-slate-soft">Tổng thời gian làm bài: <b className="text-ink">{kq.mon.reduce((t, m) => t + m.thoi_luong_phut, 0)} phút</b></p>
+            )}
           </div>
         )}
         <p className="mx-auto mt-5 max-w-md text-sm text-slate-soft">
-          Bố mẹ lưu lại thông tin này và đưa con đến đúng giờ giúp trung tâm. Trung tâm sẽ liên hệ lại để xác nhận.
+          Bố mẹ lưu lại thông tin này và đưa con đến trong khung giờ trên giúp trung tâm. Trung tâm sẽ liên hệ lại để xác nhận.
         </p>
         <p className="mt-4 text-sm text-slate-soft">Cần đổi lịch, bố mẹ nhắn Zalo cho trung tâm.</p>
         <a href={SITE.zaloUrl} target="_blank" rel="noreferrer" className="mt-3 inline-flex rounded-full bg-gold px-6 py-3 text-sm font-semibold text-white hover:bg-gold-light">Nhắn Zalo</a>
@@ -175,7 +178,7 @@ export function DangKyTestForm() {
   }
 
   // Lộc chưa dựng khung lịch / chưa khai thời lượng ⇒ chưa có gì để chọn: chỉ đường Zalo, không bày form rỗng
-  if (fd.lop.length === 0 || fd.lich.length === 0) {
+  if (fd.lop.length === 0 || !fd.ca?.length) {
     return (
       <div className="rounded-2xl border border-ink/10 bg-white p-6 text-center text-slate-soft shadow-sm">
         <p>Lịch test online đang được cập nhật. Bố mẹ nhắn Zalo để trung tâm xếp lịch cho con nhé.</p>
@@ -215,8 +218,8 @@ export function DangKyTestForm() {
 
       {lop && khoiDang && monChon.map((m, i) => (
         <Buoc key={m} so={3 + i} ten={`Lịch test môn ${m}`}>
-          <p className="mb-3 rounded-lg bg-paper px-3 py-2 text-sm text-slate">{tenKhoi(khoiDang.ten)} · bài test dự kiến <b>{tl(m)} phút</b></p>
-          <LichMon lich={fd.lich} tl={tl(m)} chon={lichChon[m] ?? null} onChon={(c) => setLichChon((p) => ({ ...p, [m]: c }))} biChong={(ngay, bd) => biChong(m, ngay, bd)} />
+          <p className="mb-3 rounded-lg bg-paper px-3 py-2 text-sm text-slate">{tenKhoi(khoiDang.ten)} · bài test <b>{tl(m)} phút</b></p>
+          <CaMon ca={fd.ca ?? []} chon={lichChon[m] ?? null} onChon={(c) => setLichChon((p) => ({ ...p, [m]: c }))} />
         </Buoc>
       ))}
 
@@ -243,48 +246,29 @@ export function DangKyTestForm() {
   );
 }
 
-function LichMon({ lich, tl, chon, onChon, biChong }: {
-  lich: Buoi[]; tl: number; chon: Chon | null; onChon: (c: Chon) => void; biChong: (ngay: string, bd: string) => boolean;
-}) {
-  const buoi = lich.filter((b) => b.gio[String(tl)]?.length);
-  const dang = buoi.find((b) => b.khung_id === chon?.khung_id && b.ngay === chon?.ngay) ?? null;
-  const gio = dang?.gio[String(tl)] ?? [];
-  const xong = gio.find((g) => g.bat_dau === chon?.gio_bat_dau)?.xong;
-  if (!buoi.length) return <p className="text-sm text-slate-soft">Hiện chưa có buổi test trống, bố mẹ nhắn Zalo để trung tâm xếp lịch.</p>;
+// Chọn CA test: chỉ có vài ca cố định trong tuần, con đến bất cứ lúc nào trong khung (không chọn giờ bắt đầu).
+function CaMon({ ca, chon, onChon }: { ca: Ca[]; chon: Chon | null; onChon: (c: Chon) => void }) {
+  if (!ca.length) return <p className="text-sm text-slate-soft">Hiện chưa có ca test trống, bố mẹ nhắn Zalo để trung tâm xếp lịch.</p>;
+  const dang = ca.find((c) => c.khung_id === chon?.khung_id && c.ngay === chon?.ngay) ?? null;
   return (
     <div>
-      <p className="mb-2 text-sm text-slate-soft">Chọn ngày</p>
-      <div className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-2">
-        {buoi.map((b) => {
-          const on = dang === b;
+      <p className="mb-2 text-sm text-slate-soft">Chọn ca test — con đến bất cứ lúc nào trong khung giờ</p>
+      <div className="grid gap-2 sm:grid-cols-2">
+        {ca.map((c) => {
+          const on = dang === c;
           return (
-            <button key={b.khung_id + b.ngay} type="button" onClick={() => onChon({ khung_id: b.khung_id, ngay: b.ngay, gio_bat_dau: null })}
-              className={clsx(chip(on), "shrink-0 text-left leading-tight")}>
-              <div>{THU[b.thu]} {ddmm(b.ngay)}</div>
-              <div className={clsx("text-xs font-normal", on ? "text-white/75" : "text-slate-soft")}>{b.tu}–{b.den}</div>
+            <button key={c.khung_id + c.ngay} type="button" onClick={() => onChon({ khung_id: c.khung_id, ngay: c.ngay })}
+              className={clsx(chip(on), "text-left leading-tight")}>
+              <div>{tenCa(c)} · {ddmm(c.ngay)}</div>
+              <div className={clsx("text-sm font-normal", on ? "text-white/75" : "text-slate-soft")}>{c.tu} – {c.den}</div>
             </button>
           );
         })}
       </div>
       {dang && (
-        <div className="mt-3">
-          <p className="mb-2 text-sm text-slate-soft">Giờ bắt đầu</p>
-          <div className="grid grid-cols-4 gap-2 sm:grid-cols-6">
-            {gio.map((g) => {
-              const dis = biChong(dang.ngay, g.bat_dau);
-              return (
-                <button key={g.bat_dau} type="button" disabled={dis}
-                  onClick={() => onChon({ khung_id: dang.khung_id, ngay: dang.ngay, gio_bat_dau: g.bat_dau })}
-                  className={clsx(chip(chon?.gio_bat_dau === g.bat_dau, dis), "px-1")}>{g.bat_dau}</button>
-              );
-            })}
-          </div>
-          {xong && (
-            <p className="mt-3 rounded-xl bg-emerald-50 px-4 py-3 text-[15px] text-emerald-800">
-              ⏰ Dự kiến xong lúc <b>{xong}</b> — bố mẹ đón con lúc này nhé.
-            </p>
-          )}
-        </div>
+        <p className="mt-3 rounded-xl bg-emerald-50 px-4 py-3 text-[15px] text-emerald-800">
+          ✓ Con đến bất cứ lúc nào từ <b>{dang.tu}</b> đến <b>{dang.den}</b> ngày {ddmm(dang.ngay)}.
+        </p>
       )}
     </div>
   );
