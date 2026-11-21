@@ -74,7 +74,13 @@ export function DangKyTestForm() {
   useEffect(() => {
     if (!API) { setLoiTai("Đăng ký online đang tạm đóng."); return; }
     fetch(API)
-      .then(async (r) => { const d = await r.json(); if (!r.ok) throw new Error(d?.error ?? "Không tải được lịch test."); setFd(d); })
+      .then(async (r) => {
+        const d: FormData = await r.json();
+        if (!r.ok) throw new Error((d as unknown as { error?: string })?.error ?? "Không tải được lịch test.");
+        // Chỉ hiện lần GẦN NHẤT của mỗi ca (Thùy 21/11: "chỉ 7 ngày tới") — DB trả 14 ngày, mỗi ca lặp 2 tuần, ở đây giữ 1 lần/ca
+        const thay = new Set<string>();
+        setFd({ ...d, ca: (d.ca ?? []).filter((c) => (thay.has(c.khung_id) ? false : (thay.add(c.khung_id), true))) });
+      })
       .catch((e) => setLoiTai(e.message ?? "Không tải được lịch test."));
   }, []);
 
