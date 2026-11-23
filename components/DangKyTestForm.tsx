@@ -62,6 +62,7 @@ export function DangKyTestForm() {
   const [fd, setFd] = useState<FormData | null>(null);
   const [loiTai, setLoiTai] = useState<string | null>(null);
   const [ten, setTen] = useState("");
+  const [tenPh, setTenPh] = useState(""); // họ tên phụ huynh
   const [sdt, setSdt] = useState("");
   const [monChon, setMonChon] = useState<string[]>([]); // các môn đã tích
   const [lop, setLop] = useState<string | null>(null); // khối đã chọn (mã DB: '8', '4T'…)
@@ -111,6 +112,7 @@ export function DangKyTestForm() {
   if (monChon.length > 0 && !lop) thieu.push("khối");
   if (lop) monChon.forEach((m) => { if (!lichChon[m]) thieu.push(`ca test ${m}`); });
   if (ten.trim().length < 2) thieu.push("họ tên con");
+  if (tenPh.trim().length < 2) thieu.push("họ tên phụ huynh");
   if (!/^0[35789]\d{8}$/.test(sdtSo)) thieu.push("SĐT");
 
   async function gui() {
@@ -121,7 +123,7 @@ export function DangKyTestForm() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          ho_ten_hs: ten, sdt_ph: sdt, lop, website: bay,
+          ho_ten_hs: ten, ho_ten_ph: tenPh, sdt_ph: sdt, lop, website: bay,
           // Không gửi giờ bắt đầu: đăng ký theo CA, con đến bất cứ lúc nào trong ca (Thùy 21/11)
           mon: monChon.map((m) => ({ mon: m, khung_id: lichChon[m]!.khung_id, ngay: lichChon[m]!.ngay })),
         }),
@@ -233,7 +235,8 @@ export function DangKyTestForm() {
         <Buoc so={3 + monChon.length} ten="Thông tin của con">
           <div className="grid gap-3 sm:grid-cols-2">
             <input className={input} placeholder="Họ tên của con" autoComplete="off" value={ten} onChange={(e) => setTen(e.target.value)} />
-            <input className={input} placeholder="Số điện thoại bố/mẹ" type="tel" inputMode="tel" autoComplete="tel" value={sdt} onChange={(e) => setSdt(e.target.value)} />
+            <input className={input} placeholder="Họ tên phụ huynh" autoComplete="name" value={tenPh} onChange={(e) => setTenPh(e.target.value)} />
+            <input className={clsx(input, "sm:col-span-2")} placeholder="Số điện thoại phụ huynh" type="tel" inputMode="tel" autoComplete="tel" value={sdt} onChange={(e) => setSdt(e.target.value)} />
           </div>
           <input tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 opacity-0" name="website" value={bay} onChange={(e) => setBay(e.target.value)} />
         </Buoc>
